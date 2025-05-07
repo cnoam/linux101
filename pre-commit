@@ -1,15 +1,27 @@
 #!/bin/bash
-# Git pre-commit hook: check for broken links with lychee
+# Git pre-commit hook: run lychee on staged .md files only
 
-echo "Running lychee to check Markdown links in chapters/..."
+echo "🔍 Checking staged Markdown files for broken links with lychee..."
 
-# Run lychee and capture output and status
-output=$(lychee chapters 2>&1)
+# Get list of staged .md files
+md_files=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.md$')
+
+# If no .md files staged, skip check
+if [ -z "$md_files" ]; then
+  echo "✅ No staged Markdown files to check."
+  exit 0
+fi
+
+# Run lychee on staged files (relative to repo root)
+# Join files into a single line with quotes around each for safety
+file_args=$(printf '"%s" ' $md_files)
+
+# Evaluate the command to preserve quoted paths
+eval lychee $file_args
 status=$?
 
 if [ $status -ne 0 ]; then
   echo "❌ Broken links found. Commit aborted."
-  echo "$output"
   exit 1
 else
   echo "✅ No broken links detected by lychee."
