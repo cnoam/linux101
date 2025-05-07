@@ -1,12 +1,14 @@
 # Linux: a self paced course for complete beginners
 
 **TODO:**
+
 - spell check
 - add Hebrew/Arabic support via mkdocs 
 
 <hr>
 
 ממש ממש מילות פתיחה:
+
 - למה לי ללמוד לינוקס?
 - איפה משתמשים בזה?
 - מה אתה הולך ללמד כאן וכמה זמן זה נמשך?
@@ -29,7 +31,7 @@
 ℹ️  More info here
 <hr>
 
-This short course should take you 8..12 hours of watching short videos,reading and mainly trying things on your computer.
+This short course should take you 8..12 hours of watching short videos, reading and mainly trying things on your computer.
 
 It is planned for students who uses Windows (or Mac) and have never used linux, especially never used the command line.
 
@@ -54,10 +56,10 @@ Chapter 4<br>
 [File Permissions and Ownership](./04/ch_04.md)
 
 Chapter 5<br>
-Basic Linux Commands 
+[Basic Linux Commands ](./05/ch_05.md)
 
 Chapter 6<Br>
-Text Processing & Editing
+[Text Processing & Editing](./06/ch_06.md)
 
 Chapter 7<br>
 Advanced Text Processing Tools
@@ -73,3 +75,5 @@ Networking & Remote Access
 
 Chapter 11<br>
 Shell Scripting
+
+Regular Expressions are used a lot in shell commands. [Learn it!](regex/regex.md)
