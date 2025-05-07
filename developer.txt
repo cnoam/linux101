@@ -1,0 +1,21 @@
+2025-05-07
+
+To detect broken links in the MD files: "is there a tool that will recursively check each MD file for broken links"
+
+I chose Rust lychee. 
+```
+# install via cargo
+cargo install lychee
+
+# check every .md in your tree
+lychee --recursive chapters
+```
+but cargo failed becuase it cannot find openssl lib 
+you need to `sudo apt install libssl-dev pkg-config`
+
+After build is finished:
+```
+cd linux_course
+lychee chapters
+```
+
