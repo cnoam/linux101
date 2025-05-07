@@ -77,8 +77,9 @@ When you use a pipe:
 1. how many commands can be piped? Can I run `ls | grep x | wc | sort` ?
 1. if the second command (of four commands) fails, but the other succeeds, will the whole command fail or succeed?  What would you want it to be?
 
+!!TODO!!
 
-🎥 open the [video](sdf), and execute the commands below
+🎥 open the [video](), and execute the commands below
 
 
 ###  Examples:

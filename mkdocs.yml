@@ -1,0 +1,34 @@
+site_name: Linux Basics & CLI Course
+site_url: ""
+theme:
+  name: material
+
+docs_dir: chapters
+extra_css:
+  - ../assets/custom.css  # Optional, if you want styling
+extra_javascript:
+  - ../assets/custom.js   # Optional JS
+
+nav:
+  - Home: index.md
+  - Chapter 01: 01/ch_01.md
+  - Chapter 02: 02/ch_02.md
+  - Chapter 03: 03/ch_03.md
+  - Chapter 04: 04/ch_04.md
+  - Chapter 05: 05/ch_05.md
+  - Chapter 06: 06/ch_06.md
+  - Chapter 07: 07/ch_07.md
+  - Chapter 08: 08/ch_08.md
+  - Chapter 09: 09/ch_09.md
+  - Chapter 10: 10/ch_10.md
+  - Chapter 11: 11/ch_11.md
+
+# Include image assets
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - codehilite
+  - footnotes
+  - tables
+

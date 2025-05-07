@@ -56,7 +56,7 @@ The second is "installing alpine linux" which is a tiny, no GUI version of linux
 <br>This be used later, so don't skip!  See it [🎥 here](https://panoptotech.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0e2f5dde-03a0-4a7e-bd73-b2b000826177)
 
 ## or, Take the shortcut (alt3)
-Follow the instructions in [Installing Linux in VirtualBox in 3 steps](https://technionmail-my.sharepoint.com/:w:/g/personal/dds_lab_technion_ac_il/EfPtB96oB9dHqYUbm7BVEgAByq1XvgowgT4PI_ka06Y8yQ?e=6ViDmB) 
+Follow the instructions in [Installing Linux in VirtualBox in 3 steps](./using_VirtualBox_linux.pdf)
 
 <br><br>
 

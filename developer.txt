@@ -8,7 +8,7 @@ I chose Rust lychee.
 cargo install lychee
 
 # check every .md in your tree
-lychee --recursive chapters
+lychee  chapters
 ```
 but cargo failed becuase it cannot find openssl lib 
 you need to `sudo apt install libssl-dev pkg-config`
@@ -18,4 +18,31 @@ After build is finished:
 cd linux_course
 lychee chapters
 ```
+
+MD readers behaved differently, so link resolving (for example) behaves differently on each.
+Solution: create static site (html). There are a few options:mkdocs, hugo, zola, docusaurus.
+
+Will try zola (single binary, no deps)  
+```
+flatpak install flathub org.getzola.zola
+flatpak run org.getzola.zola <some command>
+```
+
+also installed mkdocs, forcing into the global system:
+
+`pip install mkdocs --break-system-packages`
+then `mkdocs serve` and watch the magic.
+
+To create a static site (not as good looking as the served one): `mkdocks build`
+
+# git pre-commit hook
+always run the link checker before commit. 
+Copy the pre-commit file to .git/hooks. Make it executable
+
+
+
+
+
+
+
 
