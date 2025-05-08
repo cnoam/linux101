@@ -1,4 +1,11 @@
+
+
 # Linux: a self paced course for complete beginners
+
+<div style="text-align: center; padding: 1em;">
+  <img src="/assets/eng-logo.png.webp" alt="Data&Decisions" style="height: 50px; vertical-align: middle;">
+  <img src="/assets/Technion_EN-2.png" alt="Technion" style="height: 50px; vertical-align: middle;">
+</div>
 
 **TODO:**
 

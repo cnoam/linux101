@@ -2,7 +2,7 @@ site_name: Linux Basics & CLI Course
 site_url: ""
 theme:
   name: material
-
+  custom_dir: overrides
 docs_dir: chapters
 extra_css:
   - ../assets/custom.css  # Optional, if you want styling

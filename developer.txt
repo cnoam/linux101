@@ -40,6 +40,12 @@ always run the link checker before commit.
 Copy the pre-commit file to .git/hooks. Make it executable
 
 
+# The web site
+The site is hosted in github pages.
+When pushing a commit to github, it automatically updated the website (recreating it from scratch).
+
+https://cnoam.github.io/linux101/
+
 
 
 
