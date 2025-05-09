@@ -1,0 +1,12 @@
+
+{
+    "cSpell.enabled": true,
+    "cSpell.enableFiletypes": ["markdown"],
+    "cSpell.language": "en",
+    "cSpell.ignorePaths": [
+      "**/node_modules/**",
+      "**/site/**",
+      "**/.git/**"
+    ]
+  }
+  

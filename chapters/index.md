@@ -12,6 +12,10 @@
 - spell check
 - add Hebrew/Arabic support via mkdocs 
 
+- should we have for each chapter a format [ objectives, contents, summary] ?
+- add explanation (somewhere) of env vars
+- add explanation of "glob" (https://www.geeksforgeeks.org/file-globbing-linux/)
+
 <hr>
 
 ממש ממש מילות פתיחה:
@@ -25,7 +29,7 @@
 - too much contents
 - contents to remove
 - mistakes
-- your time estimatation
+- your time estimation
 
 ----
 
@@ -52,7 +56,7 @@ Chapter 1<br>
 
 Chapter 2<br>
 [Navigating the Linux File System](./02/ch_02.md) <br>
-[Demistfying the terminal](./02/terminal.md)
+[Demystifying the terminal](./02/terminal.md)
 
 Chapter 3<br>
 [Working with Files and Directories](./03/ch_03.md)
@@ -72,7 +76,7 @@ Chapter 7<br>
 Advanced Text Processing Tools
 
 Chapter 8<br>
-Users, Groups & Permissions 
+[Users, Groups & Permissions](./08/ch_08.md) 
 
 Chapter 9<br>
 Package Management
@@ -82,5 +86,7 @@ Networking & Remote Access
 
 Chapter 11<br>
 Shell Scripting
+
+[Summary](summary.md)
 
 Regular Expressions are used a lot in shell commands. [Learn it!](regex/regex.md)
