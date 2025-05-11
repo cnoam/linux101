@@ -87,6 +87,9 @@ Networking & Remote Access
 Chapter 11<br>
 Shell Scripting
 
-[Summary](summary.md)
 
-Regular Expressions are used a lot in shell commands. [Learn it!](regex/regex.md)
+Regular Expressions and glob<br>
+[regex](regex/regex.md)<br>
+[glob and the difference from regex](regex/glob.md)
+
+[Summary](summary.md)
