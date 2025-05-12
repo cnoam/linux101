@@ -1,4 +1,5 @@
 
+👍
 
 # Linux: a self paced course for complete beginners
 
@@ -8,21 +9,13 @@
 </div>
 
 **TODO:**
-
+```
 - spell check
-- add Hebrew/Arabic support via mkdocs 
-
 - should we have for each chapter a format [ objectives, contents, summary] ?
 - add explanation (somewhere) of env vars
-- add explanation of "glob" (https://www.geeksforgeeks.org/file-globbing-linux/)
-
+```
 <hr>
 
-ממש ממש מילות פתיחה:
-
-- למה לי ללמוד לינוקס?
-- איפה משתמשים בזה?
-- מה אתה הולך ללמד כאן וכמה זמן זה נמשך?
 
 # למי שקורא את הטיוטה
 - missing contents

@@ -3,12 +3,29 @@ site_url: ""
 theme:
   name: material
   custom_dir: overrides
-docs_dir: chapters
-extra_css:
-  - ../assets/custom.css  # Optional, if you want styling
-extra_javascript:
-  - ../assets/custom.js   # Optional JS
 
+
+docs_dir: docs
+# extra_css:
+#   - ../assets/custom.css  # Optional, if you want styling
+# extra_javascript:
+#   - ../assets/custom.js   # Optional JS
+
+
+plugins:
+  - i18n:
+      default_language: en  # which language to serve at “/”
+      docs_structure: suffix
+      languages:
+        - locale: en
+          name: English
+          build: true
+          default: true       # <— mark this as the “/” site
+        - locale: he
+          name: עברית
+          build: true
+
+        
 nav:
   - Home: index.md
   - Chapter 01: 01/ch_01.md

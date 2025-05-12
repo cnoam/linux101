@@ -48,7 +48,31 @@ https://cnoam.github.io/linux101/
 
 
 
+[NC 2025-05-12] no matter what I did, gpt 4o failed badly: omitting words, paragraphs, links.
 
+how should I correctly tell you to perform exact translation, without summarization?
+
+
+ChatGPT said:
+When you want a verbatim, line-by-line translation—no cuts, no paraphrasing—make your prompt explicit about a one-to-one mapping. For example:
+
+“Please translate the following Markdown exactly as-is into English, preserving every sentence, paragraph, code snippet, formatting, and side-note (no summarization or omission).”
+
+Or even more prescriptive:
+
+“I want a literal translation of this text. Do not remove, condense, or paraphrase anything—translate every word and markup element in place.”
+
+Key points to include:
+
+“literal” or “verbatim” translation
+
+“no summarization”, “no omission”
+
+“preserve formatting and code blocks”
+
+Optionally, “provide output as a downloadable MD file” if you need the file written for you.
+
+With that level of detail, the model will know you expect an exact, complete translation rather than a streamlined summary.
 
 
 

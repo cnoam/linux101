@@ -64,7 +64,7 @@ Follow the instructions in [Installing Linux in VirtualBox in 3 steps](./using_V
 VirtualBox snapshots are useful because they let you save the exact state of a virtual machine, including:
 
 * Disk contents
-* Memory (RAM)
+* Memory (RAM) configuration
 * Settings
 
 This means you can:

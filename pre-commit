@@ -16,6 +16,9 @@ fi
 # Join files into a single line with quotes around each for safety
 file_args=$(printf '"%s" ' $md_files)
 
+echo $file_args
+
+
 # Evaluate the command to preserve quoted paths
 eval lychee $file_args
 status=$?
