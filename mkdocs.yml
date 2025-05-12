@@ -1,5 +1,5 @@
 site_name: Linux Basics & CLI Course
-site_url: ""
+site_url: "https://cnoam.github.io/linux101/"
 theme:
   name: material
   custom_dir: overrides

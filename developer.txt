@@ -46,7 +46,7 @@ When pushing a commit to github, it automatically updated the website (recreatin
 
 https://cnoam.github.io/linux101/
 
-
+<hr>
 
 [NC 2025-05-12] no matter what I did, gpt 4o failed badly: omitting words, paragraphs, links.
 
