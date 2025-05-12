@@ -1,0 +1,798 @@
+
+<!doctype html>
+<html lang="he" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../01/ch_01/">
+      
+      
+        <link rel="next" href="../../03/ch_03/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
+    
+    
+      
+        <title>Chapter 02 - Linux Basics & CLI Course</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="rtl">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2" class="md-skip">
+          לדלג לתוכן
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="כותרת עליונה">
+    <a href="../../" title="Linux Basics &amp; CLI Course" class="md-header__button md-logo" aria-label="Linux Basics & CLI Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Linux Basics & CLI Course
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 02
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="בחירת שפה">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../02/ch_02/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="he" class="md-select__link">
+              עברית
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ניווט" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="Linux Basics &amp; CLI Course" class="md-nav__button md-logo" aria-label="Linux Basics & CLI Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Linux Basics & CLI Course
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01/ch_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 01
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Chapter 02
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 02
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="תוכן העניינים">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      תוכן העניינים
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      מהי מערכת קבצים?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      בדוק את עצמך
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      האם זה באמת כל כך פשוט?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03/ch_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 03
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04/ch_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 04
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05/ch_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 05
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06/ch_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 06
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../07/ch_07.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 07
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/ch_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 08
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../09/ch_09.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 09
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../10/ch_10.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 10
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../11/ch_11.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 11
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="תוכן העניינים">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      תוכן העניינים
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      מהי מערכת קבצים?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      בדוק את עצמך
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      האם זה באמת כל כך פשוט?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="2">פרק 2: ניווט במערכת הקבצים של לינוקס<a class="headerlink" href="#2" title="Permanent link">&para;</a></h1>
+<h2 id="_1">מהי מערכת קבצים?<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>מערכת קבצים היא הדרך שבה מערכת הפעלה מארגנת ומנהלת נתונים על התקן אחסון, כמו דיסק קשיח, SSD או כונן USB. היא מגדירה כיצד נקראים הקבצים, כיצד הם מאוחסנים, כיצד הם מאוחזרים ואיך הם מסודרים בדיסק.</p>
+<p>תחשוב של זה כמו ספרייה:
+- הספרים הם הקבצים שלך.
+- המדפים ומערכת הקטלוג הם מערכת הקבצים.</p>
+<p>היא עוקבת אחרי מיקום כל קובץ, שמו, זמן השינוי האחרון ומי יכול לגשת אליו.</p>
+<p>לפעמים אתה בכלל לא מתעניין בקבצים ובתיקיות. פעמים אחרות זה קריטי לשימוש הנכון בתוכנית שאתה צריך.</p>
+<p>לדוגמה, כאשר משתמשים ב‑Google Docs, אתה לא מודע לקבצים. אתה רואה רק מסמכים ותמונות, וקוד Google אחראי לחשוף לך תצוגה נוחה בלי לחשוף את מבנה הקבצים, אבל זה שם בכל זאת.</p>
+<p>כשאתה משתמש ב‑Windows או בלינוקס, אתה חייב להיות מודע למערכת הקבצים. למשל, אם יש לך שני דיסקים (C: ו‑D:), והדיסק C: מלא, זו האחריות <strong>שלך</strong> למחוק קבצים ולהעביר אותם למקומות אחרים.</p>
+<p>ראה את הטבלה ונחש איזו מערכת קבצים היא היותר ישנה:</p>
+<hr />
+<table>
+<thead>
+<tr>
+<th>מערכת קבצים</th>
+<th>בשימוש ע"י</th>
+<th>גודל מקסימלי לקובץ</th>
+<th>מספר מקסימלי של קבצים</th>
+<th>הערות</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>NTFS</strong></td>
+<td>Windows</td>
+<td>16 TB (מעשי)</td>
+<td>~4.3 מיליארד</td>
+<td>תומכת בהרשאות, הצפנה, דחיסה</td>
+</tr>
+<tr>
+<td><strong>FAT</strong></td>
+<td>מערכות ישנות, דיסק גמיש</td>
+<td>2 GB</td>
+<td>~65,536 (לכל כרך)</td>
+<td>ישנה מאוד; בשימוש ב‑DOS; מיושנת לרוב השימושים</td>
+</tr>
+<tr>
+<td><strong>FAT32</strong></td>
+<td>כונני USB, מערכות ישנות</td>
+<td>4 GB פחות בת אחד</td>
+<td>~268 מיליון (תיאורטי)</td>
+<td>תואמת באופן נרחב, אך מוגבלת בגודל קובץ של 4 GB</td>
+</tr>
+<tr>
+<td><strong>exFAT</strong></td>
+<td>כונני USB במערכות שונות</td>
+<td>16 EB</td>
+<td>~2.7 מיליון (לכל תיקיה)</td>
+<td>מצוינת לקבצים גדולים; חוצה פלטפורמות</td>
+</tr>
+<tr>
+<td><strong>ext4</strong></td>
+<td>Linux</td>
+<td>16 TB (לקובץ יחיד)</td>
+<td>4 מיליארד</td>
+<td>מהירה, אמינה, תומכת ב journaling</td>
+</tr>
+<tr>
+<td><strong>APFS</strong></td>
+<td>macOS</td>
+<td>8 EB</td>
+<td>בלתי מוגבל כמעט</td>
+<td>מודרנית, מותאמת ל‑SSD</td>
+</tr>
+</tbody>
+</table>
+<p>האם אחסון קבצים בתיקיות, יצירת עץ היררכי, הוא הדרך היחידה? התשובה הקצרה היא לא, אבל בפועל החלופות לא נפוצות.</p>
+<p>רוב משחשבים האישיים והשרתים עדיין משתמשים במערכות קבצים היררכיות מסורתיות כמו:</p>
+<ul>
+<li>ext4, XFS, Btrfs (בלינוקס)</li>
+<li>NTFS (ב‑Windows)</li>
+<li>APFS (ב‑macOS)</li>
+</ul>
+<p>מערכות אלה מהירות, בשלות, נתמכות באופן רחב ומתאימות למודל המחשבתי שמשתמשים ותוכנות מצפים לו — תיקיות, נתיבים, הרשאות.</p>
+<p>למה החלופות אינן נפוצות כמערכות קבצים ראשיות:</p>
+<ul>
+<li>תאימות: רוב התוכנות מצפות לנתיבים כמו <code>/home/user/file.txt</code>.</li>
+<li>ציפיית המשתמש: היררכיות פשוטות ואינטואיטיביות.</li>
+<li>כלים ו‑APIs: רוב ממשקי ה‑OS וכלי ה‑shell (כמו ls, cd, cp) מניחים עץ תיקיות.</li>
+<li>ביצועים ובשלות: מערכות לא היררכיות לרוב ניסיוניות או מתאימות למקרים מצומצמים.</li>
+</ul>
+<p>בשעור עתידי נעמיק בפרטים, אך לעת עתה כל מה שצריך לדעת על מערכות קבצים:</p>
+<ul>
+<li>נתונים מאוחסנים בקבצים.</li>
+<li>לכל קובץ יש מטא‑דטה (“נתונים על הנתונים”) כגון “מי יכול לגשת לקובץ הזה” ו-“מתי הקובץ נוצר”.</li>
+<li>קבצים מאוחסנים בתיקיות. ב‑Windows זה נקרא Folder. בלינוקס, <strong>directory</strong>.</li>
+</ul>
+<p>משתמשים מתקדמים בלינוקס יכולים לבחור את מערכת הקבצים שמתאימה לעבודה מסוימת. לאחר הבחירה, כמעט אף פעם כבר לא משנים.</p>
+<h2 id="_2">בדוק את עצמך<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>מצא איזו מערכת קבצים בשימוש במערכת ההפעלה שלך.</li>
+<li>עבור מערכת הקבצים שמצאת (למשל NTFS), האם לינוקס יכולה לקרוא ממנו?</li>
+<li>אם התשובה היא כן, האם זה אומר שמערכת הקבצים היא “first class citizen” בלינוקס? (רמז: מה עם כתיבה/תאריך/הרשאות/ביצועים/הצפנה, snapshots)</li>
+<li>נניח שיש לך דיסק של 1TB עם מערכת קבצים, והדיסק כמעט מלא. האם אפשר להוסיף דיסק נוסף ולהרחיב את מערכת הקבצים כך שתשתמש בשני הדיסקים? שאל את ChatGPT.</li>
+</ul>
+<h2 id="_3">האם זה באמת כל כך פשוט?<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>אנחנו יכולים לבלות כמה שנים בדיון על בעיות ופתרונות של מערכות קבצים. שאל את AI על זה, והתכונן לבילוי ארוך.</p>
+<h1 id="_4">עץ מערכת הקבצים של לינוקס<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h1>
+<p>בכל מערכת קבצים שתבחר, המבנה (התיקיות) נראה אותו דבר. כמעט זהה בכל הפצות לינוקס ואפילו יש לו תקן, כך שכאשר תגיע למכונת לינוקס חדשה, רוב הסיכויים שתדע היכן לחפש קבצים מסוימים.</p>
+<p>עץ מערכת הקבצים של לינוקס מתייחס לאופן שבו קבצים ותיקיות מאורגנים במערכת לינוקס. הוא מתחיל בספריית השורש <code>/</code>, והכל מתפצל משם — בשונה מ‑Windows, שבו יש אותיות כונן נפרדות (C:\, D:\ וכו').</p>
+<p>למשל, אולי יש לך 4 דיסקים וכונני רשת, הכל תחת <code>/</code>. זו אבסטרקציה חזקה מאוד כפי שנראה בעתיד.</p>
+<h2 id="_5">שיעור היסטוריה<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>ב‑Windows, אתה קשור לכונן הפיזי המותקן. אבל יוניקס היה לפני Windows, אז למה OS מאוחר יותר פרימיטיבי יותר?</p>
+<p>Windows לקח את זה מ‑DOS, ופספס את ההזדמנות להתבגר.<br />
+DOS לקח את זה מ‑CP/M — מערכת קטנה ש‑Bill Gates בנה עליה את DOS.</p>
+<p>מערכת CP/M הייתה OS קטן למחשבים של שנות ה‑80 עם כונני דיסקט אחד או שניים. לא היה צורך לכתוב קוד מסובך כמו ביוניקס.</p>
+<p>למה C:?
+בהתחלה, רק עשירים יכלו להרשות לעצמם דיסק קשיח! למחשב PC היו שני כונני דיסקט שנקראו A: ו‑B:.<br />
+גם אם אין לך כונן B:, הדיסק הקשיח הראשון חייב להיות C:.<br />
+וכך בשנת 2025, כ‑35 שנים לאחר מכן, אנחנו עדיין סובלים מהבחירה ההיסטורית הזו.</p>
+<p><img alt="PC עתיק עם שני כונני דיסקטים" src="../../../assets/02/4CG9Dyx.jpeg" /></p>
+<h2 id="_6">מבנה עץ מערכת הקבצים הכללי בלינוקס<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>יש תקן <a href="https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html">Filesystem Hierarchy Standard</a> ולמעשה כל ההפצות משתמשות בו. ההבדלים הם איפה בדיוק נשמרים קבצים מסוימים בתיקיות המשנה.</p>
+<div class="codehilite"><pre><span></span><code><span class="o">/</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">bin</span><span class="o">/</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">boot</span><span class="o">/</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">dev</span><span class="o">/</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">etc</span><span class="o">/</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">home</span><span class="o">/</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">lib</span><span class="o">/</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">media</span><span class="o">/</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">opt</span><span class="o">/</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">proc</span><span class="o">/</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">root</span><span class="o">/</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">run</span><span class="o">/</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">sbin</span><span class="o">/</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">sys</span><span class="o">/</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">usr</span><span class="o">/</span>
+<span class="err">└──</span><span class="w"> </span><span class="k">var</span><span class="o">/</span>
+</code></pre></div>
+
+<p><strong>תיקיות עיקריות וההסבר שלהן</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="n">Directory</span><span class="w">    </span><span class="n">What</span><span class="w"> </span><span class="n">It</span><span class="w"> </span><span class="n">Contains</span>
+<span class="o">/</span><span class="w">            </span><span class="err">שורש</span><span class="w"> </span><span class="err">מערכת</span><span class="w"> </span><span class="err">הקבצים</span><span class="w"> </span><span class="err">—</span><span class="w"> </span><span class="err">הכל</span><span class="w"> </span><span class="err">מתחיל</span><span class="w"> </span><span class="err">כאן</span>
+<span class="o">/</span><span class="n">bin</span><span class="w">         </span><span class="err">כלי</span><span class="w"> </span><span class="err">שורת</span><span class="w"> </span><span class="err">פקודה</span><span class="w"> </span><span class="err">חיוניים</span><span class="w"> </span><span class="p">(</span><span class="n">ls</span><span class="p">,</span><span class="w"> </span><span class="n">cp</span><span class="p">,</span><span class="w"> </span><span class="n">rm</span><span class="w"> </span><span class="err">וכו</span><span class="s1">&#39;)</span>
+<span class="o">/</span><span class="n">sbin</span><span class="w">        </span><span class="err">בינאריות</span><span class="w"> </span><span class="err">מערכת</span><span class="w"> </span><span class="err">—</span><span class="w"> </span><span class="err">כלים</span><span class="w"> </span><span class="err">למנהל</span><span class="w"> </span><span class="p">(</span><span class="n">reboot</span><span class="p">,</span><span class="w"> </span><span class="n">fdisk</span><span class="p">)</span>
+<span class="o">/</span><span class="n">etc</span><span class="w">         </span><span class="err">קבצי</span><span class="w"> </span><span class="err">תצורה</span><span class="w"> </span><span class="err">כלליים</span><span class="w"> </span><span class="p">(</span><span class="n">passwd</span><span class="p">,</span><span class="w"> </span><span class="n">hosts</span><span class="w"> </span><span class="err">וכו</span><span class="s1">&#39;)</span>
+<span class="o">/</span><span class="n">home</span><span class="w">        </span><span class="err">ספריות</span><span class="w"> </span><span class="err">הבית</span><span class="w"> </span><span class="err">של</span><span class="w"> </span><span class="err">המשתמשים</span><span class="w"> </span><span class="p">(</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">alice</span><span class="p">,</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">bob</span><span class="p">)</span>
+<span class="o">/</span><span class="k">var</span><span class="w">         </span><span class="err">נתונים</span><span class="w"> </span><span class="err">משתנים</span><span class="w"> </span><span class="err">כמו</span><span class="w"> </span><span class="err">לוגים</span><span class="p">,</span><span class="w"> </span><span class="err">דואר</span><span class="w"> </span><span class="err">וקבצי</span><span class="w"> </span><span class="n">spool</span>
+<span class="o">/</span><span class="n">usr</span><span class="w">         </span><span class="err">תוכניות</span><span class="w"> </span><span class="err">וספריות</span><span class="w"> </span><span class="err">של</span><span class="w"> </span><span class="err">משתמש</span><span class="w"> </span><span class="err">—</span><span class="w"> </span><span class="err">אזור</span><span class="w"> </span><span class="err">גדול</span><span class="w"> </span><span class="err">עם</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="p">,</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="w"> </span><span class="err">וכו</span>
+</code></pre></div>
+
+<p><strong>ואיך זה שונה מ‑Windows?</strong></p>
+<table>
+<thead>
+<tr>
+<th>Windows</th>
+<th>Linux</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>C:\Program Files\</code></td>
+<td><code>/usr/bin/</code>, <code>/opt/</code></td>
+</tr>
+<tr>
+<td><code>C:\Users\</code></td>
+<td><code>/home/</code></td>
+</tr>
+<tr>
+<td>אותיות כונן (C:\, D:)</td>
+<td>הכל תחת <code>/</code></td>
+</tr>
+<tr>
+<td>Registry להגדרות</td>
+<td>קבצי תצורה בטקסט ב‑<code>/etc/</code></td>
+</tr>
+</tbody>
+</table>
+<p>לסיכום:</p>
+<ul>
+<li>הקבצים שלך נמצאים ב-/home/שם המשתמש  </li>
+<li>אתה יכול לקרוא את רוב הקבצים במערכת  </li>
+<li>תוכניות מאוחסנות בעיקר ב-/bin וב-/sbin  </li>
+<li>מבנה העץ הכללי שומר על עקביות  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <div style="text-align: center; padding: 1em;">
+  <img src="../assets/eng-logo.png.webp" alt="Data&Decisions" style="height: 50px; vertical-align: middle;">
+  <img src="/assets/Technion_EN-2.png" alt="Technion" style="height: 50px; vertical-align: middle;"> <br>
+      © 2025 Noam Cohen. Built with ❤️  and MkDocs.
+</div>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u05d4\u05d5\u05e2\u05ea\u05e7 \u05dc\u05dc\u05d5\u05d7", "clipboard.copy": "\u05d4\u05e2\u05ea\u05e7\u05d4 \u05dc\u05dc\u05d5\u05d7", "search.result.more.one": "\u05e2\u05d5\u05d3 \u05d0\u05d7\u05d3 \u05d1\u05d3\u05e3 \u05d4\u05d6\u05d4", "search.result.more.other": "\u05e2\u05d5\u05d3 # \u05d1\u05d3\u05e3 \u05d4\u05d6\u05d4", "search.result.none": "\u05d0\u05d9\u05df \u05de\u05e1\u05de\u05db\u05d9\u05dd \u05ea\u05d5\u05d0\u05de\u05d9\u05dd", "search.result.one": "\u05de\u05e1\u05de\u05da1 \u05ea\u05d5\u05d0\u05dd", "search.result.other": "# \u05de\u05e1\u05de\u05da \u05ea\u05d5\u05d0\u05dd", "search.result.placeholder": "\u05d9\u05e9 \u05dc\u05d4\u05e7\u05dc\u05d9\u05d3 \u05db\u05d3\u05d9 \u05dc\u05d4\u05ea\u05d7\u05d9\u05dc \u05dc\u05d7\u05e4\u05e9", "search.result.term.missing": "\u05d7\u05e1\u05e8", "select.version": "\u05d1\u05d7\u05d9\u05e8\u05ea \u05d2\u05e8\u05e1\u05d4"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

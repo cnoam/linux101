@@ -1,3 +1,199 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>./</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href=""/>
+        <xhtml:link rel="alternate" hreflang="he" href="he/"/>
+    </url>
+    <url>
+        <loc>summary/</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="summary/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="he/summary/"/>
+    </url>
+    <url>
+        <loc>01/ch_01/</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="01/ch_01/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="he/01/ch_01/"/>
+    </url>
+    <url>
+        <loc>01/virtual_machines/</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="01/virtual_machines/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="he/01/virtual_machines/"/>
+    </url>
+    <url>
+        <loc>02/ch_02/</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="02/ch_02/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="he/02/ch_02/"/>
+    </url>
+    <url>
+        <loc>02/terminal/</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="02/terminal/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="he/02/terminal/"/>
+    </url>
+    <url>
+        <loc>03/ch_03/</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="03/ch_03/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="he/03/ch_03/"/>
+    </url>
+    <url>
+        <loc>03/redirection/</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="03/redirection/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="he/03/redirection/"/>
+    </url>
+    <url>
+        <loc>04/ch_04/</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="04/ch_04/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="he/04/ch_04/"/>
+    </url>
+    <url>
+        <loc>05/ch_05/</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="05/ch_05/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="he/05/ch_05/"/>
+    </url>
+    <url>
+        <loc>06/ch_06/</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="06/ch_06/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="he/06/ch_06/"/>
+    </url>
+    <url>
+        <loc>08/ch_08/</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="08/ch_08/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="he/08/ch_08/"/>
+    </url>
+    <url>
+        <loc>regex/glob/</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="regex/glob/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="he/regex/glob/"/>
+    </url>
+    <url>
+        <loc>regex/regex/</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="regex/regex/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="he/regex/regex/"/>
+    </url>
+    <url>
+        <loc>he/</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="he" href="he/"/>
+        <xhtml:link rel="alternate" hreflang="en" href=""/>
+    </url>
+    <url>
+        <loc>he/summary/</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="he" href="he/summary/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="summary/"/>
+    </url>
+    <url>
+        <loc>he/01/ch_01/</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="he" href="he/01/ch_01/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="01/ch_01/"/>
+    </url>
+    <url>
+        <loc>he/01/virtual_machines/</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="he" href="he/01/virtual_machines/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="01/virtual_machines/"/>
+    </url>
+    <url>
+        <loc>he/02/ch_02/</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="he" href="he/02/ch_02/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="02/ch_02/"/>
+    </url>
+    <url>
+        <loc>he/02/terminal/</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="he" href="he/02/terminal/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="02/terminal/"/>
+    </url>
+    <url>
+        <loc>he/03/ch_03/</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="he" href="he/03/ch_03/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="03/ch_03/"/>
+    </url>
+    <url>
+        <loc>he/03/redirection/</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="he" href="he/03/redirection/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="03/redirection/"/>
+    </url>
+    <url>
+        <loc>he/04/ch_04/</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="he" href="he/04/ch_04/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="04/ch_04/"/>
+    </url>
+    <url>
+        <loc>he/05/ch_05/</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="he" href="he/05/ch_05/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="05/ch_05/"/>
+    </url>
+    <url>
+        <loc>he/06/ch_06/</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="he" href="he/06/ch_06/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="06/ch_06/"/>
+    </url>
+    <url>
+        <loc>he/08/ch_08/</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="he" href="he/08/ch_08/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="08/ch_08/"/>
+    </url>
+    <url>
+        <loc>he/regex/glob/</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="he" href="he/regex/glob/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="regex/glob/"/>
+    </url>
+    <url>
+        <loc>he/regex/regex/</loc>
+        <lastmod>2025-05-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="he" href="he/regex/regex/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="regex/regex/"/>
+    </url>
 </urlset>

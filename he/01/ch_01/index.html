@@ -1,0 +1,673 @@
+
+<!doctype html>
+<html lang="he" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../">
+      
+      
+        <link rel="next" href="../../02/ch_02/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
+    
+    
+      
+        <title>Chapter 01 - Linux Basics & CLI Course</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="rtl">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#01-wsl" class="md-skip">
+          לדלג לתוכן
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="כותרת עליונה">
+    <a href="../../" title="Linux Basics &amp; CLI Course" class="md-header__button md-logo" aria-label="Linux Basics & CLI Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Linux Basics & CLI Course
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 01
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="בחירת שפה">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../01/ch_01/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="he" class="md-select__link">
+              עברית
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ניווט" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="Linux Basics &amp; CLI Course" class="md-nav__button md-logo" aria-label="Linux Basics & CLI Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Linux Basics & CLI Course
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Chapter 01
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 01
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="תוכן העניינים">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      תוכן העניינים
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      שימוש במכונה וירטואלית (אל תדלג על זה!)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02/ch_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 02
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03/ch_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 03
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04/ch_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 04
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05/ch_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 05
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06/ch_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 06
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../07/ch_07.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 07
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/ch_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 08
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../09/ch_09.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 09
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../10/ch_10.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 10
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../11/ch_11.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 11
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="תוכן העניינים">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      תוכן העניינים
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      שימוש במכונה וירטואלית (אל תדלג על זה!)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p>👍</p>
+<h1 id="01-wsl">פרק 01 – מבוא ללינוקס ו-WSL<a class="headerlink" href="#01-wsl" title="Permanent link">&para;</a></h1>
+<p>בפרק זה נלמד:</p>
+<ul>
+<li>מהי מערכת הפעלה (OS)  </li>
+<li>היסטוריה של לינוקס  </li>
+<li>איך לינוקס מתחילה לפעול (מתחילת ההדלקה ועד למערכת רצה)  </li>
+</ul>
+<h2 id="_1">שימוש במכונה וירטואלית (אל תדלג על זה!)<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>במהלך הקורס נפעיל ולפעמים נשבור דברים. כדי להריץ בקלות, נשתמש בהמצאה קסומה: מחשב וירטואלי (שהוא בעצם תוכנה שרצה בתוך המחשב האמיתי שלך) שמריץ את מערכת ההפעלה לינוקס.<br />
+זה מאפשר לנו להריץ לינוקס בתוך Windows, וכשמשהו נשבר—לחזור למצב בטוח.<br />
+קרא <a href="../virtual_machines/">מכונות וירטואליות</a> וחזור לכאן.</p>
+<h1 id="_2">מתחילת ההדלקה ועד ללינוקס שרץ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<h2 id="_3">דרישה מוקדמת: שיעור "התקנת לינוקס אלפיין במכונה וירטואלית"<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>צפה ב-<a href="https://panoptotech.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=141815e4-0c6f-4176-b022-b2b000826174">🎥 הסרטון</a> בפנאופטו (זמין רק לחשבונות הטכניון) ונסה לשחזר אותו ב-VirtualBox.</p>
+<p>בואו נבחן את רצף הפעולות הזה:</p>
+<p><img alt="boot flow" src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*sjr7OoJ3xS5VZxoZ6_YF6w.png" /></p>
+<h2 id="_4">לסיכום:<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ol>
+<li>חומרת המחשב מתחילה להריץ קוד ב-<a href="https://en.wikipedia.org/wiki/BIOS">BIOS</a>.  </li>
+<li>תוכנית ה-BIOS מחפשת את רכיבי החומרה. זה יכול להשתנות בין האתחולים.  </li>
+<li>המשתמש מקבל אפשרות לבחור מאיפה לאתחל. כלומר, יכולים להיות מספר התקני אחסון (כמו דיסק קשיח ו-USB), ולכל אחד מהם מערכת הפעלה שונה.  </li>
+<li>ברוב המקרים השלב הזה מוסתר—הטעינה של התוכנית שנקראת "boot loader".  </li>
+<li>לבסוף, לינוקס מתחיל לפעול. קודם נטען את ה-<em>Kernel</em>. הוא מפעיל מספר שירותים (בסרטון הם המסומנים בכוכבית ירוקה).  </li>
+<li>כשה-kernel מוכן, הוא מפעיל את תהליך האם של כל קוד ה-<em>user</em> בלינוקס. תהליך זה נקרא לעיתים "init" ותמיד יש לו מזהה תהליך 1.  </li>
+<li>תהליך <em>init</em> מריץ את מה שמוגדר לו בקבצי התצורה. במקרה שלנו, הוא פותח טרמינל ומבקש התחברות. במקרים אחרים הוא עלול לרוץ בלי ממשק משתמש (כמו במכונת כביסה), או עם ממשק גרפי (למשל ב-Ubuntu Desktop).</li>
+</ol>
+<h1 id="_5">בדוק את עצמך<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
+<ol>
+<li>הסתכל על ההדפסות בשלב האתחול של Alpine. האם ניתן להסיר חלק מהשירותים (כלומר לא להפעיל אותם) אם אין גישה לאינטרנט? חפש את השמות באינטרנט—אין צורך לשנות בפועל את תהליך האתחול.  </li>
+<li><strong>מתקדם!</strong> מצא היכן אלפיין שומר את תצורת טעינת ה-kernel, ונסה להסיר חלקים. המטרה שלך היא לקצר את זמן האתחול למינימום.  <blockquote>
+<p><strong>TIP:</strong> בשלב מסוים תוכל/י להרוס את קובץ התצורה ואלפיין תיתקע באתחול. במקום לנסות לתקן (אין לך גישה לקבצים 😄), השתמש/י במנגנון ה-<a href="https://docs.oracle.com/en/virtualization/virtualbox/6.0/user/snapshots.html">Snapshot</a> של VirtualBox לפני שתתחיל/י לשבור את המערכת.</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="_6">מה זה לינוקס?<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p><strong>הגדרה ומקורות</strong><br />
+במקור היו מערכות Unix, שפותחו על-ידי חברות גדולות ועלו הרבה כסף. ב-1991, לינוקס טורוולדס התחיל פרויקט קטן: לכתוב מחדש את Unix כקוד פתוח, חופשי וזמין לכל.<br />
+לינוקס היא הן ה-kernel והן סט של תוכניות במרחב המשתמש (user space). נסביר מונחים אלו בהמשך.</p>
+<p>במהלך שנות ה-90 וה-2000, החלו להופיע הפצות גדולות של לינוקס, לכל אחת קהילה ומוקד משלה. <em>Debian</em> הדגישה יציבות וטוהר קוד פתוח, והייתה בסיס לרבות אחרות. <em>Red Hat</em> פנתה לארגונים עם תמיכה מקצועית. לאחר מכן, <em>Ubuntu</em> בנתה על Debian כדי ליצור חוויה ידידותית יותר, ולהנגיש את לינוקס לשולחנות עבודה ולשרתים.<br />
+הפצות אלו עזרו לתקן סטנדרטים בשימוש בלינוקס, להגדיל את ההפצה ולהעצים את המערכת האקולוגית המגוונת שאנו רואים כיום.</p>
+<h3 id="_7">השפעה על טכנולוגיה<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>השפעה על תשתיות שרתים, ענן וסביבות פיתוח.  </li>
+<li>לינוקס בכל מקום (למעט שולחנות העבודה שלך 😄): האינטרנט, התקני IoT, מחשבי־על, טלפוני אנדרואיד.</li>
+</ul>
+<h2 id="windows">לינוקס מול Windows: ההבדלים המרכזיים<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h2>
+<h3 id="_8">פילוסופיה עיקרית ועיצוב<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>לינוקס: קוד פתוח, קהילתי, ניתן להתאמה.  </li>
+<li>Windows: קניינית, מסחרית, חוויה אחידה למשתמש.</li>
+</ul>
+<h3 id="_9">ממשק משתמש וחוויה<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>GUI: מגוון סביבות שולחן עבודה בלינוקס לעומת חוויה אחידה ב-Windows.  </li>
+<li>שורת פקודה: הטרמינל בלינוקס הוא כלי חזק, כמעט זהה בכל ההפצות ושומר על תאימות לאורך שנים. ב-CMD/PowerShell ניתן לבצע חלק מהמשימות, אך העיקר הוא GUI שמשתנה לעיתים קרובות.</li>
+</ul>
+<h3 id="_10">ניהול תוכנה וחבילות<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p><strong>מנהל חבילות</strong>:<br />
+- מוריד תוכנה ממקורות מהימנים (repos)<br />
+- מתקין אותה עם כל התלויות<br />
+- מאפשר עדכון קל<br />
+- מאפשר הסרה בטוחה  </p>
+<ul>
+<li>בלינוקס: לכל הפצה יש מנהל חבילות משלה (APT, YUM, Pacman).  </li>
+<li>ב-Windows:  </li>
+<li>MSI installers – כל אחד יכול ליצור, ללא בדיקה.  </li>
+<li>Windows Store – מנהל חבילות, אך לא זכה לפופולריות. בשדרוג ל-Windows 11 שופר, אך עדיין רבות מהתוכניות לא זמינות שם.</li>
+</ul>
+<h3 id="_11">התאמה אישית<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>בלינוקס ניתן להתאים ולהוציא רכיבים לא רצויים, לכוונן פרמטרים (למשל רשת).  </li>
+<li>ב-Windows יש אפשרויות מוגבלות יותר, ותצורה פחות גמישה.</li>
+</ul>
+<h3 id="_12">מקרים ושימושים<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>לינוקס מנצחת בשרתים, סביבות פיתוח, מערכות משובצות.  </li>
+<li>Windows מובילה בשולחנות עבודה וארגונים.  </li>
+<li><strong>עלות ורישוי</strong>: לינוקס חופשית ונתמכת קהילתית; Windows דורשת רישוי מסחרי ולעיתים מנוי.</li>
+</ul>
+<blockquote>
+<p><strong>הערה:</strong> "לינוקס חופשית" פירושו שאין עלות עבור המערכת עצמה, אך ייתכן שתצטרכו לשלם על ייעוץ או תחזוקה—כמו Windows, ולעיתים אפילו יותר.</p>
+</blockquote>
+<h1 id="wsl">לסיום – מה זה WSL?<a class="headerlink" href="#wsl" title="Permanent link">&para;</a></h1>
+<p>WSL2 (Windows Subsystem for Linux 2) היא תכונה ב-Windows שמאפשרת להריץ סביבה מלאה של לינוקס <em>בתוך</em> Windows—בלי צורך במכונה וירטואלית מלאה .  </p>
+<p>WSL2 מריץ kernel אמיתי של לינוקס במכונה וירטואלית קלה (VM) באמצעות Hyper-V של מיקרוסופט. זה מביא תאימות משופרת, ביצועים טובים יותר (במיוחד Docker), ותמיכה בפעולות מורכבות יותר.  </p>
+<p>WSL2 משתלב היטב עם Windows— ניתן לגשת לקבצים שלך את הקבצים שלך (/mnt/c/Users/…), וניתן להריץ פקודות לינוקס משורת הפקודה של Windows (ולהיפך).  </p>
+<p>למפתחים שצריכים לינוקס ולא רוצים לעזוב את Windows  או שעובדים בשני העולמות, WSL2 מציע את הטוב משניהם. הוא מהיר, חינמי, ואינו דורש תוכנת וירטואליזציה כבדת משקל כמו VirtualBox או VMware. עם זאת, הוא אינו שולחן עבודה מלא—הוא פועל ב־headless command-line (אך ניתן להתקין ממשק גרפי במידת הצורך).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <div style="text-align: center; padding: 1em;">
+  <img src="../assets/eng-logo.png.webp" alt="Data&Decisions" style="height: 50px; vertical-align: middle;">
+  <img src="/assets/Technion_EN-2.png" alt="Technion" style="height: 50px; vertical-align: middle;"> <br>
+      © 2025 Noam Cohen. Built with ❤️  and MkDocs.
+</div>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u05d4\u05d5\u05e2\u05ea\u05e7 \u05dc\u05dc\u05d5\u05d7", "clipboard.copy": "\u05d4\u05e2\u05ea\u05e7\u05d4 \u05dc\u05dc\u05d5\u05d7", "search.result.more.one": "\u05e2\u05d5\u05d3 \u05d0\u05d7\u05d3 \u05d1\u05d3\u05e3 \u05d4\u05d6\u05d4", "search.result.more.other": "\u05e2\u05d5\u05d3 # \u05d1\u05d3\u05e3 \u05d4\u05d6\u05d4", "search.result.none": "\u05d0\u05d9\u05df \u05de\u05e1\u05de\u05db\u05d9\u05dd \u05ea\u05d5\u05d0\u05de\u05d9\u05dd", "search.result.one": "\u05de\u05e1\u05de\u05da1 \u05ea\u05d5\u05d0\u05dd", "search.result.other": "# \u05de\u05e1\u05de\u05da \u05ea\u05d5\u05d0\u05dd", "search.result.placeholder": "\u05d9\u05e9 \u05dc\u05d4\u05e7\u05dc\u05d9\u05d3 \u05db\u05d3\u05d9 \u05dc\u05d4\u05ea\u05d7\u05d9\u05dc \u05dc\u05d7\u05e4\u05e9", "search.result.term.missing": "\u05d7\u05e1\u05e8", "select.version": "\u05d1\u05d7\u05d9\u05e8\u05ea \u05d2\u05e8\u05e1\u05d4"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
