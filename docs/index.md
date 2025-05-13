@@ -10,9 +10,7 @@
 
 **TODO:**
 ```
-- spell check
 - should we have for each chapter a format [ objectives, contents, summary] ?
-- add explanation (somewhere) of env vars
 ```
 <hr>
 
@@ -61,6 +59,8 @@ Chapter 4<br>
 
 Chapter 5<br>
 [Basic Linux Commands ](./05/ch_05.md)
+
+Maybe put here the [Environment variables?](./02/env_vars.md)
 
 Chapter 6<Br>
 [Text Processing & Editing](./06/ch_06.md)
