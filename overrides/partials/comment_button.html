@@ -1,0 +1,24 @@
+<!-- {% if not config.dev_addr %} -->
+  <!-- only in production build; remove `if` if you want preview in serve -->
+<!-- {% endif %} -->
+<button id="open-comment" class="md-button md-button--primary">
+  📝 Send feedback
+</button>
+
+<div id="comment-modal" class="comment-modal">
+  <div class="comment-modal-content">
+       <h3>
+        Send feedback
+         {% if page and page.file %}
+           on<br><code>{{ page.file.src_path }}</code>
+         {% endif %}
+      </h3>
+
+
+    <textarea id="comment-text" placeholder="Type your comment here…"></textarea>
+    <div class="comment-buttons">
+      <button id="cancel-comment" class="md-button">Cancel</button>
+      <button id="send-comment" class="md-button md-button--primary">Send</button>
+    </div>
+  </div>
+</div>
