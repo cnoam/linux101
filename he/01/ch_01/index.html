@@ -45,6 +45,8 @@
       
     
     
+      <link rel="stylesheet" href="../../../css/comment.css">
+    
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -74,6 +76,7 @@
     </div>
     
     
+  
       
 
   
@@ -143,6 +146,29 @@
   
 </header>
     
+  <!--  -->
+<button id="open-comment" class="md-button md-button--primary">
+  📝 Send feedback
+</button>
+
+<div id="comment-modal" class="comment-modal">
+  <div class="comment-modal-content">
+       <h3>
+        Send feedback
+         
+           on<br><code>01/ch_01.he.md</code>
+         
+      </h3>
+
+
+    <textarea id="comment-text" placeholder="Type your comment here…"></textarea>
+    <div class="comment-buttons">
+      <button id="cancel-comment" class="md-button">Cancel</button>
+      <button id="send-comment" class="md-button md-button--primary">Send</button>
+    </div>
+  </div>
+</div>
+
     <div class="md-container" data-md-component="container">
       
       
@@ -387,100 +413,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../07/ch_07.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Chapter 07
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../08/ch_08/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Chapter 08
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../09/ch_09.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Chapter 09
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../10/ch_10.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Chapter 10
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../11/ch_11.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Chapter 11
     
   </span>
   
@@ -669,6 +607,8 @@
     
     
       <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../../js/comment.js"></script>
       
     
   </body>

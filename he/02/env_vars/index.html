@@ -1,0 +1,641 @@
+
+<!doctype html>
+<html lang="he" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cnoam.github.io/linux101/he/02/env_vars/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
+    
+    
+      
+        <title>Env vars - Linux Basics & CLI Course</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/comment.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="rtl">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#linux-environment-variables" class="md-skip">
+          לדלג לתוכן
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+  
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="כותרת עליונה">
+    <a href="../../" title="Linux Basics &amp; CLI Course" class="md-header__button md-logo" aria-label="Linux Basics & CLI Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Linux Basics & CLI Course
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Env vars
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="בחירת שפה">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../02/env_vars/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="he" class="md-select__link">
+              עברית
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+  </nav>
+  
+</header>
+    
+  <!--  -->
+<button id="open-comment" class="md-button md-button--primary">
+  📝 Send feedback
+</button>
+
+<div id="comment-modal" class="comment-modal">
+  <div class="comment-modal-content">
+       <h3>
+        Send feedback
+         
+           on<br><code>02/env_vars.md</code>
+         
+      </h3>
+
+
+    <textarea id="comment-text" placeholder="Type your comment here…"></textarea>
+    <div class="comment-buttons">
+      <button id="cancel-comment" class="md-button">Cancel</button>
+      <button id="send-comment" class="md-button md-button--primary">Send</button>
+    </div>
+  </div>
+</div>
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ניווט" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="Linux Basics &amp; CLI Course" class="md-nav__button md-logo" aria-label="Linux Basics & CLI Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Linux Basics & CLI Course
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01/ch_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 01
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 02
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03/ch_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 03
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04/ch_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 04
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05/ch_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 05
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06/ch_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 06
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/ch_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 08
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="תוכן העניינים">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      תוכן העניינים
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-an-environment-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is an Environment Variable?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p>👍</p>
+<h1 id="linux-environment-variables">Linux Environment Variables<a class="headerlink" href="#linux-environment-variables" title="Permanent link">&para;</a></h1>
+<h2 id="what-is-an-environment-variable">What is an Environment Variable?<a class="headerlink" href="#what-is-an-environment-variable" title="Permanent link">&para;</a></h2>
+<p>An <strong>environment variable</strong> is a named key-value pair that the operating system and any process running under it can use to configure behavior. When you launch a program, it inherits a copy of your shell’s environment — i.e. all the variables you’ve <strong>exported</strong> in your shell session.</p>
+<ul>
+<li>Stored in memory by the kernel and by each process in its own copy of the environment.</li>
+<li>Commonly used to tell programs where to find files, how to format output, which language to use, and so on.</li>
+</ul>
+<h1 id="using-env-vars">Using env vars<a class="headerlink" href="#using-env-vars" title="Permanent link">&para;</a></h1>
+<p>Environment variables are useful because they <em>decouple configuration from code</em>, allowing the same scripts or applications to run in different contexts simply by changing a few key-value pairs rather than editing source files.</p>
+<p>They let you override defaults (e.g. database URLs, API keys, file paths) on a per-environment basis (development, testing, production) without touching code, and they make it easy to share settings between a parent shell and all the processes it launches.</p>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<p>Your (python) script need to access a host server, using an API key. </p>
+<p>The host name can change, so you don't want to hardcode it in the file. </p>
+<p>The API key not only changes, but is secret, so you MUST NOT write it in the script.</p>
+<p>Here is how to use env vars for this:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">get_env_var</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Retrieve environment variable or exit with error if undefined or empty.&quot;&quot;&quot;</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">value</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: required environment variable &#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39; is not set or is empty.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">value</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Read and validate environment variables</span>
+    <span class="n">host</span> <span class="o">=</span> <span class="n">get_env_var</span><span class="p">(</span><span class="s2">&quot;HOST&quot;</span><span class="p">)</span>
+    <span class="n">api_key</span> <span class="o">=</span> <span class="n">get_env_var</span><span class="p">(</span><span class="s2">&quot;API_KEY&quot;</span><span class="p">)</span>
+
+    <span class="c1"># If we reach here, both HOST and API_KEY are defined and non-empty</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Connecting to </span><span class="si">{</span><span class="n">host</span><span class="si">}</span><span class="s2"> with provided API key…&quot;</span><span class="p">)</span>
+    <span class="c1"># …rest of your application logic…</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+
+<hr>
+
+<h2 id="shell-variables-vs-environment-variables">Shell Variables vs. Environment Variables<a class="headerlink" href="#shell-variables-vs-environment-variables" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A <strong>shell variable</strong> exists only in the shell where it’s defined.  </li>
+<li>An <strong>environment variable</strong> is a shell variable that has been marked for export, making it visible to any subprocess you launch.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Shell Variable</th>
+<th>Environment Variable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scope</td>
+<td>Current shell only</td>
+<td>Current shell + child processes</td>
+</tr>
+<tr>
+<td>Creation</td>
+<td><code>VAR=value</code></td>
+<td><code>export VAR=value</code></td>
+</tr>
+<tr>
+<td>Visibility to apps</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Persistence</td>
+<td>Lost on shell exit</td>
+<td>Lost on shell exit (unless in startup files)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exercise-what-variable-are-already-defined">💻 Exercise -- what variable are already defined?<a class="headerlink" href="#exercise-what-variable-are-already-defined" title="Permanent link">&para;</a></h3>
+<p>In a terminal (a shell): type <code>env</code>. This shows all the existing env vars. (see <a href="https://www.man7.org/linux/man-pages/man1/env.1.html">the man page</a>)</p>
+<h2 id="common-environment-variables">Common Environment Variables<a class="headerlink" href="#common-environment-variables" title="Permanent link">&para;</a></h2>
+<p>Here are a few you’ll see in almost every Linux system:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PATH</code></td>
+<td>Colon-separated list of directories in which to search for executables (e.g. <code>/usr/bin:/home/user/bin</code>)</td>
+</tr>
+<tr>
+<td><code>HOME</code></td>
+<td>Your user’s home directory (e.g. <code>/home/user</code>)</td>
+</tr>
+<tr>
+<td><code>USER</code></td>
+<td>Your login name</td>
+</tr>
+<tr>
+<td><code>SHELL</code></td>
+<td>The program that runs your shell (e.g. <code>/bin/bash</code>)</td>
+</tr>
+<tr>
+<td><code>LANG</code></td>
+<td>Default locale and character-set (e.g. <code>en_US.UTF-8</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>You can inspect all exported variables with:</p>
+<div class="codehilite"><pre><span></span><code>printenv
+<span class="c1"># or</span>
+env
+</code></pre></div>
+
+<h3 id="exercise-where-is-this-var-hiding">💻 Exercise -- where is this var hiding?<a class="headerlink" href="#exercise-where-is-this-var-hiding" title="Permanent link">&para;</a></h3>
+<p>open a terminal and create a new var:</p>
+<p><code>$ badmonky = 1</code> <br> (without the "$" sign. It is just to remind you that this is the shell prompt)<br>
+This will fail with <code>sh: badmonkey: not found</code> . Why?</p>
+<p>Now write it correctly: <code>badmonkey=1</code> and in the next line show it using <code>echo $badmonkey</code>.  Ok?</p>
+<p>This is a <em>shell variable</em>. It lives in the current shell and is <strong>not</strong> passed to subprocessess (program launched from this shell)</p>
+<p>To create an environment variable: <code>export badmonkey=1</code> . Now programs run from this shell will see it. </p>
+<p>What will happen when this shell is closed? try it!</p>
+<p>Write a program (myecho.sh) that will print the value of badmonkey:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="nv">$badmonkey</span>
+</code></pre></div>
+
+<p><code>chmod +x myecho.sh</code> and run it. surprised?</p>
+<h1 id="scope">Scope<a class="headerlink" href="#scope" title="Permanent link">&para;</a></h1>
+<p>In this line <code>badmonkey=22 command</code> , the variable is defined only for this line!</p>
+<p>in this line <code>badmonkey=33</code>, the variable is defined in the current shell, but not for subprocesses</p>
+<p>In this line <code>export badmonkey=44</code>, the variable is defined in the current shell, and for subprocesses. When the shell is closed, the variable is lost.</p>
+<p>If you want to keep an (env) var persistent, put it in a command file that will run <em>before</em> a shell is opened. See the file <code>.bashrc</code> that does exactly this.</p>
+<p>To unset an env var: <code>unset the-var-name</code>, e.g. <code>unset badmonkey</code> (without the "$" !)</p>
+<h1 id="undefined-vars">Undefined vars?<a class="headerlink" href="#undefined-vars" title="Permanent link">&para;</a></h1>
+<p>What happens if we reference undefined variable? </p>
+<p><strong>by default, undefined var is treated as empty string.</strong>
+so <code>echo $mycat</code> will simply print empty string.</p>
+<p>This behavior was defined in the previous millennium and is now considered BAD habit!</p>
+<h2 id="maybe-true-horror-story">Maybe True horror story<a class="headerlink" href="#maybe-true-horror-story" title="Permanent link">&para;</a></h2>
+<p>You run this script as root:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># bla bla</span>
+<span class="c1">#... more stuff to hide the next line</span>
+rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$SOURCE_FOLDER</span>/<span class="nv">$DATA_FOLDER</span>
+<span class="c1"># ... some more lines</span>
+</code></pre></div>
+
+<p>The <code>rm -rf</code> means "delete the file/path without questions, recursively"</p>
+<p>What happens if these env vars are not defined?
+(hint: don't try it on your computer): <code>rm -rf /</code></p>
+<p>How can you protect your script against such disaster?</p>
+<p>Add <code>set -u</code> which tells the shell to stop with an error if reading undefined var:</p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/sh -u</span>
+<span class="c1"># or </span>
+<span class="nb">set</span><span class="w"> </span>-u
+<span class="c1"># bla bla</span>
+<span class="c1">#... more stuff to hide the next line</span>
+rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$SOURCE_FOLDER</span>/<span class="nv">$DATA_FOLDER</span>
+<span class="c1"># ... some more lines</span>
+</code></pre></div>
+
+<p>PS: A variable can be defined and have empty value, so the above is not a complete guard.</p>
+<h1 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h1>
+<p>Environment variables provide a simple, standardized way to pass configuration and secret data to shells and applications without hard-coding values into scripts or source code.</p>
+<p>By exporting only the values that differ between environments - such as file paths, API endpoints, or credentials - you make your workflows more portable, secure, and maintainable.</p>
+<p>Shell variables let you customize the current shell session, while exporting them turns them into environment variables that child processes can inherit. Adopting best practices like <code>set -u</code>, quoting your expansions, and validating required variables at startup helps prevent silent failures.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <div style="text-align: center; padding: 1em;">
+  <img src="/assets/eng-logo.png.webp" alt="Data&Decisions" style="height: 50px; vertical-align: middle;">
+  <img src="/assets/Technion_EN-2.png" alt="Technion" style="height: 50px; vertical-align: middle;"> <br>
+  © 2025 Noam Cohen. Built with ❤️  and MkDocs.
+</div>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u05d4\u05d5\u05e2\u05ea\u05e7 \u05dc\u05dc\u05d5\u05d7", "clipboard.copy": "\u05d4\u05e2\u05ea\u05e7\u05d4 \u05dc\u05dc\u05d5\u05d7", "search.result.more.one": "\u05e2\u05d5\u05d3 \u05d0\u05d7\u05d3 \u05d1\u05d3\u05e3 \u05d4\u05d6\u05d4", "search.result.more.other": "\u05e2\u05d5\u05d3 # \u05d1\u05d3\u05e3 \u05d4\u05d6\u05d4", "search.result.none": "\u05d0\u05d9\u05df \u05de\u05e1\u05de\u05db\u05d9\u05dd \u05ea\u05d5\u05d0\u05de\u05d9\u05dd", "search.result.one": "\u05de\u05e1\u05de\u05da1 \u05ea\u05d5\u05d0\u05dd", "search.result.other": "# \u05de\u05e1\u05de\u05da \u05ea\u05d5\u05d0\u05dd", "search.result.placeholder": "\u05d9\u05e9 \u05dc\u05d4\u05e7\u05dc\u05d9\u05d3 \u05db\u05d3\u05d9 \u05dc\u05d4\u05ea\u05d7\u05d9\u05dc \u05dc\u05d7\u05e4\u05e9", "search.result.term.missing": "\u05d7\u05e1\u05e8", "select.version": "\u05d1\u05d7\u05d9\u05e8\u05ea \u05d2\u05e8\u05e1\u05d4"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../../js/comment.js"></script>
+      
+    
+  </body>
+</html>

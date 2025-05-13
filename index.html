@@ -43,6 +43,8 @@
       
     
     
+      <link rel="stylesheet" href="css/comment.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -72,6 +74,7 @@
     </div>
     
     
+  
       
 
   
@@ -141,6 +144,29 @@
   
 </header>
     
+  <!--  -->
+<button id="open-comment" class="md-button md-button--primary">
+  📝 Send feedback
+</button>
+
+<div id="comment-modal" class="comment-modal">
+  <div class="comment-modal-content">
+       <h3>
+        Send feedback
+         
+           on<br><code>index.md</code>
+         
+      </h3>
+
+
+    <textarea id="comment-text" placeholder="Type your comment here…"></textarea>
+    <div class="comment-buttons">
+      <button id="cancel-comment" class="md-button">Cancel</button>
+      <button id="send-comment" class="md-button md-button--primary">Send</button>
+    </div>
+  </div>
+</div>
+
     <div class="md-container" data-md-component="container">
       
       
@@ -344,100 +370,12 @@
   
   
     <li class="md-nav__item">
-      <a href="07/ch_07.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Chapter 07
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="08/ch_08/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Chapter 08
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="09/ch_09.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Chapter 09
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="10/ch_10.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Chapter 10
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="11/ch_11.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Chapter 11
     
   </span>
   
@@ -489,9 +427,7 @@
 </div>
 
 <p><strong>TODO:</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="o">-</span><span class="w"> </span><span class="n">spell</span><span class="w"> </span><span class="n">check</span>
-<span class="o">-</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">chapter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="n">objectives</span><span class="p">,</span><span class="w"> </span><span class="n">contents</span><span class="p">,</span><span class="w"> </span><span class="n">summary</span><span class="p">]</span><span class="w"> </span><span class="err">?</span>
-<span class="o">-</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="n">explanation</span><span class="w"> </span><span class="p">(</span><span class="n">somewhere</span><span class="p">)</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">env</span><span class="w"> </span><span class="n">vars</span>
+<div class="codehilite"><pre><span></span><code><span class="o">-</span><span class="w"> </span><span class="nv">should</span><span class="w"> </span><span class="nv">we</span><span class="w"> </span><span class="nv">have</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">each</span><span class="w"> </span><span class="nv">chapter</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">format</span><span class="w"> </span>[<span class="w"> </span><span class="nv">objectives</span>,<span class="w"> </span><span class="nv">contents</span>,<span class="w"> </span><span class="nv">summary</span>]<span class="w"> </span>?
 </code></pre></div>
 
 <hr>
@@ -530,6 +466,7 @@
 <a href="04/ch_04/">File Permissions and Ownership</a></p>
 <p>Chapter 5<br>
 <a href="05/ch_05/">Basic Linux Commands </a></p>
+<p>Maybe put here the <a href="02/env_vars/">Environment variables?</a></p>
 <p>Chapter 6<Br>
 <a href="06/ch_06/">Text Processing &amp; Editing</a></p>
 <p>Chapter 7<br>
@@ -586,6 +523,8 @@ Shell Scripting</p>
     
     
       <script src="assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="js/comment.js"></script>
       
     
   </body>

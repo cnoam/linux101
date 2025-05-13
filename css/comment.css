@@ -1,0 +1,63 @@
+/* docs/css/comment.css */
+
+/* The background overlay for the modal */
+.comment-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+/* The modal “sheet” itself */
+.comment-modal-content {
+  background: white;
+  max-width: 600px;      /* widened a bit for more space */
+  margin: 10% auto;
+  padding: 1.5rem;       /* extra padding */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Enlarge the “Send feedback” header button */
+#open-comment {
+  font-size: 1.0rem;       
+  padding: 0.75rem 1.5rem;  /* more clickable area */
+  position: relative;
+  top: 0.5rem;
+  right: 1rem;
+}
+
+/* Style for the textarea where comments are typed */
+#comment-text {
+  width: 100%;
+  height: 140px;         /* slightly taller */
+  margin: 0.75rem 0;
+  font-size: 1rem;       /* ensure readability */
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+/* Container for the modal’s footer buttons */
+.comment-buttons {
+  text-align: right;
+}
+
+/* Enlarge and space the modal’s Cancel/Send buttons */
+.comment-buttons .md-button {
+  font-size: 1.1rem;
+  padding: 0.6rem 1.2rem;
+  margin-left: 0.75rem;
+}
+
+/* Enlarge the modal title */
+.comment-modal-content h3 {
+  font-size: 1.5rem;        /* ~24px */
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
