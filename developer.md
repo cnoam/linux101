@@ -1,3 +1,7 @@
+This file contains Noam's comments during development.
+
+
+# Detect broken links
 2025-05-07
 
 To detect broken links in the MD files: "is there a tool that will recursively check each MD file for broken links"
@@ -10,7 +14,7 @@ cargo install lychee
 # check every .md in your tree
 lychee  chapters
 ```
-but cargo failed becuase it cannot find openssl lib 
+but cargo failed because it cannot find openssl lib 
 you need to `sudo apt install libssl-dev pkg-config`
 
 After build is finished:
@@ -35,19 +39,32 @@ then `mkdocs serve` and watch the magic.
 
 To create a static site (not as good looking as the served one): `mkdocks build`
 
+[NC 2025-05-15] : currently use venv with requirements.txt
+
 # git pre-commit hook
 always run the link checker before commit. 
 Copy the pre-commit file to .git/hooks. Make it executable
 
 
 # The web site
+
+To serve locally (it shows different output than the VScode preview):
+(don't forget `source venv/bin/activate`)
+
+ `mkdocs serve` 
 The site is hosted in github pages.
 When pushing a commit to github, it automatically updated the website (recreating it from scratch).
 
-https://cnoam.github.io/linux101/
+The `push` tries to build the site, but fails due to bad keys config.
+
+however, running `mkdocs gh-deploy --force` works ok.
+
+The output is at https://cnoam.github.io/linux101/
 
 <hr>
 
+
+# Translation to Hebrew
 [NC 2025-05-12] no matter what I did, gpt 4o failed badly: omitting words, paragraphs, links.
 
 how should I correctly tell you to perform exact translation, without summarization?
@@ -72,7 +89,8 @@ Key points to include:
 
 Optionally, “provide output as a downloadable MD file” if you need the file written for you.
 
-With that level of detail, the model will know you expect an exact, complete translation rather than a streamlined summary.
+---
+
 
 
 

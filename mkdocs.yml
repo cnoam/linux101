@@ -32,16 +32,16 @@ plugins:
         
 nav:
   - Home: index.md
-  - Chapter 01: 01/ch_01.md
-  - Chapter 02: 02/ch_02.md
-  - Chapter 03: 03/ch_03.md
-  - Chapter 04: 04/ch_04.md
-  - Chapter 05: 05/ch_05.md
-  - Chapter 06: 06/ch_06.md
+  - "01: Intro" : 01/ch_01.md
+  - "02: The file system": 02/ch_02.md
+  - "03: Working with files" : 03/ch_03.md
+  - "04: File permissions" : 04/ch_04.md
+  - "05: Basic command" : 05/ch_05.md
+  - "06: Text processing" : 06/ch_06.md
   #- Chapter 07: 07/ch_07.md
-  - Chapter 08: 08/ch_08.md
-  - Chapter 09: 09/ch_09.md
-  #- Chapter 10: 10/ch_10.md
+  - "08: User/groups" : 08/ch_08.md
+  - "09: Package management" : 09/ch_09.md
+  - "10: Networking" : 10/networking.md
   #- Chapter 11: 11/ch_11.md
 
 # Include image assets

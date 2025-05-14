@@ -3,6 +3,10 @@
 
 echo "🔍 Checking staged Markdown files for broken links with lychee..."
 
+echo "Allowing status 403"
+
+lychee_flags=(--accept 403 --no-progress)
+
 # Get list of staged .md files
 md_files=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.md$')
 
@@ -14,13 +18,12 @@ fi
 
 # Run lychee on staged files (relative to repo root)
 # Join files into a single line with quotes around each for safety
-file_args=$(printf '"%s" ' $md_files)
+file_args=($md_files)
 
-echo $file_args
+echo "${file_args[@]}"
 
-
-# Evaluate the command to preserve quoted paths
-eval lychee $file_args
+# run lychee with the specified flags
+lychee "${lychee_flags[@]}" "${file_args[@]}"
 status=$?
 
 if [ $status -ne 0 ]; then

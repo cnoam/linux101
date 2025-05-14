@@ -28,7 +28,6 @@ With these skills, you can confidently:
 To deepen your Linux knowledge, consider exploring:
 
 - **Shell scripting**: Automate tasks with loops, conditionals, and variables (`bash`, `sh`)
-- **Package management**: Install and manage software using `apt`, `yum`, or `dnf`
 - **Process management**: Understand `ps`, `top`, `kill`, background jobs, and signals
 - **Networking tools**: Use `ping`, `netstat`, `ss`, `curl`, `scp`, `rsync`
 - **Systemd and services**: Manage services with `systemctl`, understand boot processes
@@ -41,6 +40,33 @@ Free learning resources:
 - [OverTheWire Wargames](https://overthewire.org/wargames/) (for security-focused learning)
 
 ---
+
+## Is there a cheat sheet?
+Of course! nobody remembers all these strange command line args.
+[download and install from here](https://www.linode.com/docs/guides/linux-cheat-command/)
+
+Then you get the common options for commands:
+
+For example the `find` command:
+```
+~$ cheat find
+# To find files following symlinks (otherwise the symlinks are not followed):
+find -L . -type f
+
+# To find files by case-insensitive extension (ex: .jpg, .JPG, .jpG):
+find . -iname "*.jpg"
+
+# To find directories:
+find . -type d
+
+# To find files:
+find . -type f
+
+# To find files by octal permission:
+find . -type f -perm 777
+```
+and you can even add your own!
+
 
 ##  Major Topics We Did Not Cover
 
