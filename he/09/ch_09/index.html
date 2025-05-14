@@ -8,8 +8,10 @@
       
       
       
-        <link rel="canonical" href="https://cnoam.github.io/linux101/he/01/virtual_machines/">
+        <link rel="canonical" href="https://cnoam.github.io/linux101/he/09/ch_09/">
       
+      
+        <link rel="prev" href="../../08/ch_08/">
       
       
       
@@ -18,7 +20,7 @@
     
     
       
-        <title>Virtual machines - Linux Basics & CLI Course</title>
+        <title>Chapter 09 - Linux Basics & CLI Course</title>
       
     
     
@@ -62,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#chapter-9-package-management" class="md-skip">
           לדלג לתוכן
         </a>
       
@@ -99,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Virtual machines
+              Chapter 09
             
           </span>
         </div>
@@ -120,7 +122,7 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="../../../01/virtual_machines/" hreflang="en" class="md-select__link">
+            <a href="../../../09/ch_09/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -152,7 +154,7 @@
        <h3>
         Send feedback
          
-           on<br><code>01/virtual_machines.he.md</code>
+           on<br><code>09/ch_09.md</code>
          
       </h3>
 
@@ -226,7 +228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ch_01/" class="md-nav__link">
+      <a href="../../01/ch_01/" class="md-nav__link">
         
   
   
@@ -377,10 +379,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../09/ch_09/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Chapter 09
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -391,6 +415,101 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="תוכן העניינים">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      תוכן העניינים
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-updating-and-removing-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing, Updating, and Removing Software
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing, Updating, and Removing Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-package-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a package manager?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitations-of-package-managers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations of Package Managers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-use-apt-instead-of-dpkg" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Use apt Instead of dpkg?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why Use apt Instead of dpkg?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-installing-google-chrome-in-ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example --- installing Google Chrome in Ubuntu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-apt-advanced-packaging-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using apt – Advanced Packaging Tool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-install-htop" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Exercise -- install "htop"
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -422,37 +541,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#virtual-machine" class="md-nav__link">
+  <a href="#installing-updating-and-removing-software" class="md-nav__link">
     <span class="md-ellipsis">
-      מהי מכונה וירטואלית (Virtual Machine)?
+      Installing, Updating, and Removing Software
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      שני סוגים עיקריים של מכונות וירטואליות:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="שני סוגים עיקריים של מכונות וירטואליות:">
+    <nav class="md-nav" aria-label="Installing, Updating, and Removing Software">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-hypervisor-type-1-bare-metal" class="md-nav__link">
+  <a href="#what-is-a-package-manager" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Hypervisor Type 1 – "Bare Metal"
+      What is a package manager?
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-hypervisor-type-2-hosted" class="md-nav__link">
+  <a href="#limitations-of-package-managers" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Hypervisor Type 2 – "Hosted"
+      Limitations of Package Managers
     </span>
   </a>
   
@@ -464,11 +574,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#hypervisor-type-1-type-2" class="md-nav__link">
+  <a href="#why-use-apt-instead-of-dpkg" class="md-nav__link">
     <span class="md-ellipsis">
-      איור המדגים את ההבדל בין Hypervisor Type 1 ל-Type 2:
+      Why Use apt Instead of dpkg?
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Why Use apt Instead of dpkg?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-installing-google-chrome-in-ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example --- installing Google Chrome in Ubuntu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-apt-advanced-packaging-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using apt – Advanced Packaging Tool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-install-htop" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Exercise -- install "htop"
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -488,56 +631,140 @@
 
 
 
-<p>כדי להבין מה זה לינוקס[ ומה ההבדל בינו לwindows]  נסתכל קודם מהי מערכת הפעלה.</p>
-<h1 id="_1">מהי מערכת הפעלה?<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>מערכת הפעלה (OS) היא התוכנה הבסיסית המנהלת את חומרת המחשב ומספקת שירותים חיוניים לתוכניות מחשב. היא פועלת כגשר בין יישומי המשתמש לרכיבים הפיזיים כגון המעבד, הזיכרון ומכשירי האחסון. מערכת ההפעלה מקצה משאבים, מתזמנת מטלות ומבקרת התקנים היקפיים תוך הבטחת יציבות ואבטחת המערכת. היא מפשטת את מורכבות החומרה, ומאפשרת למשתמשים לבצע משימות ללא דאגה לפרטים הטכניים הבסיסיים. בנוסף, מערכת ההפעלה מציעה ממשק עקבי לפיתוח תוכנה ואינטראקציה עם המשתמש, ומאפשרת ריבוי משימות יעיל, ניהול תהליכים וטיפול בנתונים בסביבות מחשוב שונות. היא חיונית לשימוש יומיומי.</p>
-<p>האם אפשר להפעיל מחשב ללא מערכת הפעלה?
-כן . זה נקרא bare metal.
-במקרה זה כל העול של טיפול בחומרה נופל על המפתח.</p>
-<h3 id="virtual-machine">מהי מכונה וירטואלית (Virtual Machine)?<a class="headerlink" href="#virtual-machine" title="Permanent link">&para;</a></h3>
-<p>מכונה וירטואלית (VM) היא מערכת המדמה מחשב פיזי שלם בתוך מחשב אחר. ניתן להריץ עליה מערכות הפעלה שונות ולהריץ יישומים כאילו היו על מחשב נפרד. לדוגמה, בעזרת תוכנה כמו <strong>VirtualBox</strong>, ניתן להריץ לינוקס בתוך מחשב שמריץ ווינדוס, או ההפך.</p>
-<p>המכונה הווירטואלית משתמשת במשאבים של המחשב הפיזי – כמו מעבד, זיכרון ודיסק – אך היא מבודדת מהמערכת המארחת. זה מאפשר לבדוק תוכנות, להריץ סביבות שונות, או ללמוד על מערכות הפעלה – ללא סיכון למערכת הראשית.</p>
+<p>👍</p>
+<h1 id="chapter-9-package-management">Chapter 9: Package Management<a class="headerlink" href="#chapter-9-package-management" title="Permanent link">&para;</a></h1>
+<p>This chapter introduces the basics of managing software on a Linux system using command-line tools. You'll learn how to install, update, and remove software, as well as how to search for packages and manage services.</p>
+<h2 id="installing-updating-and-removing-software">Installing, Updating, and Removing Software<a class="headerlink" href="#installing-updating-and-removing-software" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-a-package-manager">What is a package manager?<a class="headerlink" href="#what-is-a-package-manager" title="Permanent link">&para;</a></h3>
+<p>A package manager is a system tool that automates the process of installing, upgrading, configuring, and removing software packages on a Linux system. It connects to online repositories to fetch software, ensures that all required dependencies are installed, and tracks which files belong to which package.</p>
+<p>Without a package manager, users would need to manually download software, resolve complex dependency chains, and handle updates by themselves—making system maintenance error-prone and time-consuming.</p>
+<h3 id="limitations-of-package-managers">Limitations of Package Managers<a class="headerlink" href="#limitations-of-package-managers" title="Permanent link">&para;</a></h3>
+<p>Despite their power, package managers have limitations. They depend on curated repositories, so software not officially packaged or updated there can lag behind or be unavailable. Conflicts may arise when mixing packages from different sources, or when manually modifying system files.</p>
+<p>Additionally, traditional package managers install system-wide software, making it difficult to manage per-user environments or multiple versions of the same tool—issues that newer tools like flatpak, snap, or language-specific managers (e.g., pip, npm) aim to address.</p>
+<p>In Debian (and derived distros such as Ubuntu and its variants), <code>apt</code> is the formal package manager, but any distro can use its own (or develop a new one!)</p>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Distribution</th>
+<th>Package Manager</th>
+<th>Format</th>
+<th>Example Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Debian/Ubuntu</td>
+<td><code>apt</code>, <code>dpkg</code></td>
+<td><code>.deb</code></td>
+<td><code>sudo apt install htop</code></td>
+</tr>
+<tr>
+<td>Fedora/Red Hat</td>
+<td><code>dnf</code>, <code>rpm</code></td>
+<td><code>.rpm</code></td>
+<td><code>sudo dnf install htop</code></td>
+</tr>
+<tr>
+<td>Arch Linux</td>
+<td><code>pacman</code></td>
+<td><code>.pkg.tar.zst</code></td>
+<td><code>sudo pacman -S htop</code></td>
+</tr>
+<tr>
+<td>Alpine Linux</td>
+<td><code>apk</code></td>
+<td><code>.apk</code></td>
+<td><code>apk add htop</code></td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h3 id="_2">שני סוגים עיקריים של מכונות וירטואליות:<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<h4 id="1-hypervisor-type-1-bare-metal">1. Hypervisor Type 1 – "Bare Metal"<a class="headerlink" href="#1-hypervisor-type-1-bare-metal" title="Permanent link">&para;</a></h4>
+<h2 id="why-use-apt-instead-of-dpkg">Why Use <code>apt</code> Instead of <code>dpkg</code>?<a class="headerlink" href="#why-use-apt-instead-of-dpkg" title="Permanent link">&para;</a></h2>
+<p>(This applies to Debian/Ubuntu). <br>
+While <code>dpkg</code> can install <code>.deb</code> files directly, it has important limitations. Consider these differences:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th><code>apt</code></th>
+<th><code>dpkg</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Resolves dependencies</td>
+<td>✅ Yes</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>Fetches packages from web</td>
+<td>✅ Yes</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>Can update all packages</td>
+<td>✅ Yes (<code>apt upgrade</code>)</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>Maintains package database</td>
+<td>✅ Yes</td>
+<td>✅ Yes (read-only)</td>
+</tr>
+<tr>
+<td>Safer for daily use</td>
+<td>✅ Yes</td>
+<td>⚠️ Expert use only</td>
+</tr>
+</tbody>
+</table>
+<p>If it requires other packages, dpkg will not install them. You’ll see errors like "dependency not satisfied".</p>
+<p>Recommended Approach:<br>
+Use <code>apt</code> whenever possible. It handles everything automatically and ensures your system remains in a consistent state.</p>
+<h3 id="example-installing-google-chrome-in-ubuntu">Example --- installing Google Chrome in Ubuntu<a class="headerlink" href="#example-installing-google-chrome-in-ubuntu" title="Permanent link">&para;</a></h3>
+<p>You want to install Chrome in you new Ubuntu machine. </p>
 <ul>
-<li>רץ ישירות על החומרה, בלי מערכת הפעלה מארחת.</li>
-<li>דוגמה: VMware ESXi, Microsoft Hyper-V (בשרתים).</li>
-<li>יעיל יותר, משמש בדאטה סנטרים.</li>
+<li>You cannot install using the GUI "App Center" because Chrome is not there -- not an open source.</li>
+<li>Also, Some packages are are simply not available in the distro's repositories. Specifically, this one is not.</li>
+<li>Use the least preferred method:<ul>
+<li>download the file from the site (Danger! Maybe this file is infected?)</li>
+<li><code>sudo dpkg -i google-chrome-stable_current_amd64.deb</code></li>
 </ul>
-<h4 id="2-hypervisor-type-2-hosted">2. Hypervisor Type 2 – "Hosted"<a class="headerlink" href="#2-hypervisor-type-2-hosted" title="Permanent link">&para;</a></h4>
+</li>
+</ul>
+<blockquote>
+<p>Note: Some programs can be installed using <code>apt</code> or from the author's site (e.g. Docker). The version stored in the Ubuntu repos (where apt is taking the files) is too old, so Docker recommends uninstalling them, and use the fresh version from their site.</p>
+</blockquote>
+<h3 id="using-apt-advanced-packaging-tool">Using <code>apt</code> – Advanced Packaging Tool<a class="headerlink" href="#using-apt-advanced-packaging-tool" title="Permanent link">&para;</a></h3>
 <ul>
-<li>רץ על גבי מערכת הפעלה קיימת.</li>
-<li>דוגמה: VirtualBox, VMware Workstation.</li>
-<li>פשוט לשימוש, מתאים למשתמשים אישיים ולפיתוח.</li>
+<li>
+<p><strong>Install a package</strong>:
+  <code>sudo apt install &lt;package-name&gt;</code></p>
+</li>
+<li>
+<p><strong>Remove a package</strong>:
+   <code>sudo apt remove &lt;package-name&gt;</code></p>
+</li>
+<li>
+<p><strong>Update the list of available packages</strong>:
+ <code>sudo apt update</code></p>
+</li>
 </ul>
-<hr />
-<h3 id="hypervisor-type-1-type-2">איור המדגים את ההבדל בין Hypervisor Type 1 ל-Type 2:<a class="headerlink" href="#hypervisor-type-1-type-2" title="Permanent link">&para;</a></h3>
-<p><img alt=" " src="https://miro.medium.com/v2/resize:fit:4800/format:webp/0*r7b1FbiZM3bdTZDf.png" /></p>
-<p>https://medium.com/@ravipatel.it/understanding-hypervisors-exploring-type-1-vs-type-2-and-full-vs-para-virtualization-71b4dad9abd9</p>
-<p>Now go and install VirtualBox on your computer.</p>
-<h1 id="installing-linux-in-virtualbox-3-alternatives">Installing Linux in VirtualBox: 3 alternatives<a class="headerlink" href="#installing-linux-in-virtualbox-3-alternatives" title="Permanent link">&para;</a></h1>
-<h2 id="watch-the-videos-alt1-alt2">Watch the videos (alt1, alt2)<a class="headerlink" href="#watch-the-videos-alt1-alt2" title="Permanent link">&para;</a></h2>
-<p>In these videos, we install two variants of linux (each in its own VM)</p>
-<p>The first one is installing "linux lite" which has a GUI. It is pre-installed on a (virtual hard disk), so all we have to do is create the machine, and connect the hard disk. See it <a href="https://panoptotech.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=98ca8b22-12aa-497e-b254-b2b000826174">🎥 here</a></p>
-<p>The second is "installing alpine linux" which is a tiny, no GUI version of linux. We create a machine as before, and then follow all the steps until there is an installed linux!
-<br>This be used later, so don't skip!  See it <a href="https://panoptotech.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0e2f5dde-03a0-4a7e-bd73-b2b000826177">🎥 here</a></p>
-<h2 id="or-take-the-shortcut-alt3">or, Take the shortcut (alt3)<a class="headerlink" href="#or-take-the-shortcut-alt3" title="Permanent link">&para;</a></h2>
-<p>Follow the instructions in <a href="../../../01/using_VirtualBox_linux.pdf">Installing Linux in VirtualBox in 3 steps</a></p>
-<p><br><br></p>
-<h1 id="snapshots-how-to-go-back-to-a-good-state">Snapshots -- how to go back to a good state<a class="headerlink" href="#snapshots-how-to-go-back-to-a-good-state" title="Permanent link">&para;</a></h1>
-<p>VirtualBox snapshots are useful because they let you save the exact state of a virtual machine, including:</p>
-<ul>
-<li>Disk contents</li>
-<li>Memory (RAM) configuration</li>
-<li>Settings</li>
-</ul>
-<p>This means you can:</p>
-<p>🕒 Go back in time — If something breaks (like a misconfigured boot file), you can quickly revert to the last working state.</p>
-<p>🧪 Experiment safely — Try changes without fear. If it fails, restore the snapshot.</p>
-<p>💡 Fast recovery — No need to reinstall or reconfigure your system.</p>
-<p>In short: Snapshots = undo button for your VM.</p>
-<p><a href="https://docs.oracle.com/en/virtualization/virtualbox/6.0/user/snapshots.html"><strong>snapshot in Oracle site</strong></a></p>
+<h3 id="exercise-install-htop">💻 Exercise -- install "htop"<a class="headerlink" href="#exercise-install-htop" title="Permanent link">&para;</a></h3>
+<p>htop is a program to show the top processes running. It has nicer UI than <code>top</code>.</p>
+<p>Install with <code>sudo apt install htop</code></p>
+<p>run: <code>htop</code></p>
+<p>Uninstall with <code>sudo apt remove htop</code></p>
+<p>This will (obviously!) work in Ubuntu system which uses apt.</p>
+<p>How would you install it in Alpine?<br>
+You guessed it: login as root, and <code>apk add htop</code></p>
+<hr>
+
+<h1 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h1>
+<p>In summary, package managers are essential tools for maintaining a Linux system efficiently and safely.</p>
+<p>They simplify software installation, automate dependency handling, and help keep systems consistent and up to date. While each Linux distribution has its own preferred tool - like <code>apt</code> on Ubuntu or <code>apk</code> on Alpine - the core ideas remain the same. </p>
+<p>Understanding both the power and the limitations of package managers prepares you to troubleshoot issues, choose appropriate tools, and safely extend your system with new software.</p>
 
 
 

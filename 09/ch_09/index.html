@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://cnoam.github.io/linux101/08/ch_08/">
+        <link rel="canonical" href="https://cnoam.github.io/linux101/09/ch_09/">
       
       
-        <link rel="prev" href="../../06/ch_06/">
+        <link rel="prev" href="../../08/ch_08/">
       
-      
-        <link rel="next" href="../../09/ch_09/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +20,7 @@
     
     
       
-        <title>Chapter 08 - Linux Basics & CLI Course</title>
+        <title>Chapter 09 - Linux Basics & CLI Course</title>
       
     
     
@@ -66,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-8-users-groups-permissions" class="md-skip">
+        <a href="#chapter-9-package-management" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chapter 08
+              Chapter 09
             
           </span>
         </div>
@@ -130,7 +128,7 @@
           </li>
         
           <li class="md-select__item">
-            <a href="../../he/08/ch_08/" hreflang="he" class="md-select__link">
+            <a href="../../he/09/ch_09/" hreflang="he" class="md-select__link">
               עברית
             </a>
           </li>
@@ -156,7 +154,7 @@
        <h3>
         Send feedback
          
-           on<br><code>08/ch_08.md</code>
+           on<br><code>09/ch_09.md</code>
          
       </h3>
 
@@ -359,6 +357,28 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/ch_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 08
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -376,7 +396,7 @@
   
   
   <span class="md-ellipsis">
-    Chapter 08
+    Chapter 09
     
   </span>
   
@@ -389,7 +409,7 @@
   
   
   <span class="md-ellipsis">
-    Chapter 08
+    Chapter 09
     
   </span>
   
@@ -412,28 +432,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objectives" class="md-nav__link">
+  <a href="#installing-updating-and-removing-software" class="md-nav__link">
     <span class="md-ellipsis">
-      Objectives
+      Installing, Updating, and Removing Software
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing, Updating, and Removing Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-package-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a package manager?
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#user-accounts" class="md-nav__link">
-    <span class="md-ellipsis">
-      User Accounts
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="User Accounts">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-root-user" class="md-nav__link">
+  <a href="#limitations-of-package-managers" class="md-nav__link">
     <span class="md-ellipsis">
-      The Root User
+      Limitations of Package Managers
     </span>
   </a>
   
@@ -445,64 +465,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#listing-users-and-groups" class="md-nav__link">
+  <a href="#why-use-apt-instead-of-dpkg" class="md-nav__link">
     <span class="md-ellipsis">
-      Listing Users and Groups
+      Why Use apt Instead of dpkg?
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#addingremoving-users" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adding/removing users
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#managing-permissions-recap" class="md-nav__link">
-    <span class="md-ellipsis">
-      Managing Permissions (Recap)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercise" class="md-nav__link">
-    <span class="md-ellipsis">
-      💻 Exercise
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="💻 Exercise">
+    <nav class="md-nav" aria-label="Why Use apt Instead of dpkg?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-change-your-password" class="md-nav__link">
+  <a href="#example-installing-google-chrome-in-ubuntu" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Change Your Password
+      Example --- installing Google Chrome in Ubuntu
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-create-a-new-group-and-add-a-user" class="md-nav__link">
+  <a href="#using-apt-advanced-packaging-tool" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Create a New Group and Add a User
+      Using apt – Advanced Packaging Tool
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-test-file-permissions-by-group" class="md-nav__link">
+  <a href="#exercise-install-htop" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Test File Permissions by Group
+      💻 Exercise -- install "htop"
     </span>
   </a>
   
@@ -517,28 +510,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../09/ch_09/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Chapter 09
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -570,28 +541,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objectives" class="md-nav__link">
+  <a href="#installing-updating-and-removing-software" class="md-nav__link">
     <span class="md-ellipsis">
-      Objectives
+      Installing, Updating, and Removing Software
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing, Updating, and Removing Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-package-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a package manager?
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#user-accounts" class="md-nav__link">
-    <span class="md-ellipsis">
-      User Accounts
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="User Accounts">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-root-user" class="md-nav__link">
+  <a href="#limitations-of-package-managers" class="md-nav__link">
     <span class="md-ellipsis">
-      The Root User
+      Limitations of Package Managers
     </span>
   </a>
   
@@ -603,64 +574,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#listing-users-and-groups" class="md-nav__link">
+  <a href="#why-use-apt-instead-of-dpkg" class="md-nav__link">
     <span class="md-ellipsis">
-      Listing Users and Groups
+      Why Use apt Instead of dpkg?
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#addingremoving-users" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adding/removing users
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#managing-permissions-recap" class="md-nav__link">
-    <span class="md-ellipsis">
-      Managing Permissions (Recap)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercise" class="md-nav__link">
-    <span class="md-ellipsis">
-      💻 Exercise
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="💻 Exercise">
+    <nav class="md-nav" aria-label="Why Use apt Instead of dpkg?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-change-your-password" class="md-nav__link">
+  <a href="#example-installing-google-chrome-in-ubuntu" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Change Your Password
+      Example --- installing Google Chrome in Ubuntu
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-create-a-new-group-and-add-a-user" class="md-nav__link">
+  <a href="#using-apt-advanced-packaging-tool" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Create a New Group and Add a User
+      Using apt – Advanced Packaging Tool
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-test-file-permissions-by-group" class="md-nav__link">
+  <a href="#exercise-install-htop" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Test File Permissions by Group
+      💻 Exercise -- install "htop"
     </span>
   </a>
   
@@ -687,124 +631,140 @@
 
 
 
-<h1 id="chapter-8-users-groups-permissions">Chapter 8: Users, Groups &amp; Permissions<a class="headerlink" href="#chapter-8-users-groups-permissions" title="Permanent link">&para;</a></h1>
-<h2 id="objectives">Objectives<a class="headerlink" href="#objectives" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Understand how Linux identifies users and groups</li>
-<li>Learn where user/group info is stored</li>
-<li>Know how to view your identity and modify group memberships</li>
-<li>Apply permissions knowledge from earlier chapters to real-world user setups</li>
-</ul>
+<p>👍</p>
+<h1 id="chapter-9-package-management">Chapter 9: Package Management<a class="headerlink" href="#chapter-9-package-management" title="Permanent link">&para;</a></h1>
+<p>This chapter introduces the basics of managing software on a Linux system using command-line tools. You'll learn how to install, update, and remove software, as well as how to search for packages and manage services.</p>
+<h2 id="installing-updating-and-removing-software">Installing, Updating, and Removing Software<a class="headerlink" href="#installing-updating-and-removing-software" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-a-package-manager">What is a package manager?<a class="headerlink" href="#what-is-a-package-manager" title="Permanent link">&para;</a></h3>
+<p>A package manager is a system tool that automates the process of installing, upgrading, configuring, and removing software packages on a Linux system. It connects to online repositories to fetch software, ensures that all required dependencies are installed, and tracks which files belong to which package.</p>
+<p>Without a package manager, users would need to manually download software, resolve complex dependency chains, and handle updates by themselves—making system maintenance error-prone and time-consuming.</p>
+<h3 id="limitations-of-package-managers">Limitations of Package Managers<a class="headerlink" href="#limitations-of-package-managers" title="Permanent link">&para;</a></h3>
+<p>Despite their power, package managers have limitations. They depend on curated repositories, so software not officially packaged or updated there can lag behind or be unavailable. Conflicts may arise when mixing packages from different sources, or when manually modifying system files.</p>
+<p>Additionally, traditional package managers install system-wide software, making it difficult to manage per-user environments or multiple versions of the same tool—issues that newer tools like flatpak, snap, or language-specific managers (e.g., pip, npm) aim to address.</p>
+<p>In Debian (and derived distros such as Ubuntu and its variants), <code>apt</code> is the formal package manager, but any distro can use its own (or develop a new one!)</p>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Distribution</th>
+<th>Package Manager</th>
+<th>Format</th>
+<th>Example Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Debian/Ubuntu</td>
+<td><code>apt</code>, <code>dpkg</code></td>
+<td><code>.deb</code></td>
+<td><code>sudo apt install htop</code></td>
+</tr>
+<tr>
+<td>Fedora/Red Hat</td>
+<td><code>dnf</code>, <code>rpm</code></td>
+<td><code>.rpm</code></td>
+<td><code>sudo dnf install htop</code></td>
+</tr>
+<tr>
+<td>Arch Linux</td>
+<td><code>pacman</code></td>
+<td><code>.pkg.tar.zst</code></td>
+<td><code>sudo pacman -S htop</code></td>
+</tr>
+<tr>
+<td>Alpine Linux</td>
+<td><code>apk</code></td>
+<td><code>.apk</code></td>
+<td><code>apk add htop</code></td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="user-accounts">User Accounts<a class="headerlink" href="#user-accounts" title="Permanent link">&para;</a></h2>
-<p>Every process in Linux runs under a <strong>user identity</strong>. To check yours:</p>
-<div class="codehilite"><pre><span></span><code>whoami
-</code></pre></div>
-
-<p>To see detailed information about yourself:</p>
-<div class="codehilite"><pre><span></span><code>id
-</code></pre></div>
-
-<p>Example output:</p>
-<div class="codehilite"><pre><span></span><code>uid=1000(noam) gid=1000(noam) groups=1000(noam),27(sudo)
-</code></pre></div>
-
+<h2 id="why-use-apt-instead-of-dpkg">Why Use <code>apt</code> Instead of <code>dpkg</code>?<a class="headerlink" href="#why-use-apt-instead-of-dpkg" title="Permanent link">&para;</a></h2>
+<p>(This applies to Debian/Ubuntu). <br>
+While <code>dpkg</code> can install <code>.deb</code> files directly, it has important limitations. Consider these differences:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th><code>apt</code></th>
+<th><code>dpkg</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Resolves dependencies</td>
+<td>✅ Yes</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>Fetches packages from web</td>
+<td>✅ Yes</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>Can update all packages</td>
+<td>✅ Yes (<code>apt upgrade</code>)</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>Maintains package database</td>
+<td>✅ Yes</td>
+<td>✅ Yes (read-only)</td>
+</tr>
+<tr>
+<td>Safer for daily use</td>
+<td>✅ Yes</td>
+<td>⚠️ Expert use only</td>
+</tr>
+</tbody>
+</table>
+<p>If it requires other packages, dpkg will not install them. You’ll see errors like "dependency not satisfied".</p>
+<p>Recommended Approach:<br>
+Use <code>apt</code> whenever possible. It handles everything automatically and ensures your system remains in a consistent state.</p>
+<h3 id="example-installing-google-chrome-in-ubuntu">Example --- installing Google Chrome in Ubuntu<a class="headerlink" href="#example-installing-google-chrome-in-ubuntu" title="Permanent link">&para;</a></h3>
+<p>You want to install Chrome in you new Ubuntu machine. </p>
 <ul>
-<li><code>uid</code> = User ID  </li>
-<li><code>gid</code> = Primary group ID  </li>
-<li><code>groups</code> = All groups this user belongs to</li>
+<li>You cannot install using the GUI "App Center" because Chrome is not there -- not an open source.</li>
+<li>Also, Some packages are are simply not available in the distro's repositories. Specifically, this one is not.</li>
+<li>Use the least preferred method:<ul>
+<li>download the file from the site (Danger! Maybe this file is infected?)</li>
+<li><code>sudo dpkg -i google-chrome-stable_current_amd64.deb</code></li>
 </ul>
-<p>To change your own password:</p>
-<div class="codehilite"><pre><span></span><code>passwd
-</code></pre></div>
-
+</li>
+</ul>
 <blockquote>
-<p>⚠️ You may be prompted for your current password. Only works for your own account.</p>
+<p>Note: Some programs can be installed using <code>apt</code> or from the author's site (e.g. Docker). The version stored in the Ubuntu repos (where apt is taking the files) is too old, so Docker recommends uninstalling them, and use the fresh version from their site.</p>
 </blockquote>
-<h3 id="the-root-user">The Root User<a class="headerlink" href="#the-root-user" title="Permanent link">&para;</a></h3>
-<p>The <strong>root</strong> user is the superuser in Linux, with <strong>unrestricted access</strong> to all files, commands, and system resources. This is the user to use for adminsistrative tasks such as installing programs.</p>
+<h3 id="using-apt-advanced-packaging-tool">Using <code>apt</code> – Advanced Packaging Tool<a class="headerlink" href="#using-apt-advanced-packaging-tool" title="Permanent link">&para;</a></h3>
 <ul>
-<li>UID of root is always <code>0</code>.</li>
-<li>Can modify other users, install software, and override permission checks.</li>
+<li>
+<p><strong>Install a package</strong>:
+  <code>sudo apt install &lt;package-name&gt;</code></p>
+</li>
+<li>
+<p><strong>Remove a package</strong>:
+   <code>sudo apt remove &lt;package-name&gt;</code></p>
+</li>
+<li>
+<p><strong>Update the list of available packages</strong>:
+ <code>sudo apt update</code></p>
+</li>
 </ul>
-<p>Use root powers sparingly. A common practice is to run privileged commands using <code>sudo</code>: (stands for "super-user do")</p>
-<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>some-command
-</code></pre></div>
+<h3 id="exercise-install-htop">💻 Exercise -- install "htop"<a class="headerlink" href="#exercise-install-htop" title="Permanent link">&para;</a></h3>
+<p>htop is a program to show the top processes running. It has nicer UI than <code>top</code>.</p>
+<p>Install with <code>sudo apt install htop</code></p>
+<p>run: <code>htop</code></p>
+<p>Uninstall with <code>sudo apt remove htop</code></p>
+<p>This will (obviously!) work in Ubuntu system which uses apt.</p>
+<p>How would you install it in Alpine?<br>
+You guessed it: login as root, and <code>apk add htop</code></p>
+<hr>
 
-<p>Only users in the <code>sudo</code> group can do this.  This means that you may have an account on a computer <em>without</em> the ability to be root.</p>
-<h2 id="listing-users-and-groups">Listing Users and Groups<a class="headerlink" href="#listing-users-and-groups" title="Permanent link">&para;</a></h2>
-<p>All user information is stored in <code>/etc/passwd</code>:</p>
-<p>ℹ️ Historically, (encrypted) passwords of users were stored in this file, hence the name.</p>
-<div class="codehilite"><pre><span></span><code>cat<span class="w"> </span>/etc/passwd<span class="w"> </span><span class="p">|</span><span class="w"> </span>less
-</code></pre></div>
-
-<p>Each line looks like:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">noam</span><span class="o">:</span><span class="n">x</span><span class="o">:</span><span class="mi">1000</span><span class="o">:</span><span class="mi">1000</span><span class="o">:</span><span class="n">Noam</span><span class="w"> </span><span class="n">Cohen</span><span class="o">,,,:/</span><span class="n">home</span><span class="sr">/noam:/bin/</span><span class="n">bash</span>
-</code></pre></div>
-
-<p>The fields are:</p>
-<ul>
-<li>Username</li>
-<li>Encrypted password placeholder</li>
-<li>User ID (UID)</li>
-<li>Group ID (GID)</li>
-<li>Description</li>
-<li>Home directory</li>
-<li>Login shell</li>
-</ul>
-<p>To list all groups:</p>
-<div class="codehilite"><pre><span></span><code>cat<span class="w"> </span>/etc/group<span class="w"> </span><span class="p">|</span><span class="w"> </span>less
-</code></pre></div>
-
-<p>Each line looks like:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">sudo</span><span class="o">:</span><span class="n">x</span><span class="o">:</span><span class="mi">27</span><span class="o">:</span><span class="n">noam</span>
-</code></pre></div>
-
-<p>ℹ️ Try <code>man group</code>. </p>
-<h2 id="addingremoving-users">Adding/removing users<a class="headerlink" href="#addingremoving-users" title="Permanent link">&para;</a></h2>
-<p>Obviously, only user root can do <code>adduser</code> and <code>deluser</code></p>
-<h2 id="managing-permissions-recap">Managing Permissions (Recap)<a class="headerlink" href="#managing-permissions-recap" title="Permanent link">&para;</a></h2>
-<p>File and directory access in Linux is based on:
-- Owner
-- Group
-- Others</p>
-<p>Use <code>ls -l</code> to view permissions:</p>
-<div class="codehilite"><pre><span></span><code>-rw-r--r-- 1 noam noam 1234 May 1  file.txt
-</code></pre></div>
-
-<p>From earlier chapters, recall:
-- <code>chmod</code> — change permission bits<br />
-- <code>chown</code> — change ownership<br />
-- <code>chgrp</code> — change group ownership</p>
-<h2 id="exercise">💻 Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
-<h3 id="1-change-your-password">1. Change Your Password<a class="headerlink" href="#1-change-your-password" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>passwd
-</code></pre></div>
-
-<p>Try this now and note how many characters are accepted (even though they don't echo to the screen).</p>
-<h3 id="2-create-a-new-group-and-add-a-user">2. Create a New Group and Add a User<a class="headerlink" href="#2-create-a-new-group-and-add-a-user" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p>You'll need <code>sudo</code> privileges.</p>
-</blockquote>
-<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>groupadd<span class="w"> </span>mygroup
-sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>mygroup<span class="w"> </span><span class="nv">$USER</span>
-</code></pre></div>
-
-<p>ℹ️  The <code>$USER</code> is an environment variable holding the name of the current user. Using this variable allows for writing general scripts that will work for all users.</p>
-<p>Then <strong>log out and back in</strong> for the group membership to take effect.</p>
-<p>Check your group list:</p>
-<div class="codehilite"><pre><span></span><code>groups
-</code></pre></div>
-
-<p>You should see <code>mygroup</code> listed.</p>
-<h3 id="3-test-file-permissions-by-group">3.  Test File Permissions by Group<a class="headerlink" href="#3-test-file-permissions-by-group" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>mkdir<span class="w"> </span>shared-folder
-sudo<span class="w"> </span>chgrp<span class="w"> </span>mygroup<span class="w"> </span>shared-folder
-chmod<span class="w"> </span>g+rw<span class="w"> </span>shared-folder
-</code></pre></div>
-
-<p>ℹ️ the <code>sudo</code> is needed here since only group members may add files to a group (a safety measure), and you might not yet be in this group.</p>
-<p>This lets all users in <code>mygroup</code> read/write the folder, without affecting the permissions of Owner and Other.</p>
+<h1 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h1>
+<p>In summary, package managers are essential tools for maintaining a Linux system efficiently and safely.</p>
+<p>They simplify software installation, automate dependency handling, and help keep systems consistent and up to date. While each Linux distribution has its own preferred tool - like <code>apt</code> on Ubuntu or <code>apk</code> on Alpine - the core ideas remain the same. </p>
+<p>Understanding both the power and the limitations of package managers prepares you to troubleshoot issues, choose appropriate tools, and safely extend your system with new software.</p>
 
 
 
