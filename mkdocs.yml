@@ -25,6 +25,9 @@ plugins:
         - locale: he
           name: עברית
           build: true
+        # - locale: ar
+        #   name: العربية
+        #   build: true
 
         
 nav:
@@ -37,7 +40,7 @@ nav:
   - Chapter 06: 06/ch_06.md
   #- Chapter 07: 07/ch_07.md
   - Chapter 08: 08/ch_08.md
-  #- Chapter 09: 09/ch_09.md
+  - Chapter 09: 09/ch_09.md
   #- Chapter 10: 10/ch_10.md
   #- Chapter 11: 11/ch_11.md
 

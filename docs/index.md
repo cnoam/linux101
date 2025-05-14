@@ -3,11 +3,6 @@
 
 # Linux: a self paced course for complete beginners
 
-<div style="text-align: center; padding: 1em;">
-  <img src="/assets/eng-logo.png.webp" alt="Data&Decisions" style="height: 50px; vertical-align: middle;">
-  <img src="/assets/Technion_EN-2.png" alt="Technion" style="height: 50px; vertical-align: middle;">
-</div>
-
 **TODO:**
 ```
 - should we have for each chapter a format [ objectives, contents, summary] ?
@@ -72,7 +67,7 @@ Chapter 8<br>
 [Users, Groups & Permissions](./08/ch_08.md) 
 
 Chapter 9<br>
-Package Management
+[Package Management](./09/ch_09.md)
 
 Chapter 10<br>
 Networking & Remote Access
