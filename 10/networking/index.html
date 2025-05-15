@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://cnoam.github.io/linux101/09/ch_09/">
+        <link rel="canonical" href="https://cnoam.github.io/linux101/10/networking/">
       
       
-        <link rel="prev" href="../../08/ch_08/">
+        <link rel="prev" href="../../09/ch_09/">
       
-      
-        <link rel="next" href="../../10/networking/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +20,7 @@
     
     
       
-        <title>09: Package management - Linux Basics & CLI Course</title>
+        <title>10: Networking - Linux Basics & CLI Course</title>
       
     
     
@@ -66,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-9-package-management" class="md-skip">
+        <a href="#chapter-10-networking-remote-access" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              09: Package management
+              10: Networking
             
           </span>
         </div>
@@ -130,7 +128,7 @@
           </li>
         
           <li class="md-select__item">
-            <a href="../../he/09/ch_09/" hreflang="he" class="md-select__link">
+            <a href="../../he/10/networking/" hreflang="he" class="md-select__link">
               עברית
             </a>
           </li>
@@ -156,7 +154,7 @@
        <h3>
         Send feedback
          
-           on<br><code>09/ch_09.md</code>
+           on<br><code>10/networking.md</code>
          
       </h3>
 
@@ -381,6 +379,28 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../../09/ch_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    09: Package management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -398,7 +418,7 @@
   
   
   <span class="md-ellipsis">
-    09: Package management
+    10: Networking
     
   </span>
   
@@ -411,7 +431,7 @@
   
   
   <span class="md-ellipsis">
-    09: Package management
+    10: Networking
     
   </span>
   
@@ -434,28 +454,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installing-updating-and-removing-software" class="md-nav__link">
+  <a href="#checking-network-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing, Updating, and Removing Software
+      Checking Network Settings
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Installing, Updating, and Removing Software">
+    <nav class="md-nav" aria-label="Checking Network Settings">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#what-is-a-package-manager" class="md-nav__link">
+  <a href="#ip-a-view-network-interfaces" class="md-nav__link">
     <span class="md-ellipsis">
-      What is a package manager?
+      ip a – View Network Interfaces
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#limitations-of-package-managers" class="md-nav__link">
+  <a href="#ping-check-network-reachability" class="md-nav__link">
     <span class="md-ellipsis">
-      Limitations of Package Managers
+      ping – Check Network Reachability
     </span>
   </a>
   
@@ -467,37 +487,88 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-use-apt-instead-of-dpkg" class="md-nav__link">
+  <a href="#downloading-files" class="md-nav__link">
     <span class="md-ellipsis">
-      Why Use apt Instead of dpkg?
+      Downloading Files
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Why Use apt Instead of dpkg?">
+    <nav class="md-nav" aria-label="Downloading Files">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-installing-google-chrome-in-ubuntu" class="md-nav__link">
+  <a href="#wget-download-via-httphttpsftp" class="md-nav__link">
     <span class="md-ellipsis">
-      Example --- installing Google Chrome in Ubuntu
+      wget – Download via HTTP/HTTPS/FTP
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#using-apt-advanced-packaging-tool" class="md-nav__link">
+  <a href="#curl-flexible-data-transfer-tool" class="md-nav__link">
     <span class="md-ellipsis">
-      Using apt – Advanced Packaging Tool
+      curl – Flexible Data Transfer Tool
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-secure-remote-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH: Secure Remote Access
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#note-winscp-implements-this-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      NOTE: WinScp implements this command.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Exercises
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💻 Exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-check-your-ip-address" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Check your IP address
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#exercise-install-htop" class="md-nav__link">
+  <a href="#2-connect-to-a-remote-server-via-ssh" class="md-nav__link">
     <span class="md-ellipsis">
-      💻 Exercise -- install "htop"
+      2. Connect to a remote server via SSH
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-connect-to-a-remote-server-run-a-command-there" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. connect to a remote server, run a command there
     </span>
   </a>
   
@@ -512,28 +583,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../10/networking/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    10: Networking
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -565,28 +614,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installing-updating-and-removing-software" class="md-nav__link">
+  <a href="#checking-network-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing, Updating, and Removing Software
+      Checking Network Settings
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Installing, Updating, and Removing Software">
+    <nav class="md-nav" aria-label="Checking Network Settings">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#what-is-a-package-manager" class="md-nav__link">
+  <a href="#ip-a-view-network-interfaces" class="md-nav__link">
     <span class="md-ellipsis">
-      What is a package manager?
+      ip a – View Network Interfaces
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#limitations-of-package-managers" class="md-nav__link">
+  <a href="#ping-check-network-reachability" class="md-nav__link">
     <span class="md-ellipsis">
-      Limitations of Package Managers
+      ping – Check Network Reachability
     </span>
   </a>
   
@@ -598,37 +647,88 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-use-apt-instead-of-dpkg" class="md-nav__link">
+  <a href="#downloading-files" class="md-nav__link">
     <span class="md-ellipsis">
-      Why Use apt Instead of dpkg?
+      Downloading Files
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Why Use apt Instead of dpkg?">
+    <nav class="md-nav" aria-label="Downloading Files">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-installing-google-chrome-in-ubuntu" class="md-nav__link">
+  <a href="#wget-download-via-httphttpsftp" class="md-nav__link">
     <span class="md-ellipsis">
-      Example --- installing Google Chrome in Ubuntu
+      wget – Download via HTTP/HTTPS/FTP
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#using-apt-advanced-packaging-tool" class="md-nav__link">
+  <a href="#curl-flexible-data-transfer-tool" class="md-nav__link">
     <span class="md-ellipsis">
-      Using apt – Advanced Packaging Tool
+      curl – Flexible Data Transfer Tool
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-secure-remote-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH: Secure Remote Access
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#note-winscp-implements-this-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      NOTE: WinScp implements this command.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Exercises
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💻 Exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-check-your-ip-address" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Check your IP address
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#exercise-install-htop" class="md-nav__link">
+  <a href="#2-connect-to-a-remote-server-via-ssh" class="md-nav__link">
     <span class="md-ellipsis">
-      💻 Exercise -- install "htop"
+      2. Connect to a remote server via SSH
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-connect-to-a-remote-server-run-a-command-there" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. connect to a remote server, run a command there
     </span>
   </a>
   
@@ -656,139 +756,101 @@
 
 
 <p>👍</p>
-<h1 id="chapter-9-package-management">Chapter 9: Package Management<a class="headerlink" href="#chapter-9-package-management" title="Permanent link">&para;</a></h1>
-<p>This chapter introduces the basics of managing software on a Linux system using command-line tools. You'll learn how to install, update, and remove software, as well as how to search for packages and manage services.</p>
-<h2 id="installing-updating-and-removing-software">Installing, Updating, and Removing Software<a class="headerlink" href="#installing-updating-and-removing-software" title="Permanent link">&para;</a></h2>
-<h3 id="what-is-a-package-manager">What is a package manager?<a class="headerlink" href="#what-is-a-package-manager" title="Permanent link">&para;</a></h3>
-<p>A package manager is a system tool that automates the process of installing, upgrading, configuring, and removing software packages on a Linux system. It connects to online repositories to fetch software, ensures that all required dependencies are installed, and tracks which files belong to which package.</p>
-<p>Without a package manager, users would need to manually download software, resolve complex dependency chains, and handle updates by themselves—making system maintenance error-prone and time-consuming.</p>
-<h3 id="limitations-of-package-managers">Limitations of Package Managers<a class="headerlink" href="#limitations-of-package-managers" title="Permanent link">&para;</a></h3>
-<p>Despite their power, package managers have limitations. They depend on curated repositories, so software not officially packaged or updated there can lag behind or be unavailable. Conflicts may arise when mixing packages from different sources, or when manually modifying system files.</p>
-<p>Additionally, traditional package managers install system-wide software, making it difficult to manage per-user environments or multiple versions of the same tool—issues that newer tools like flatpak, snap, or language-specific managers (e.g., pip, npm) aim to address.</p>
-<p>In Debian (and derived distros such as Ubuntu and its variants), <code>apt</code> is the formal package manager, but any distro can use its own (or develop a new one!)</p>
-<p><br></p>
-<table>
-<thead>
-<tr>
-<th>Distribution</th>
-<th>Package Manager</th>
-<th>Format</th>
-<th>Example Command</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Debian/Ubuntu</td>
-<td><code>apt</code>, <code>dpkg</code></td>
-<td><code>.deb</code></td>
-<td><code>sudo apt install htop</code></td>
-</tr>
-<tr>
-<td>Fedora/Red Hat</td>
-<td><code>dnf</code>, <code>rpm</code></td>
-<td><code>.rpm</code></td>
-<td><code>sudo dnf install htop</code></td>
-</tr>
-<tr>
-<td>Arch Linux</td>
-<td><code>pacman</code></td>
-<td><code>.pkg.tar.zst</code></td>
-<td><code>sudo pacman -S htop</code></td>
-</tr>
-<tr>
-<td>Alpine Linux</td>
-<td><code>apk</code></td>
-<td><code>.apk</code></td>
-<td><code>apk add htop</code></td>
-</tr>
-</tbody>
-</table>
+<h1 id="chapter-10-networking-remote-access">Chapter 10: Networking &amp; Remote Access<a class="headerlink" href="#chapter-10-networking-remote-access" title="Permanent link">&para;</a></h1>
+<p>This chapter introduces key command-line tools to inspect your network setup, download files from the internet, and connect securely to remote machines. These tools are essential for system administration, software development, and working with remote servers or cloud environments.</p>
 <hr />
-<h2 id="why-use-apt-instead-of-dpkg">Why Use <code>apt</code> Instead of <code>dpkg</code>?<a class="headerlink" href="#why-use-apt-instead-of-dpkg" title="Permanent link">&para;</a></h2>
-<p>(This applies to Debian/Ubuntu). <br>
-While <code>dpkg</code> can install <code>.deb</code> files directly, it has important limitations. Consider these differences:</p>
-<table>
-<thead>
-<tr>
-<th>Feature</th>
-<th><code>apt</code></th>
-<th><code>dpkg</code></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Resolves dependencies</td>
-<td>✅ Yes</td>
-<td>❌ No</td>
-</tr>
-<tr>
-<td>Fetches packages from web</td>
-<td>✅ Yes</td>
-<td>❌ No</td>
-</tr>
-<tr>
-<td>Can update all packages</td>
-<td>✅ Yes (<code>apt upgrade</code>)</td>
-<td>❌ No</td>
-</tr>
-<tr>
-<td>Maintains package database</td>
-<td>✅ Yes</td>
-<td>✅ Yes (read-only)</td>
-</tr>
-<tr>
-<td>Safer for daily use</td>
-<td>✅ Yes</td>
-<td>⚠️ Expert use only</td>
-</tr>
-</tbody>
-</table>
-<p>If it requires other packages, dpkg will not install them. You’ll see errors like "dependency not satisfied".</p>
-<p>Recommended Approach:<br>
-Use <code>apt</code> whenever possible. It handles everything automatically and ensures your system remains in a consistent state.</p>
-<h3 id="example-installing-google-chrome-in-ubuntu">Example --- installing Google Chrome in Ubuntu<a class="headerlink" href="#example-installing-google-chrome-in-ubuntu" title="Permanent link">&para;</a></h3>
-<p>You want to install Chrome in you new Ubuntu machine. </p>
-<ul>
-<li>You cannot install using the GUI "App Center" because Chrome is not there -- not an open source.</li>
-<li>Also, Some packages are are simply not available in the distro's repositories. Specifically, this one is not.</li>
-<li>Use the least preferred method:<ul>
-<li>download the file from the site (Danger! Maybe this file is infected?)</li>
-<li><code>sudo dpkg -i google-chrome-stable_current_amd64.deb</code></li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>Note: Some programs can be installed using <code>apt</code> or from the author's site (e.g. Docker). The version stored in the Ubuntu repos (where apt is taking the files) is too old, so Docker recommends uninstalling them, and use the fresh version from their site.</p>
-</blockquote>
-<h3 id="using-apt-advanced-packaging-tool">Using <code>apt</code> – Advanced Packaging Tool<a class="headerlink" href="#using-apt-advanced-packaging-tool" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p><strong>Install a package</strong>:
-  <code>sudo apt install &lt;package-name&gt;</code></p>
-</li>
-<li>
-<p><strong>Remove a package</strong>:
-   <code>sudo apt remove &lt;package-name&gt;</code></p>
-</li>
-<li>
-<p><strong>Update the list of available packages</strong>:
- <code>sudo apt update</code></p>
-</li>
-</ul>
-<h3 id="exercise-install-htop">💻 Exercise -- install "htop"<a class="headerlink" href="#exercise-install-htop" title="Permanent link">&para;</a></h3>
-<p>htop is a program to show the top processes running. It has nicer UI than <code>top</code>.</p>
-<p>Install with <code>sudo apt install htop</code></p>
-<p>run: <code>htop</code></p>
-<p>Uninstall with <code>sudo apt remove htop</code></p>
-<p>This will (obviously!) work in Ubuntu system which uses apt.</p>
-<p>How would you install it in Alpine?<br>
-You guessed it: login as root, and <code>apk add htop</code></p>
-<hr>
+<h2 id="checking-network-settings">Checking Network Settings<a class="headerlink" href="#checking-network-settings" title="Permanent link">&para;</a></h2>
+<h3 id="ip-a-view-network-interfaces"><code>ip a</code> – View Network Interfaces<a class="headerlink" href="#ip-a-view-network-interfaces" title="Permanent link">&para;</a></h3>
+<p>Displays IP addresses and the status of each network interface (Ethernet, Wi-Fi, loopback).</p>
+<div class="codehilite"><pre><span></span><code>ip<span class="w"> </span>a
+</code></pre></div>
 
+<p>Look for:
+- <code>inet</code> for IPv4 addresses
+- <code>inet6</code> for IPv6 addresses
+- <code>lo</code> for the loopback (local) interface</p>
+<p><strong>To modify IP settings (such as changing address), you need to be root</strong></p>
+<p>ℹ️ just do <code>cheat ip</code> like I do!</p>
+<blockquote>
+<p>NOTE:<br> 
+In older systems, <code>ifconfig</code>  (standing for INterface CONFIGuration) was used. There are still web tutorials using it, but by default it is not installed. You can install it with <code>sudo apt install net-tools</code></p>
+</blockquote>
+<h3 id="ping-check-network-reachability"><code>ping</code> – Check Network Reachability<a class="headerlink" href="#ping-check-network-reachability" title="Permanent link">&para;</a></h3>
+<p>Tests if a host is reachable by sending special packets (ICMP) echo requests. </p>
+<div class="codehilite"><pre><span></span><code>ping<span class="w"> </span>google.com
+</code></pre></div>
+
+<p>To stop: press <code>Ctrl + C</code>.</p>
+<blockquote>
+<p>NOTE: If a server answered, it is alive and willing to reply, but if you get no answer, you cannot know if the server is offline or simply does not want to answer!</p>
+</blockquote>
+<h2 id="downloading-files">Downloading Files<a class="headerlink" href="#downloading-files" title="Permanent link">&para;</a></h2>
+<h3 id="wget-download-via-httphttpsftp"><code>wget</code> – Download via HTTP/HTTPS/FTP<a class="headerlink" href="#wget-download-via-httphttpsftp" title="Permanent link">&para;</a></h3>
+<p>Simple tool to fetch files from URLs. It is built to handle slow/unstable connection and can even be used to download a whole site. The downloaded URL is saved into a file.</p>
+<div class="codehilite"><pre><span></span><code>wget<span class="w"> </span>https://example.com/file.txt
+</code></pre></div>
+
+<h3 id="curl-flexible-data-transfer-tool"><code>curl</code> – Flexible Data Transfer Tool<a class="headerlink" href="#curl-flexible-data-transfer-tool" title="Permanent link">&para;</a></h3>
+<p>More powerful than <code>wget</code>, supports APIs, headers, and POST data. <br>
+By default it writes the contents to stdout.</p>
+<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>https://example.com
+</code></pre></div>
+
+<p>Download to file:</p>
+<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-o<span class="w"> </span>output.html<span class="w"> </span>https://example.com
+</code></pre></div>
+
+<hr />
+<h2 id="ssh-secure-remote-access">SSH: Secure Remote Access<a class="headerlink" href="#ssh-secure-remote-access" title="Permanent link">&para;</a></h2>
+<p>SSH (Secure Shell) allows you to log into a remote machine securely.</p>
+<div class="codehilite"><pre><span></span><code>ssh<span class="w"> </span>yourname@192.168.1.5
+</code></pre></div>
+
+<p>This opens a shell on the remote computer if:</p>
+<ul>
+<li>It is running an SSH server.</li>
+<li>You have network access to it.</li>
+<li>You know the login credentials or have a key pair configured.</li>
+</ul>
+<p>You can also copy files:</p>
+<div class="codehilite"><pre><span></span><code>scp<span class="w"> </span>file.txt<span class="w"> </span>user@host:/path/to/destination/
+</code></pre></div>
+
+<p>Or copy from remote:</p>
+<div class="codehilite"><pre><span></span><code>scp<span class="w"> </span>user@host:/remote/file.txt<span class="w"> </span>.
+</code></pre></div>
+
+<h2 id="note-winscp-implements-this-command">NOTE: <em>WinScp</em> implements this command.<a class="headerlink" href="#note-winscp-implements-this-command" title="Permanent link">&para;</a></h2>
+<h2 id="exercises">💻 Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
+<h3 id="1-check-your-ip-address">1. Check your IP address<a class="headerlink" href="#1-check-your-ip-address" title="Permanent link">&para;</a></h3>
+<p>Run the following and note your active IP:</p>
+<div class="codehilite"><pre><span></span><code>ip<span class="w"> </span>a
+</code></pre></div>
+
+<p>Look for your interface (usually <code>eth0</code> or <code>wlan0</code>), and the <code>inet</code> line.</p>
+<h3 id="2-connect-to-a-remote-server-via-ssh">2. Connect to a remote server via SSH<a class="headerlink" href="#2-connect-to-a-remote-server-via-ssh" title="Permanent link">&para;</a></h3>
+<p>If you have access to a remote machine:</p>
+<div class="codehilite"><pre><span></span><code>ssh<span class="w"> </span>your_username@remote_ip
+</code></pre></div>
+
+<p>If using a private SSH key:</p>
+<div class="codehilite"><pre><span></span><code>ssh<span class="w"> </span>-i<span class="w"> </span>~/.ssh/your_key.pem<span class="w"> </span>your_username@remote_ip
+</code></pre></div>
+
+<h3 id="3-connect-to-a-remote-server-run-a-command-there">3. connect to a remote server, run a command there<a class="headerlink" href="#3-connect-to-a-remote-server-run-a-command-there" title="Permanent link">&para;</a></h3>
+<p>You don't have to open a shell if you want a single command. Simply run</p>
+<p><code>ssh your_username@remote_ip command</code></p>
+<p>⚠️ In the following code, which $USER is printed?<br>
+<code>ssh remote_server echo $USER</code></p>
+<p>Tip: If you don’t have access to a server, try setting up a test VM (and make sure the ssh server runs on it!).</p>
 <h1 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h1>
-<p>In summary, package managers are essential tools for maintaining a Linux system efficiently and safely.</p>
-<p>They simplify software installation, automate dependency handling, and help keep systems consistent and up to date. While each Linux distribution has its own preferred tool - like <code>apt</code> on Ubuntu or <code>apk</code> on Alpine - the core ideas remain the same. </p>
-<p>Understanding both the power and the limitations of package managers prepares you to troubleshoot issues, choose appropriate tools, and safely extend your system with new software.</p>
+<p>In this chapter, you explored key commands for networking:</p>
+<ul>
+<li><code>ip a</code> and <code>ping</code> to check and debug connectivity</li>
+<li><code>wget</code> and <code>curl</code> to fetch files or interact with websites</li>
+<li><code>ssh</code> for secure remote access</li>
+</ul>
+<p>These tools give you powerful control over networking and remote work—foundational skills for server admins, developers, and DevOps engineers.</p>
 
 
 

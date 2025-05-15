@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://cnoam.github.io/linux101/he/08/ch_08/">
+        <link rel="canonical" href="https://cnoam.github.io/linux101/he/10/networking/">
       
       
-        <link rel="prev" href="../../06/ch_06/">
+        <link rel="prev" href="../../09/ch_09/">
       
-      
-        <link rel="next" href="../../09/ch_09/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +20,7 @@
     
     
       
-        <title>08: User/groups - Linux Basics & CLI Course</title>
+        <title>10: Networking - Linux Basics & CLI Course</title>
       
     
     
@@ -66,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-8-users-groups-permissions" class="md-skip">
+        <a href="#chapter-10-networking-remote-access" class="md-skip">
           לדלג לתוכן
         </a>
       
@@ -103,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              08: User/groups
+              10: Networking
             
           </span>
         </div>
@@ -124,7 +122,7 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="../../../08/ch_08/" hreflang="en" class="md-select__link">
+            <a href="../../../10/networking/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -156,7 +154,7 @@
        <h3>
         Send feedback
          
-           on<br><code>08/ch_08.md</code>
+           on<br><code>10/networking.md</code>
          
       </h3>
 
@@ -359,32 +357,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    08: User/groups
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../08/ch_08/" class="md-nav__link">
         
   
   
@@ -395,128 +371,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="תוכן העניינים">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      תוכן העניינים
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#objectives" class="md-nav__link">
-    <span class="md-ellipsis">
-      Objectives
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#user-accounts" class="md-nav__link">
-    <span class="md-ellipsis">
-      User Accounts
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="User Accounts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-root-user" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Root User
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#listing-users-and-groups" class="md-nav__link">
-    <span class="md-ellipsis">
-      Listing Users and Groups
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#addingremoving-users" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adding/removing users
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#managing-permissions-recap" class="md-nav__link">
-    <span class="md-ellipsis">
-      Managing Permissions (Recap)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercise" class="md-nav__link">
-    <span class="md-ellipsis">
-      💻 Exercise
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="💻 Exercise">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-change-your-password" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Change Your Password
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-create-a-new-group-and-add-a-user" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Create a New Group and Add a User
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-test-file-permissions-by-group" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Test File Permissions by Group
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -547,10 +401,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../10/networking/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    10: Networking
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -561,6 +437,152 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="תוכן העניינים">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      תוכן העניינים
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#checking-network-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking Network Settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Checking Network Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ip-a-view-network-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      ip a – View Network Interfaces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ping-check-network-reachability" class="md-nav__link">
+    <span class="md-ellipsis">
+      ping – Check Network Reachability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloading-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Downloading Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Downloading Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wget-download-via-httphttpsftp" class="md-nav__link">
+    <span class="md-ellipsis">
+      wget – Download via HTTP/HTTPS/FTP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#curl-flexible-data-transfer-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      curl – Flexible Data Transfer Tool
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-secure-remote-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH: Secure Remote Access
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#note-winscp-implements-this-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      NOTE: WinScp implements this command.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Exercises
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💻 Exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-check-your-ip-address" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Check your IP address
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-connect-to-a-remote-server-via-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Connect to a remote server via SSH
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-connect-to-a-remote-server-run-a-command-there" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. connect to a remote server, run a command there
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -592,28 +614,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objectives" class="md-nav__link">
+  <a href="#checking-network-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      Objectives
+      Checking Network Settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Checking Network Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ip-a-view-network-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      ip a – View Network Interfaces
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#user-accounts" class="md-nav__link">
-    <span class="md-ellipsis">
-      User Accounts
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="User Accounts">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-root-user" class="md-nav__link">
+  <a href="#ping-check-network-reachability" class="md-nav__link">
     <span class="md-ellipsis">
-      The Root User
+      ping – Check Network Reachability
     </span>
   </a>
   
@@ -625,64 +647,88 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#listing-users-and-groups" class="md-nav__link">
+  <a href="#downloading-files" class="md-nav__link">
     <span class="md-ellipsis">
-      Listing Users and Groups
+      Downloading Files
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#addingremoving-users" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adding/removing users
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#managing-permissions-recap" class="md-nav__link">
-    <span class="md-ellipsis">
-      Managing Permissions (Recap)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercise" class="md-nav__link">
-    <span class="md-ellipsis">
-      💻 Exercise
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="💻 Exercise">
+    <nav class="md-nav" aria-label="Downloading Files">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-change-your-password" class="md-nav__link">
+  <a href="#wget-download-via-httphttpsftp" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Change Your Password
+      wget – Download via HTTP/HTTPS/FTP
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-create-a-new-group-and-add-a-user" class="md-nav__link">
+  <a href="#curl-flexible-data-transfer-tool" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Create a New Group and Add a User
+      curl – Flexible Data Transfer Tool
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-secure-remote-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH: Secure Remote Access
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#note-winscp-implements-this-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      NOTE: WinScp implements this command.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Exercises
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💻 Exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-check-your-ip-address" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Check your IP address
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-test-file-permissions-by-group" class="md-nav__link">
+  <a href="#2-connect-to-a-remote-server-via-ssh" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Test File Permissions by Group
+      2. Connect to a remote server via SSH
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-connect-to-a-remote-server-run-a-command-there" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. connect to a remote server, run a command there
     </span>
   </a>
   
@@ -709,124 +755,102 @@
 
 
 
-<h1 id="chapter-8-users-groups-permissions">Chapter 8: Users, Groups &amp; Permissions<a class="headerlink" href="#chapter-8-users-groups-permissions" title="Permanent link">&para;</a></h1>
-<h2 id="objectives">Objectives<a class="headerlink" href="#objectives" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Understand how Linux identifies users and groups</li>
-<li>Learn where user/group info is stored</li>
-<li>Know how to view your identity and modify group memberships</li>
-<li>Apply permissions knowledge from earlier chapters to real-world user setups</li>
-</ul>
+<p>👍</p>
+<h1 id="chapter-10-networking-remote-access">Chapter 10: Networking &amp; Remote Access<a class="headerlink" href="#chapter-10-networking-remote-access" title="Permanent link">&para;</a></h1>
+<p>This chapter introduces key command-line tools to inspect your network setup, download files from the internet, and connect securely to remote machines. These tools are essential for system administration, software development, and working with remote servers or cloud environments.</p>
 <hr />
-<h2 id="user-accounts">User Accounts<a class="headerlink" href="#user-accounts" title="Permanent link">&para;</a></h2>
-<p>Every process in Linux runs under a <strong>user identity</strong>. To check yours:</p>
-<div class="codehilite"><pre><span></span><code>whoami
+<h2 id="checking-network-settings">Checking Network Settings<a class="headerlink" href="#checking-network-settings" title="Permanent link">&para;</a></h2>
+<h3 id="ip-a-view-network-interfaces"><code>ip a</code> – View Network Interfaces<a class="headerlink" href="#ip-a-view-network-interfaces" title="Permanent link">&para;</a></h3>
+<p>Displays IP addresses and the status of each network interface (Ethernet, Wi-Fi, loopback).</p>
+<div class="codehilite"><pre><span></span><code>ip<span class="w"> </span>a
 </code></pre></div>
 
-<p>To see detailed information about yourself:</p>
-<div class="codehilite"><pre><span></span><code>id
-</code></pre></div>
-
-<p>Example output:</p>
-<div class="codehilite"><pre><span></span><code>uid=1000(noam) gid=1000(noam) groups=1000(noam),27(sudo)
-</code></pre></div>
-
-<ul>
-<li><code>uid</code> = User ID  </li>
-<li><code>gid</code> = Primary group ID  </li>
-<li><code>groups</code> = All groups this user belongs to</li>
-</ul>
-<p>To change your own password:</p>
-<div class="codehilite"><pre><span></span><code>passwd
-</code></pre></div>
-
+<p>Look for:
+- <code>inet</code> for IPv4 addresses
+- <code>inet6</code> for IPv6 addresses
+- <code>lo</code> for the loopback (local) interface</p>
+<p><strong>To modify IP settings (such as changing address), you need to be root</strong></p>
+<p>ℹ️ just do <code>cheat ip</code> like I do!</p>
 <blockquote>
-<p>⚠️ You may be prompted for your current password. Only works for your own account.</p>
+<p>NOTE:<br> 
+In older systems, <code>ifconfig</code>  (standing for INterface CONFIGuration) was used. There are still web tutorials using it, but by default it is not installed. You can install it with <code>sudo apt install net-tools</code></p>
 </blockquote>
-<h3 id="the-root-user">The Root User<a class="headerlink" href="#the-root-user" title="Permanent link">&para;</a></h3>
-<p>The <strong>root</strong> user is the superuser in Linux, with <strong>unrestricted access</strong> to all files, commands, and system resources. This is the user to use for adminsistrative tasks such as installing programs.</p>
-<ul>
-<li>UID of root is always <code>0</code>.</li>
-<li>Can modify other users, install software, and override permission checks.</li>
-</ul>
-<p>Use root powers sparingly. A common practice is to run privileged commands using <code>sudo</code>: (stands for "super-user do")</p>
-<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>some-command
+<h3 id="ping-check-network-reachability"><code>ping</code> – Check Network Reachability<a class="headerlink" href="#ping-check-network-reachability" title="Permanent link">&para;</a></h3>
+<p>Tests if a host is reachable by sending special packets (ICMP) echo requests. </p>
+<div class="codehilite"><pre><span></span><code>ping<span class="w"> </span>google.com
 </code></pre></div>
 
-<p>Only users in the <code>sudo</code> group can do this.  This means that you may have an account on a computer <em>without</em> the ability to be root.</p>
-<h2 id="listing-users-and-groups">Listing Users and Groups<a class="headerlink" href="#listing-users-and-groups" title="Permanent link">&para;</a></h2>
-<p>All user information is stored in <code>/etc/passwd</code>:</p>
-<p>ℹ️ Historically, (encrypted) passwords of users were stored in this file, hence the name.</p>
-<div class="codehilite"><pre><span></span><code>cat<span class="w"> </span>/etc/passwd<span class="w"> </span><span class="p">|</span><span class="w"> </span>less
-</code></pre></div>
-
-<p>Each line looks like:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">noam</span><span class="o">:</span><span class="n">x</span><span class="o">:</span><span class="mi">1000</span><span class="o">:</span><span class="mi">1000</span><span class="o">:</span><span class="n">Noam</span><span class="w"> </span><span class="n">Cohen</span><span class="o">,,,:/</span><span class="n">home</span><span class="sr">/noam:/bin/</span><span class="n">bash</span>
-</code></pre></div>
-
-<p>The fields are:</p>
-<ul>
-<li>Username</li>
-<li>Encrypted password placeholder</li>
-<li>User ID (UID)</li>
-<li>Group ID (GID)</li>
-<li>Description</li>
-<li>Home directory</li>
-<li>Login shell</li>
-</ul>
-<p>To list all groups:</p>
-<div class="codehilite"><pre><span></span><code>cat<span class="w"> </span>/etc/group<span class="w"> </span><span class="p">|</span><span class="w"> </span>less
-</code></pre></div>
-
-<p>Each line looks like:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">sudo</span><span class="o">:</span><span class="n">x</span><span class="o">:</span><span class="mi">27</span><span class="o">:</span><span class="n">noam</span>
-</code></pre></div>
-
-<p>ℹ️ Try <code>man group</code>. </p>
-<h2 id="addingremoving-users">Adding/removing users<a class="headerlink" href="#addingremoving-users" title="Permanent link">&para;</a></h2>
-<p>Obviously, only user root can do <code>adduser</code> and <code>deluser</code></p>
-<h2 id="managing-permissions-recap">Managing Permissions (Recap)<a class="headerlink" href="#managing-permissions-recap" title="Permanent link">&para;</a></h2>
-<p>File and directory access in Linux is based on:
-- Owner
-- Group
-- Others</p>
-<p>Use <code>ls -l</code> to view permissions:</p>
-<div class="codehilite"><pre><span></span><code>-rw-r--r-- 1 noam noam 1234 May 1  file.txt
-</code></pre></div>
-
-<p>From earlier chapters, recall:
-- <code>chmod</code> — change permission bits<br />
-- <code>chown</code> — change ownership<br />
-- <code>chgrp</code> — change group ownership</p>
-<h2 id="exercise">💻 Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
-<h3 id="1-change-your-password">1. Change Your Password<a class="headerlink" href="#1-change-your-password" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>passwd
-</code></pre></div>
-
-<p>Try this now and note how many characters are accepted (even though they don't echo to the screen).</p>
-<h3 id="2-create-a-new-group-and-add-a-user">2. Create a New Group and Add a User<a class="headerlink" href="#2-create-a-new-group-and-add-a-user" title="Permanent link">&para;</a></h3>
+<p>To stop: press <code>Ctrl + C</code>.</p>
 <blockquote>
-<p>You'll need <code>sudo</code> privileges.</p>
+<p>NOTE: If a server answered, it is alive and willing to reply, but if you get no answer, you cannot know if the server is offline or simply does not want to answer!</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>groupadd<span class="w"> </span>mygroup
-sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>mygroup<span class="w"> </span><span class="nv">$USER</span>
+<h2 id="downloading-files">Downloading Files<a class="headerlink" href="#downloading-files" title="Permanent link">&para;</a></h2>
+<h3 id="wget-download-via-httphttpsftp"><code>wget</code> – Download via HTTP/HTTPS/FTP<a class="headerlink" href="#wget-download-via-httphttpsftp" title="Permanent link">&para;</a></h3>
+<p>Simple tool to fetch files from URLs. It is built to handle slow/unstable connection and can even be used to download a whole site. The downloaded URL is saved into a file.</p>
+<div class="codehilite"><pre><span></span><code>wget<span class="w"> </span>https://example.com/file.txt
 </code></pre></div>
 
-<p>ℹ️  The <code>$USER</code> is an environment variable holding the name of the current user. Using this variable allows for writing general scripts that will work for all users.</p>
-<p>Then <strong>log out and back in</strong> for the group membership to take effect.</p>
-<p>Check your group list:</p>
-<div class="codehilite"><pre><span></span><code>groups
+<h3 id="curl-flexible-data-transfer-tool"><code>curl</code> – Flexible Data Transfer Tool<a class="headerlink" href="#curl-flexible-data-transfer-tool" title="Permanent link">&para;</a></h3>
+<p>More powerful than <code>wget</code>, supports APIs, headers, and POST data. <br>
+By default it writes the contents to stdout.</p>
+<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>https://example.com
 </code></pre></div>
 
-<p>You should see <code>mygroup</code> listed.</p>
-<h3 id="3-test-file-permissions-by-group">3.  Test File Permissions by Group<a class="headerlink" href="#3-test-file-permissions-by-group" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>mkdir<span class="w"> </span>shared-folder
-sudo<span class="w"> </span>chgrp<span class="w"> </span>mygroup<span class="w"> </span>shared-folder
-chmod<span class="w"> </span>g+rw<span class="w"> </span>shared-folder
+<p>Download to file:</p>
+<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-o<span class="w"> </span>output.html<span class="w"> </span>https://example.com
 </code></pre></div>
 
-<p>ℹ️ the <code>sudo</code> is needed here since only group members may add files to a group (a safety measure), and you might not yet be in this group.</p>
-<p>This lets all users in <code>mygroup</code> read/write the folder, without affecting the permissions of Owner and Other.</p>
+<hr />
+<h2 id="ssh-secure-remote-access">SSH: Secure Remote Access<a class="headerlink" href="#ssh-secure-remote-access" title="Permanent link">&para;</a></h2>
+<p>SSH (Secure Shell) allows you to log into a remote machine securely.</p>
+<div class="codehilite"><pre><span></span><code>ssh<span class="w"> </span>yourname@192.168.1.5
+</code></pre></div>
+
+<p>This opens a shell on the remote computer if:</p>
+<ul>
+<li>It is running an SSH server.</li>
+<li>You have network access to it.</li>
+<li>You know the login credentials or have a key pair configured.</li>
+</ul>
+<p>You can also copy files:</p>
+<div class="codehilite"><pre><span></span><code>scp<span class="w"> </span>file.txt<span class="w"> </span>user@host:/path/to/destination/
+</code></pre></div>
+
+<p>Or copy from remote:</p>
+<div class="codehilite"><pre><span></span><code>scp<span class="w"> </span>user@host:/remote/file.txt<span class="w"> </span>.
+</code></pre></div>
+
+<h2 id="note-winscp-implements-this-command">NOTE: <em>WinScp</em> implements this command.<a class="headerlink" href="#note-winscp-implements-this-command" title="Permanent link">&para;</a></h2>
+<h2 id="exercises">💻 Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
+<h3 id="1-check-your-ip-address">1. Check your IP address<a class="headerlink" href="#1-check-your-ip-address" title="Permanent link">&para;</a></h3>
+<p>Run the following and note your active IP:</p>
+<div class="codehilite"><pre><span></span><code>ip<span class="w"> </span>a
+</code></pre></div>
+
+<p>Look for your interface (usually <code>eth0</code> or <code>wlan0</code>), and the <code>inet</code> line.</p>
+<h3 id="2-connect-to-a-remote-server-via-ssh">2. Connect to a remote server via SSH<a class="headerlink" href="#2-connect-to-a-remote-server-via-ssh" title="Permanent link">&para;</a></h3>
+<p>If you have access to a remote machine:</p>
+<div class="codehilite"><pre><span></span><code>ssh<span class="w"> </span>your_username@remote_ip
+</code></pre></div>
+
+<p>If using a private SSH key:</p>
+<div class="codehilite"><pre><span></span><code>ssh<span class="w"> </span>-i<span class="w"> </span>~/.ssh/your_key.pem<span class="w"> </span>your_username@remote_ip
+</code></pre></div>
+
+<h3 id="3-connect-to-a-remote-server-run-a-command-there">3. connect to a remote server, run a command there<a class="headerlink" href="#3-connect-to-a-remote-server-run-a-command-there" title="Permanent link">&para;</a></h3>
+<p>You don't have to open a shell if you want a single command. Simply run</p>
+<p><code>ssh your_username@remote_ip command</code></p>
+<p>⚠️ In the following code, which $USER is printed?<br>
+<code>ssh remote_server echo $USER</code></p>
+<p>Tip: If you don’t have access to a server, try setting up a test VM (and make sure the ssh server runs on it!).</p>
+<h1 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h1>
+<p>In this chapter, you explored key commands for networking:</p>
+<ul>
+<li><code>ip a</code> and <code>ping</code> to check and debug connectivity</li>
+<li><code>wget</code> and <code>curl</code> to fetch files or interact with websites</li>
+<li><code>ssh</code> for secure remote access</li>
+</ul>
+<p>These tools give you powerful control over networking and remote work—foundational skills for server admins, developers, and DevOps engineers.</p>
 
 
 

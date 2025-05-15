@@ -231,7 +231,7 @@
   
   
   <span class="md-ellipsis">
-    Chapter 01
+    01: Intro
     
   </span>
   
@@ -253,7 +253,7 @@
   
   
   <span class="md-ellipsis">
-    Chapter 02
+    02: The file system
     
   </span>
   
@@ -275,7 +275,7 @@
   
   
   <span class="md-ellipsis">
-    Chapter 03
+    03: Working with files
     
   </span>
   
@@ -297,7 +297,7 @@
   
   
   <span class="md-ellipsis">
-    Chapter 04
+    04: File permissions
     
   </span>
   
@@ -319,7 +319,7 @@
   
   
   <span class="md-ellipsis">
-    Chapter 05
+    05: Basic command
     
   </span>
   
@@ -341,7 +341,7 @@
   
   
   <span class="md-ellipsis">
-    Chapter 06
+    06: Text processing
     
   </span>
   
@@ -363,7 +363,7 @@
   
   
   <span class="md-ellipsis">
-    Chapter 08
+    08: User/groups
     
   </span>
   
@@ -385,7 +385,29 @@
   
   
   <span class="md-ellipsis">
-    Chapter 09
+    09: Package management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10/networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10: Networking
     
   </span>
   
@@ -434,6 +456,15 @@
   <a href="#where-to-go-next" class="md-nav__link">
     <span class="md-ellipsis">
       Where to Go Next
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is-there-a-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is there a cheat sheet?
     </span>
   </a>
   
@@ -496,7 +527,6 @@
 <p>To deepen your Linux knowledge, consider exploring:</p>
 <ul>
 <li><strong>Shell scripting</strong>: Automate tasks with loops, conditionals, and variables (<code>bash</code>, <code>sh</code>)</li>
-<li><strong>Package management</strong>: Install and manage software using <code>apt</code>, <code>yum</code>, or <code>dnf</code></li>
 <li><strong>Process management</strong>: Understand <code>ps</code>, <code>top</code>, <code>kill</code>, background jobs, and signals</li>
 <li><strong>Networking tools</strong>: Use <code>ping</code>, <code>netstat</code>, <code>ss</code>, <code>curl</code>, <code>scp</code>, <code>rsync</code></li>
 <li><strong>Systemd and services</strong>: Manage services with <code>systemctl</code>, understand boot processes</li>
@@ -508,6 +538,29 @@
 - <a href="https://tldp.org/">The Linux Documentation Project</a>
 - <a href="https://overthewire.org/wargames/">OverTheWire Wargames</a> (for security-focused learning)</p>
 <hr />
+<h2 id="is-there-a-cheat-sheet">Is there a cheat sheet?<a class="headerlink" href="#is-there-a-cheat-sheet" title="Permanent link">&para;</a></h2>
+<p>Of course! nobody remembers all these strange command line args.
+<a href="https://www.linode.com/docs/guides/linux-cheat-command/">download and install from here</a></p>
+<p>Then you get the common options for commands:</p>
+<p>For example the <code>find</code> command:</p>
+<div class="codehilite"><pre><span></span><code><span class="o">~</span><span class="err">$</span><span class="w"> </span><span class="nx">cheat</span><span class="w"> </span><span class="nx">find</span>
+<span class="err">#</span><span class="w"> </span><span class="nx">To</span><span class="w"> </span><span class="nx">find</span><span class="w"> </span><span class="nx">files</span><span class="w"> </span><span class="nx">following</span><span class="w"> </span><span class="nx">symlinks</span><span class="w"> </span><span class="p">(</span><span class="nx">otherwise</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">symlinks</span><span class="w"> </span><span class="nx">are</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">followed</span><span class="p">):</span>
+<span class="nx">find</span><span class="w"> </span><span class="o">-</span><span class="nx">L</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="o">-</span><span class="k">type</span><span class="w"> </span><span class="nx">f</span>
+
+<span class="err">#</span><span class="w"> </span><span class="nx">To</span><span class="w"> </span><span class="nx">find</span><span class="w"> </span><span class="nx">files</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="k">case</span><span class="o">-</span><span class="nx">insensitive</span><span class="w"> </span><span class="nx">extension</span><span class="w"> </span><span class="p">(</span><span class="nx">ex</span><span class="p">:</span><span class="w"> </span><span class="p">.</span><span class="nx">jpg</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="nx">JPG</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="nx">jpG</span><span class="p">):</span>
+<span class="nx">find</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="o">-</span><span class="nx">iname</span><span class="w"> </span><span class="s">&quot;*.jpg&quot;</span>
+
+<span class="err">#</span><span class="w"> </span><span class="nx">To</span><span class="w"> </span><span class="nx">find</span><span class="w"> </span><span class="nx">directories</span><span class="p">:</span>
+<span class="nx">find</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="o">-</span><span class="k">type</span><span class="w"> </span><span class="nx">d</span>
+
+<span class="err">#</span><span class="w"> </span><span class="nx">To</span><span class="w"> </span><span class="nx">find</span><span class="w"> </span><span class="nx">files</span><span class="p">:</span>
+<span class="nx">find</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="o">-</span><span class="k">type</span><span class="w"> </span><span class="nx">f</span>
+
+<span class="err">#</span><span class="w"> </span><span class="nx">To</span><span class="w"> </span><span class="nx">find</span><span class="w"> </span><span class="nx">files</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="nx">octal</span><span class="w"> </span><span class="nx">permission</span><span class="p">:</span>
+<span class="nx">find</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="o">-</span><span class="k">type</span><span class="w"> </span><span class="nx">f</span><span class="w"> </span><span class="o">-</span><span class="nx">perm</span><span class="w"> </span><span class="mi">777</span>
+</code></pre></div>
+
+<p>and you can even add your own!</p>
 <h2 id="major-topics-we-did-not-cover">Major Topics We Did Not Cover<a class="headerlink" href="#major-topics-we-did-not-cover" title="Permanent link">&para;</a></h2>
 <p>While this course gave you a practical shell foundation, some deeper or advanced topics remain untouched:</p>
 <ul>
