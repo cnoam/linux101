@@ -33,6 +33,7 @@ At the end of this course, you will be able to connect to a linux computer, and 
 🎥  a video to watch<br>
 💻  exercise to run on computer<br>
 ✅  Check yourself<br>
+❔  ask yourself<br>
 ⚠️  Warning. You can cause damage<br>
 ℹ️  More info here
 <hr>
@@ -64,7 +65,7 @@ Chapter 6<Br>
 [Text Processing & Editing](./06/ch_06.md)
 
 Chapter 7<br>
-Advanced Text Processing Tools
+[Advanced Text Processing Tools](./07/ch_07.md)
 
 Chapter 8<br>
 [Users, Groups & Permissions](./08/ch_08.md) 

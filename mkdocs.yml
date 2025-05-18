@@ -38,7 +38,7 @@ nav:
   - "04: File permissions" : 04/ch_04.md
   - "05: Basic command" : 05/ch_05.md
   - "06: Text processing" : 06/ch_06.md
-  #- Chapter 07: 07/ch_07.md
+  - "07: Advanced text processing" : 07/ch_07.md
   - "08: User/groups" : 08/ch_08.md
   - "09: Package management" : 09/ch_09.md
   - "10: Networking" : 10/networking.md
