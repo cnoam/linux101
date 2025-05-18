@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://cnoam.github.io/linux101/08/ch_08/">
+        <link rel="canonical" href="https://cnoam.github.io/linux101/07/ch_07/">
       
       
-        <link rel="prev" href="../../07/ch_07/">
+        <link rel="prev" href="../../06/ch_06/">
       
       
-        <link rel="next" href="../../09/ch_09/">
+        <link rel="next" href="../../08/ch_08/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>08: User/groups - Linux Basics & CLI Course</title>
+        <title>07: Advanced text processing - Linux Basics & CLI Course</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-8-users-groups-permissions" class="md-skip">
+        <a href="#advanced-text-processing" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              08: User/groups
+              07: Advanced text processing
             
           </span>
         </div>
@@ -130,7 +130,7 @@
           </li>
         
           <li class="md-select__item">
-            <a href="../../he/08/ch_08/" hreflang="he" class="md-select__link">
+            <a href="../../he/07/ch_07/" hreflang="he" class="md-select__link">
               עברית
             </a>
           </li>
@@ -156,7 +156,7 @@
        <h3>
         Send feedback
          
-           on<br><code>08/ch_08.md</code>
+           on<br><code>07/ch_07.md</code>
          
       </h3>
 
@@ -359,28 +359,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../../07/ch_07/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    07: Advanced text processing
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -398,7 +376,7 @@
   
   
   <span class="md-ellipsis">
-    08: User/groups
+    07: Advanced text processing
     
   </span>
   
@@ -411,7 +389,7 @@
   
   
   <span class="md-ellipsis">
-    08: User/groups
+    07: Advanced text processing
     
   </span>
   
@@ -434,97 +412,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objectives" class="md-nav__link">
+  <a href="#stream-editor-sed" class="md-nav__link">
     <span class="md-ellipsis">
-      Objectives
+      Stream EDitor (sed)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#user-accounts" class="md-nav__link">
+  <a href="#awk" class="md-nav__link">
     <span class="md-ellipsis">
-      User Accounts
+      AWK
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="User Accounts">
+    <nav class="md-nav" aria-label="AWK">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-root-user" class="md-nav__link">
+  <a href="#begin-and-end" class="md-nav__link">
     <span class="md-ellipsis">
-      The Root User
+      BEGIN and END
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#listing-users-and-groups" class="md-nav__link">
+          <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
     <span class="md-ellipsis">
-      Listing Users and Groups
+      Variables
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#addingremoving-users" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#search-patterns" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding/removing users
+      Search Patterns
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#managing-permissions-recap" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#awk-program" class="md-nav__link">
     <span class="md-ellipsis">
-      Managing Permissions (Recap)
+      Awk program
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
-      💻 Exercise
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="💻 Exercise">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-change-your-password" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Change Your Password
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-create-a-new-group-and-add-a-user" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Create a New Group and Add a User
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-test-file-permissions-by-group" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Test File Permissions by Group
+      Exercise
     </span>
   </a>
   
@@ -532,6 +477,24 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is-that-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is that it?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples-using-both-awk-and-sed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples (using both awk and sed)
+    </span>
+  </a>
   
 </li>
       
@@ -539,6 +502,28 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08/ch_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    08: User/groups
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -614,97 +599,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objectives" class="md-nav__link">
+  <a href="#stream-editor-sed" class="md-nav__link">
     <span class="md-ellipsis">
-      Objectives
+      Stream EDitor (sed)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#user-accounts" class="md-nav__link">
+  <a href="#awk" class="md-nav__link">
     <span class="md-ellipsis">
-      User Accounts
+      AWK
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="User Accounts">
+    <nav class="md-nav" aria-label="AWK">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-root-user" class="md-nav__link">
+  <a href="#begin-and-end" class="md-nav__link">
     <span class="md-ellipsis">
-      The Root User
+      BEGIN and END
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#listing-users-and-groups" class="md-nav__link">
+          <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
     <span class="md-ellipsis">
-      Listing Users and Groups
+      Variables
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#addingremoving-users" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#search-patterns" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding/removing users
+      Search Patterns
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#managing-permissions-recap" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#awk-program" class="md-nav__link">
     <span class="md-ellipsis">
-      Managing Permissions (Recap)
+      Awk program
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#exercise" class="md-nav__link">
     <span class="md-ellipsis">
-      💻 Exercise
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="💻 Exercise">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-change-your-password" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Change Your Password
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-create-a-new-group-and-add-a-user" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Create a New Group and Add a User
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-test-file-permissions-by-group" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Test File Permissions by Group
+      Exercise
     </span>
   </a>
   
@@ -712,6 +664,24 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is-that-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is that it?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples-using-both-awk-and-sed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples (using both awk and sed)
+    </span>
+  </a>
   
 </li>
       
@@ -731,124 +701,120 @@
 
 
 
-<h1 id="chapter-8-users-groups-permissions">Chapter 8: Users, Groups &amp; Permissions<a class="headerlink" href="#chapter-8-users-groups-permissions" title="Permanent link">&para;</a></h1>
-<h2 id="objectives">Objectives<a class="headerlink" href="#objectives" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Understand how Linux identifies users and groups</li>
-<li>Learn where user/group info is stored</li>
-<li>Know how to view your identity and modify group memberships</li>
-<li>Apply permissions knowledge from earlier chapters to real-world user setups</li>
-</ul>
-<hr />
-<h2 id="user-accounts">User Accounts<a class="headerlink" href="#user-accounts" title="Permanent link">&para;</a></h2>
-<p>Every process in Linux runs under a <strong>user identity</strong>. To check yours:</p>
-<div class="codehilite"><pre><span></span><code>whoami
-</code></pre></div>
-
-<p>To see detailed information about yourself:</p>
-<div class="codehilite"><pre><span></span><code>id
-</code></pre></div>
-
-<p>Example output:</p>
-<div class="codehilite"><pre><span></span><code>uid=1000(noam) gid=1000(noam) groups=1000(noam),27(sudo)
-</code></pre></div>
-
-<ul>
-<li><code>uid</code> = User ID  </li>
-<li><code>gid</code> = Primary group ID  </li>
-<li><code>groups</code> = All groups this user belongs to</li>
-</ul>
-<p>To change your own password:</p>
-<div class="codehilite"><pre><span></span><code>passwd
-</code></pre></div>
-
+<p>👍</p>
+<h1 id="advanced-text-processing">Advanced Text Processing<a class="headerlink" href="#advanced-text-processing" title="Permanent link">&para;</a></h1>
+<p>In this chapter we will discuss two tools that allow for advanced manipulation of text in the linux shell environment.</p>
+<p><code>sed</code> is a stream editor for non-interactive text transformations, working line by line for substitutions and more. <br>
+<code>awk</code> is a more powerful text processing language for structured data, splitting lines into fields and allowing actions based on patterns, ideal for data extraction and complex manipulation. Both are essential Linux tools often used together for text processing tasks.</p>
+<h2 id="stream-editor-sed">Stream EDitor (sed)<a class="headerlink" href="#stream-editor-sed" title="Permanent link">&para;</a></h2>
+<p>This program reads text from stdin, applies processing (from command line) and writes the result to stdout. </p>
+<p>The idea is powerful: you have a very big file (or endless text stream), and you need to do some editing in it before it goes to the next processing stage. Again, this is the idea of <code>filter programs</code> connected in a pipeline.</p>
+<p>It is very complex, and here we only show a trivial use case:</p>
+<p>"For the input stream, find and replace all occurrences of STRING1 with STRING2"</p>
+<p>Example: <code>echo "I use Windows to clean windows in the knight" | sed -e "s/Windows/Linux/"</code>
+-&gt; <code>I use Linux to clean windows in the knight</code></p>
+<p>Explanation:</p>
+<p><code>-e</code> : execute the expression</p>
+<p><code>s</code> : substitute</p>
+<p><code>/pattern1/pattern2/</code> find <code>pattern1</code> and (in this case) substitute with <code>pattern2</code></p>
+<p>This operation is done for every line in the input stream/file.</p>
+<p>There are whole <a href="https://www.amazon.com/sed-awk-Dale-Dougherty/dp/1565922255">books</a> on sed, but we stop here.</p>
 <blockquote>
-<p>⚠️ You may be prompted for your current password. Only works for your own account.</p>
-</blockquote>
-<h3 id="the-root-user">The Root User<a class="headerlink" href="#the-root-user" title="Permanent link">&para;</a></h3>
-<p>The <strong>root</strong> user is the superuser in Linux, with <strong>unrestricted access</strong> to all files, commands, and system resources. This is the user to use for adminsistrative tasks such as installing programs.</p>
+<p>Questions you could ask:</p>
 <ul>
-<li>UID of root is always <code>0</code>.</li>
-<li>Can modify other users, install software, and override permission checks.</li>
+<li>can it be case insensitive?</li>
+<li>what if "Windows" appears more than once in one line?</li>
+<li>Can I use the found pattern  - e.g. "Windows95"</li>
+<li>what are the syntax rules of defining the patterns?</li>
 </ul>
-<p>Use root powers sparingly. A common practice is to run privileged commands using <code>sudo</code>: (stands for "super-user do")</p>
-<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>some-command
-</code></pre></div>
-
-<p>Only users in the <code>sudo</code> group can do this.  This means that you may have an account on a computer <em>without</em> the ability to be root.</p>
-<h2 id="listing-users-and-groups">Listing Users and Groups<a class="headerlink" href="#listing-users-and-groups" title="Permanent link">&para;</a></h2>
-<p>All user information is stored in <code>/etc/passwd</code>:</p>
-<p>ℹ️ Historically, (encrypted) passwords of users were stored in this file, hence the name.</p>
-<div class="codehilite"><pre><span></span><code>cat<span class="w"> </span>/etc/passwd<span class="w"> </span><span class="p">|</span><span class="w"> </span>less
-</code></pre></div>
-
-<p>Each line looks like:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">noam</span><span class="o">:</span><span class="n">x</span><span class="o">:</span><span class="mi">1000</span><span class="o">:</span><span class="mi">1000</span><span class="o">:</span><span class="n">Noam</span><span class="w"> </span><span class="n">Cohen</span><span class="o">,,,:/</span><span class="n">home</span><span class="sr">/noam:/bin/</span><span class="n">bash</span>
-</code></pre></div>
-
-<p>The fields are:</p>
-<ul>
-<li>Username</li>
-<li>Encrypted password placeholder</li>
-<li>User ID (UID)</li>
-<li>Group ID (GID)</li>
-<li>Description</li>
-<li>Home directory</li>
-<li>Login shell</li>
-</ul>
-<p>To list all groups:</p>
-<div class="codehilite"><pre><span></span><code>cat<span class="w"> </span>/etc/group<span class="w"> </span><span class="p">|</span><span class="w"> </span>less
-</code></pre></div>
-
-<p>Each line looks like:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">sudo</span><span class="o">:</span><span class="n">x</span><span class="o">:</span><span class="mi">27</span><span class="o">:</span><span class="n">noam</span>
-</code></pre></div>
-
-<p>ℹ️ Try <code>man group</code>. </p>
-<h2 id="addingremoving-users">Adding/removing users<a class="headerlink" href="#addingremoving-users" title="Permanent link">&para;</a></h2>
-<p>Obviously, only user root can do <code>adduser</code> and <code>deluser</code></p>
-<h2 id="managing-permissions-recap">Managing Permissions (Recap)<a class="headerlink" href="#managing-permissions-recap" title="Permanent link">&para;</a></h2>
-<p>File and directory access in Linux is based on:
-- Owner
-- Group
-- Others</p>
-<p>Use <code>ls -l</code> to view permissions:</p>
-<div class="codehilite"><pre><span></span><code>-rw-r--r-- 1 noam noam 1234 May 1  file.txt
-</code></pre></div>
-
-<p>From earlier chapters, recall:
-- <code>chmod</code> — change permission bits<br />
-- <code>chown</code> — change ownership<br />
-- <code>chgrp</code> — change group ownership</p>
-<h2 id="exercise">💻 Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h2>
-<h3 id="1-change-your-password">1. Change Your Password<a class="headerlink" href="#1-change-your-password" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>passwd
-</code></pre></div>
-
-<p>Try this now and note how many characters are accepted (even though they don't echo to the screen).</p>
-<h3 id="2-create-a-new-group-and-add-a-user">2. Create a New Group and Add a User<a class="headerlink" href="#2-create-a-new-group-and-add-a-user" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p>You'll need <code>sudo</code> privileges.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>groupadd<span class="w"> </span>mygroup
-sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>mygroup<span class="w"> </span><span class="nv">$USER</span>
+<p><br></p>
+<hr>
+<p><br></p>
+<h2 id="awk">AWK<a class="headerlink" href="#awk" title="Permanent link">&para;</a></h2>
+<p>Awk is a text processing tool built in 1977 in Bell labs. 
+Surprisingly enough, it is still widely used today by many people for its simplicity and power. </p>
+<p>Awk is interpreted -&gt; slow for large inputs.<br>
+Use it for quick and dirty processing of texts, or as part of scripts. This will usually be part of a pipeline (e.g. find | awk | sort ).</p>
+<p>Examples taken from https://en.wikibooks.org/wiki/An_Awk_Primer</p>
+<p>Awk can be used with command line args "one line program" or with a program file.</p>
+<p>An Awk program has the general form:</p>
+<div class="codehilite"><pre><span></span><code><span class="kr">BEGIN</span> <span class="p">{</span> <span class="n">initializations</span> <span class="p">}</span>  <span class="n">search</span> <span class="n">pattern</span> <span class="mi">1</span> <span class="p">{</span> <span class="n">program</span> <span class="n">actions</span> <span class="p">}</span> <span class="n">search</span> <span class="n">pattern</span> <span class="mi">2</span> <span class="p">{</span> <span class="n">program</span> <span class="n">actions</span> <span class="p">}</span> <span class="p">...</span> <span class="kr">END</span> <span class="p">{</span> <span class="n">final</span> <span class="n">actions</span> <span class="p">}</span>
 </code></pre></div>
 
-<p>ℹ️  The <code>$USER</code> is an environment variable holding the name of the current user. Using this variable allows for writing general scripts that will work for all users.</p>
-<p>Then <strong>log out and back in</strong> for the group membership to take effect.</p>
-<p>Check your group list:</p>
-<div class="codehilite"><pre><span></span><code>groups
+<p>Each part is optional if it is not needed.</p>
+<p>Download the <a href="../../assets/07/coins.txt">sample file</a> and run <code>$ awk '/gold/' coins.txt</code></p>
+<p>❔ Why  no "{program actions}"?</p>
+<p>The above show the "one liner" usage: <br>
+<code>awk search-pattern { program actions }</code></p>
+<p>We can add conditions:<br>
+<code>awk '{if ($3 &lt; 1980) print $3, "....",$5,$6,$7,$8}' coins.txt</code></p>
+<p>In awk, everything is a string, but if the string can be understood as number, it is possible to perform number operations on it.</p>
+<h3 id="begin-and-end">BEGIN and END<a class="headerlink" href="#begin-and-end" title="Permanent link">&para;</a></h3>
+<p><code>awk 'END {print NR,"coins"}' coins.txt</code></p>
+<p>You can add sections that will be done before and after the lines are read from the input.</p>
+<div class="codehilite"><pre><span></span><code><span class="o">#</span> <span class="p">(</span><span class="n">in</span> <span class="n">a</span> <span class="n">single</span> <span class="n">line</span><span class="p">.</span> <span class="n">folded</span> <span class="n">here</span> <span class="n">for</span> <span class="n">brevity</span><span class="p">)</span>
+<span class="n">awk</span> <span class="err">&#39;</span><span class="kr">BEGIN</span> <span class="p">{</span> <span class="n">initializations</span> <span class="p">}</span>
+    <span class="n">search</span> <span class="n">pattern</span> <span class="mi">1</span> <span class="p">{</span> <span class="n">program</span> <span class="n">actions</span> <span class="p">}</span>
+    <span class="n">search</span> <span class="n">pattern</span> <span class="mi">2</span> <span class="p">{</span> <span class="n">program</span> <span class="n">actions</span> <span class="p">}</span>
+    <span class="p">...</span>
+    <span class="kr">END</span> <span class="p">{</span> <span class="n">final</span> <span class="n">actions</span> <span class="p">}</span><span class="err">&#39;</span> <span class="n">input</span> <span class="n">file</span>
 </code></pre></div>
 
-<p>You should see <code>mygroup</code> listed.</p>
-<h3 id="3-test-file-permissions-by-group">3.  Test File Permissions by Group<a class="headerlink" href="#3-test-file-permissions-by-group" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>mkdir<span class="w"> </span>shared-folder
-sudo<span class="w"> </span>chgrp<span class="w"> </span>mygroup<span class="w"> </span>shared-folder
-chmod<span class="w"> </span>g+rw<span class="w"> </span>shared-folder
+<h3 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h3>
+<p>User defined variables are not declared. They are defaulting to empty string or 0.
+<code>{ounces += $2}</code> will define <code>ounces</code>, set it to 0 and add value of field 2</p>
+<p>❔ Is $1 the first or second field? (i.e. zero based indexing or not)</p>
+<p>A variable can be a scalar or array.<br>
+There are builtin variables such as</p>
+<p><strong>NR</strong>: Keeps a current count of the number of input records<br>
+<strong>NF</strong>: number of fields within the current input record<br>
+<strong>FS</strong>: the field separator character used to divide fields on the input line<br>
+<strong>RS</strong>: Record separator    ← a record can span MORE THAN ONE LINE!</p>
+<p><code>echo -e "one two three \n a b c d e f" | awk '{print NF}'</code></p>
+<p>will print <code>3 6</code> : three fields in first line, and 6 in the second</p>
+<h3 id="search-patterns">Search Patterns<a class="headerlink" href="#search-patterns" title="Permanent link">&para;</a></h3>
+<p><code>awk /regular expression/ [...]</code></p>
+<p>The regular expression (regex) is POSIX Extended Regular Expressions. It is similar to python's variant.</p>
+<p>If empty, it matches everything.</p>
+<h3 id="awk-program">Awk program<a class="headerlink" href="#awk-program" title="Permanent link">&para;</a></h3>
+<p>If there is more than one statement, write them in a file:</p>
+<p><code>awk -f awk program datafile</code></p>
+<p>Awk can also read from stdin (important for pipeline!) </p>
+<p><code>awk -f awk program &lt; datafile</code></p>
+<h3 id="exercise">Exercise<a class="headerlink" href="#exercise" title="Permanent link">&para;</a></h3>
+<p>Based on the data in coins.txt:</p>
+<ul>
+<li>how many gold pieces?</li>
+<li>how many silver pieces?</li>
+<li>weight and value of each? (assume gold is 485 [Dinar/gram] and silver is 16 [Dinar/gram]
+)</li>
+</ul>
+<p>See the <a href="../../assets/07/summing.awk">answer</a> if you are stuck.</p>
+<h2 id="is-that-it">Is that it?<a class="headerlink" href="#is-that-it" title="Permanent link">&para;</a></h2>
+<p>There is more to awk! </p>
+<div class="codehilite"><pre><span></span><code>•<span class="w"> </span><span class="nv">Arrays</span>
+•<span class="w"> </span><span class="nv">Functions</span>
+•<span class="w"> </span><span class="nv">Control</span><span class="w"> </span><span class="nv">structures</span><span class="w"> </span><span class="ss">(</span><span class="k">if</span>,<span class="w"> </span><span class="k">while</span>,<span class="w"> </span><span class="k">break</span>...<span class="ss">)</span>
+•<span class="w"> </span><span class="nv">Output</span><span class="w"> </span><span class="nv">formats</span>
+•<span class="w"> </span><span class="nv">Redirection</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">files</span>
+•<span class="w"> </span><span class="nv">Debugging</span><span class="w"> </span><span class="nv">awk</span><span class="w"> </span><span class="nv">programs</span>
+•<span class="w"> </span><span class="nv">Extensions</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">language</span>
 </code></pre></div>
 
-<p>ℹ️ the <code>sudo</code> is needed here since only group members may add files to a group (a safety measure), and you might not yet be in this group.</p>
-<p>This lets all users in <code>mygroup</code> read/write the folder, without affecting the permissions of Owner and Other.</p>
+<p>But with today's availability of AI, should we invest in learning awk, or just ask the AI to create python/awk script for us?</p>
+<p>obviously, if you are offline/no-ai-status, you must know what to do.</p>
+<p>And even when online, use awk/sed/tr to do simple tasks. it is good to know you don't have to write a python script just to cut some columns and sum them.</p>
+<h2 id="examples-using-both-awk-and-sed">Examples (using both awk and sed)<a class="headerlink" href="#examples-using-both-awk-and-sed" title="Permanent link">&para;</a></h2>
+<p>Given the file "Alice_book", prepare it for processing. You can find it <a href="../../assets/07/alice.txt">here</a></p>
+<p><strong>convert all to lower case and remove punctuation marks and create a new book called Alice_book_new</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="nt">awk</span><span class="w"> </span><span class="s1">&#39;{print tolower($0)}&#39;</span><span class="w"> </span><span class="nt">Alice_book</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nt">awk</span><span class="w"> </span><span class="s1">&#39;{ gsub(/</span><span class="cp">[</span><span class="err">[</span><span class="p">:</span><span class="nx">punct</span><span class="p">:</span><span class="cp">]</span><span class="s1">]/, &quot;&quot;, $0) } 1;&#39;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nt">Alice_book_new</span>
+</code></pre></div>
+
+<p><strong>remove empty lines</strong>
+<code>sed -i '/^[[:space:]]*$/d' Alice_book_new</code></p>
+<p><strong>remove leading spaces and tabs from each line</strong>
+<code>sed -i "s/^[ \t]*//" Alice_book_new</code></p>
 
 
 
