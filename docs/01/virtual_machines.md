@@ -48,8 +48,14 @@ The software that enables this magic is the **Hypervisor**
 
 [more explanation here](https://medium.com/@ravipatel.it/understanding-hypervisors-exploring-type-1-vs-type-2-and-full-vs-para-virtualization-71b4dad9abd9)
 
+⚠️ When installing VirtualBox, it can also install *Extension Pack*. This package is free for personal users but requires paid license for commercial/University usage.  You may install the extension pack on your personal laptop, but MUST NOT install the extension pack on Technion servers. 
+
+For the purpose of this course, you do not need the extension pack.
+
+
 
 Now go and install VirtualBox on your computer!
+
 
 
 # Installing Linux in VirtualBox: 3 alternatives
