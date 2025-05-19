@@ -2,252 +2,252 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://cnoam.github.io/linux101/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/"/>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/summary/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/summary/"/>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/summary/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/01/ch_01/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/01/ch_01/"/>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/01/ch_01/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/01/virtual_machines/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/01/virtual_machines/"/>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/01/virtual_machines/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/02/ch_02/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/02/ch_02/"/>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/02/ch_02/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/02/env_vars/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/02/env_vars/"/>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/02/env_vars/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/02/terminal/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/02/terminal/"/>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/02/terminal/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/03/ch_03/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/03/ch_03/"/>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/03/ch_03/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/03/redirection/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/03/redirection/"/>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/03/redirection/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/04/ch_04/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/04/ch_04/"/>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/04/ch_04/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/05/ch_05/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/05/ch_05/"/>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/05/ch_05/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/06/ch_06/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/06/ch_06/"/>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/06/ch_06/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/07/ch_07/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/07/ch_07/"/>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/07/ch_07/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/08/ch_08/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/08/ch_08/"/>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/08/ch_08/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/09/ch_09/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/09/ch_09/"/>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/09/ch_09/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/10/networking/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/10/networking/"/>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/10/networking/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/regex/glob/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/regex/glob/"/>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/regex/glob/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/regex/regex/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/regex/regex/"/>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/regex/regex/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/he/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/he/summary/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/summary/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/summary/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/he/01/ch_01/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/01/ch_01/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/01/ch_01/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/he/01/virtual_machines/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/01/virtual_machines/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/01/virtual_machines/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/he/02/ch_02/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/02/ch_02/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/02/ch_02/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/he/02/env_vars/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/02/env_vars/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/02/env_vars/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/he/02/terminal/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/02/terminal/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/02/terminal/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/he/03/ch_03/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/03/ch_03/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/03/ch_03/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/he/03/redirection/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/03/redirection/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/03/redirection/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/he/04/ch_04/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/04/ch_04/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/04/ch_04/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/he/05/ch_05/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/05/ch_05/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/05/ch_05/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/he/06/ch_06/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/06/ch_06/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/06/ch_06/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/he/07/ch_07/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/07/ch_07/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/07/ch_07/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/he/08/ch_08/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/08/ch_08/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/08/ch_08/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/he/09/ch_09/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/09/ch_09/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/09/ch_09/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/he/10/networking/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/10/networking/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/10/networking/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/he/regex/glob/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/regex/glob/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/regex/glob/"/>
     </url>
     <url>
         <loc>https://cnoam.github.io/linux101/he/regex/regex/</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-05-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="he" href="https://cnoam.github.io/linux101/he/regex/regex/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://cnoam.github.io/linux101/regex/regex/"/>
