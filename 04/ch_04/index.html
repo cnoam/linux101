@@ -488,7 +488,7 @@
 
 
 <h1 id="chapter-4-file-permissions-and-ownership">Chapter 4: File Permissions and Ownership<a class="headerlink" href="#chapter-4-file-permissions-and-ownership" title="Permanent link">&para;</a></h1>
-<p>(content partialy taken from course 095219/07_linux_tools)</p>
+<p>(content partially taken from course 095219/07_linux_tools)</p>
 <p>The concept of file in <em>nix is very strong. It proves it by living without change for 50 years.
  Anything that implements </em>{open, close, read, write, seek}* can be a file.<br>
 A file can be simply a storage: keep a text document, a picture, executable program, source code...</p>
@@ -496,21 +496,20 @@ A file can be simply a storage: keep a text document, a picture, executable prog
 <p>example: <code>/dev   /proc   /sys</code></p>
 <p>Go ahead and try </p>
 <div class="codehilite"><pre><span></span><code>cat /proc/cpuinfo     
-cat /cpu/meminfo
+cat /proc/meminfo
 </code></pre></div>
 
 <h1 id="file-permissions">File permissions<a class="headerlink" href="#file-permissions" title="Permanent link">&para;</a></h1>
 <p>A file has permissions: who can do what.<br>
 A <strong>Directory (now referring to storage!) is also a file!</strong></p>
-<p>This means that by using file permissions, we can recursively give access to directory to a specific user/group.</p>
+<p>This means that by using file permissions, we can recursively give access to a directory to a specific user/group.</p>
 <p>Linux file permissions are a crucial aspect of the operating system, governing how users and processes can access and modify files. They establish a security layer, ensuring only authorized entities can interact with data. Here's a breakdown of the key concepts:</p>
 <h2 id="understanding-the-actors">Understanding the Actors<a class="headerlink" href="#understanding-the-actors" title="Permanent link">&para;</a></h2>
 <p><strong>User:</strong> Refers to an individual with an account on the system. </p>
 <p><strong>Group:</strong> A collection of users who share certain permissions. </p>
 <p><strong>Others:</strong> All users who are not the owner or part of the group associated with the file. </p>
 <p>In the old days, file permissions were ONLY by user/group/other.
-With today’s challenges, there are sometimes variations – adding more security features.
-See Appendix A for more on File Systems</p>
+With today’s challenges, there are sometimes variations – adding more security features.</p>
 <h2 id="the-permission-trio">The Permission Trio<a class="headerlink" href="#the-permission-trio" title="Permanent link">&para;</a></h2>
 <p>Each file and directory in Linux have three permission sets:
 * <strong>Read (r):</strong> Allows users to view the contents of a file or list the contents of a directory. </p>
@@ -617,7 +616,7 @@ $<span class="w"> </span>cat<span class="w"> </span>fileA<span class="w"> </span
 $<span class="w"> </span>rm<span class="w"> </span>fileA<span class="w"> </span>
 rm:<span class="w"> </span>remove<span class="w"> </span>write-protected<span class="w"> </span>regular<span class="w"> </span>empty<span class="w"> </span>file<span class="w"> </span><span class="s1">&#39;fileA&#39;</span>?<span class="w"> </span>y<span class="w"> </span>
 rm:<span class="w"> </span>cannot<span class="w"> </span>remove<span class="w"> </span><span class="s1">&#39;fileA&#39;</span>:<span class="w"> </span>Permission<span class="w"> </span>denied<span class="w"> </span>
-$<span class="w"> </span>
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>../test<span class="w"> </span>
 $<span class="w"> </span>sudo<span class="w"> </span>chmod<span class="w"> </span>a-x<span class="w"> </span><span class="nb">test</span><span class="w"> </span>
 $<span class="w"> </span>ls<span class="w"> </span>-ld<span class="w"> </span><span class="nb">test</span><span class="w"> </span>
 drw-r--r--<span class="w"> </span><span class="m">2</span><span class="w"> </span>root<span class="w"> </span>root<span class="w"> </span><span class="m">4096</span><span class="w"> </span>Mar<span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="m">13</span>:36<span class="w"> </span><span class="nb">test</span><span class="w"> </span>
@@ -627,11 +626,11 @@ bash:<span class="w"> </span>cd:<span class="w"> </span>test:<span class="w"> </
 
 <h1 id="check-yourself">Check yourself<a class="headerlink" href="#check-yourself" title="Permanent link">&para;</a></h1>
 <ol>
-<li>Create directory named <code>parent</code> with these permissions <code>drwx---r-x root root .</code> <br>
+<li>Create directory named <code>parent</code> with these permissions <code>drwx---r-x root root</code> <br>
 <strong>Hint</strong>: To set ownership, run <code>sudo chown root:root parent</code></li>
 <li>
-<p>Create a sub directory <code>child</code> with permissions <code>0777</code><br>
-Can you list the files in child? <br>
+<p>as root, Create a sub directory <code>child</code> with permissions <code>0777</code><br>
+Can you (a regular user) list the files in child? <br>
 Can you modify a file in child? <br>
 Delete a file? Create a file? <br>
 Confused?<br></p>

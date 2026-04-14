@@ -18,7 +18,7 @@
     
     
       
-        <title>Chapter NN Text Streams, Redirection, and Pipes in Linux - Linux Basics & CLI Course</title>
+        <title>Text Streams, Redirection, and Pipes in Linux - Linux Basics & CLI Course</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-nn-text-streams-redirection-and-pipes-in-linux" class="md-skip">
+        <a href="#text-streams-redirection-and-pipes-in-linux" class="md-skip">
           לדלג לתוכן
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chapter NN Text Streams, Redirection, and Pipes in Linux
+              Text Streams, Redirection, and Pipes in Linux
             
           </span>
         </div>
@@ -598,7 +598,7 @@
 
 
 
-<h1 id="chapter-nn-text-streams-redirection-and-pipes-in-linux">Chapter NN Text Streams, Redirection, and Pipes in Linux<a class="headerlink" href="#chapter-nn-text-streams-redirection-and-pipes-in-linux" title="Permanent link">&para;</a></h1>
+<h1 id="text-streams-redirection-and-pipes-in-linux">Text Streams, Redirection, and Pipes in Linux<a class="headerlink" href="#text-streams-redirection-and-pipes-in-linux" title="Permanent link">&para;</a></h1>
 <h2 id="why-do-linux-programs-use-text">Why Do Linux Programs Use Text?<a class="headerlink" href="#why-do-linux-programs-use-text" title="Permanent link">&para;</a></h2>
 <p>Linux programs often use <strong>plain text</strong> as input and output because:
 - It's <strong>simple</strong> and <strong>human-readable</strong>
@@ -636,7 +636,7 @@
 </tbody>
 </table>
 <p>You don’t usually see these streams directly — but you can control them with <strong>redirection</strong> and <strong>pipes</strong>.</p>
-<p>ℹ️ The fact that the data streams are provided, does not mean that program use ! For example, a GUI program (e.g. file explorer, video player) will not use stdin. </p>
+<p>ℹ️ The fact that the data streams are provided, does not mean that program use them! For example, a GUI program (e.g. file explorer, video player) will not use stdin. </p>
 <p>These are mostly used with <strong>text based</strong> content</p>
 <hr />
 <h2 id="redirects-2">🔄 Redirects (<code>&gt;</code>, <code>&gt;&gt;</code>, <code>&lt;</code>, <code>2&gt;</code>)<a class="headerlink" href="#redirects-2" title="Permanent link">&para;</a></h2>
@@ -685,7 +685,7 @@ ls<span class="w"> </span>/fake/dir<span class="w"> </span><span class="m">2</sp
 </code></pre></div>
 
 <p>This lets you build powerful chains of tools.</p>
-<p>The Beuty of it is that the program itself is <em>not aware</em> to the redirection. It keeps reading from stdin and writing to stdout.</p>
+<p>The Beauty of it is that the program itself is <em>not aware</em> to the redirection. It keeps reading from stdin and writing to stdout.</p>
 <h3 id="all-piped-commands-run-concurrently">All piped commands Run Concurrently!<a class="headerlink" href="#all-piped-commands-run-concurrently" title="Permanent link">&para;</a></h3>
 <p>When you use a pipe:
 - <strong>Both commands run at the same time</strong>
@@ -696,19 +696,18 @@ ls<span class="w"> </span>/fake/dir<span class="w"> </span><span class="m">2</sp
 <li>how many commands can be piped? Can I run <code>ls | grep x | wc | sort</code> ?</li>
 <li>if the second command (of four commands) fails, but the other succeeds, will the whole command fail or succeed?  What would you want it to be?</li>
 </ol>
-<p>!!TODO!!</p>
-<p>🎥 open the <a href="">video</a>, and execute the commands below</p>
+<p>🎥 open the <a href="https://panoptotech.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=46869a52-f796-4e79-ba2f-b42b00d1d451">video</a>, and execute the commands below</p>
 <h3 id="examples_1">Examples:<a class="headerlink" href="#examples_1" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code>ls<span class="w"> </span>-l<span class="w"> </span><span class="p">|</span><span class="w"> </span>less
 cat<span class="w"> </span>file.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;error&quot;</span>
-ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>firefox<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l
+ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>chrome<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l
 </code></pre></div>
 
 <hr />
 <h2 id="example-filter-to-stderr">Example: Filter to stderr<a class="headerlink" href="#example-filter-to-stderr" title="Permanent link">&para;</a></h2>
 <p>Sometimes you want to <strong>send only errors</strong> to another command or to a file.</p>
 <h3 id="example-with-find">Example with <code>find</code>:<a class="headerlink" href="#example-with-find" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>find<span class="w"> </span>/<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.conf&quot;</span><span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>errors.txt
+<div class="codehilite"><pre><span></span><code>find<span class="w"> </span>/usr<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.conf&quot;</span><span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>errors.txt
 </code></pre></div>
 
 <ul>
@@ -717,7 +716,7 @@ ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><sp
 <li>Normal results (stdout) still appear in the terminal</li>
 </ul>
 <p>Or send both to separate places:</p>
-<div class="codehilite"><pre><span></span><code>find<span class="w"> </span>/<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.conf&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>results.txt<span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>errors.txt
+<div class="codehilite"><pre><span></span><code>find<span class="w"> </span>/usr<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.conf&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>results.txt<span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>errors.txt
 </code></pre></div>
 
 <hr />

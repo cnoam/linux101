@@ -500,13 +500,16 @@
 <p>Every command you run is a process. These commands help you see and manage them.</p>
 <p><code>ps</code> – Shows running processes (programs). Use <code>ps aux</code> to see all processes.</p>
 <p><code>kill</code> – Sends a signal to a process, usually to stop (terminate) it. You need the process ID (PID), which you can get from <code>ps</code></p>
-<p>A process can run in the <em>forground</em> or <em>background</em></p>
+<p>A process can run in the <em>foreground</em> or <em>background</em></p>
 <p><code>jobs</code> – Lists your current jobs (programs started from this terminal). Useful when working with background tasks.</p>
 <p>A process can be suspended - it is in comma until we kill it or revive it.</p>
 <p><code>Ctrl+z</code> – Pause the current command and send it to the background in <em>stopped</em> state. You can resume it with <code>fg</code> or <code>bg</code>.</p>
 <p><code>bg</code> – Resumes a paused job (usually with Ctrl+Z) and runs it in the background.</p>
 <p><code>fg</code> – Brings a background job back to the foreground so you can interact with it.</p>
-<p><code>Ctrl+cC</code> – Cancel the current command. If a program is running and you want to stop it, press this.</p>
+<p><code>Ctrl+C</code> – Cancel the current command. If a program is running and you want to stop it, press this.</p>
+<blockquote>
+<p>note: this is can lead to unwanted killing of a program: you are used to copy/paste using ctrl-c / ctrl-v , and now the same key kills the program.</p>
+</blockquote>
 <h3 id="excercise-using-ps-and-jobs">💻 Excercise -- using ps and jobs<a class="headerlink" href="#excercise-using-ps-and-jobs" title="Permanent link">&para;</a></h3>
 <p>In this exercise, you will run a program, suspend it, send it the background and more.</p>
 <p>Create the program: <code>echo 'for ((i=1; ; i++)); do echo  "$i" ; sleep 1; done' &gt; loop</code></p>
@@ -515,9 +518,9 @@
 <p>Kill it by pressing <code>ctrl-c</code></p>
 <p>Run it again, this time suspend it.</p>
 <div class="codehilite"><pre><span></span><code>$<span class="w"> </span>./loop
-hello
-hello
-hello
+<span class="m">1</span>
+<span class="m">2</span>
+<span class="m">3</span>
 ^Z
 <span class="o">[</span><span class="m">1</span><span class="o">]</span>+<span class="w">  </span>Stopped<span class="w">                 </span>./loop
 cnoam@noam-u:~/tmp$
@@ -526,10 +529,9 @@ cnoam@noam-u:~/tmp$
 <p>check who is suspended: <code>jobs</code></p>
 <p>Resume it to run in the background. Because the program writes to stdout, it will disturb the prompt (<code>$</code>)but you can give other commands in the shell since the program runs in the background!</p>
 <p>You cannot kill or suspend it again now using <code>ctrl-c</code> / <code>ctrl-z</code> since it is not connected to the shell.</p>
-<p>type <code>fg</code> (don`t forget ENTER) and the program will now be in the forground, using the shell's stdin.(so pressing keys will affect it)</p>
+<p>type <code>fg</code> (don`t forget ENTER) and the program will now be in the foreground, using the shell's stdin.(so pressing keys will affect it)</p>
 <p>Kill it using <code>ctrl-c</code></p>
-<p>!!TODO!!</p>
-<p>🎥 watch the <a href="">video</a> where I run this example</p>
+<p>🎥 watch the <a href="https://panoptotech.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=8e3c2212-f6bb-4a54-98c3-b42b010fa881">video</a> where I run this example</p>
 <h1 id="keyboard-shortcuts">Keyboard shortcuts<a class="headerlink" href="#keyboard-shortcuts" title="Permanent link">&para;</a></h1>
 <p>Don't work too hard — nobody wants to type everything from scratch.</p>
 <p><strong>↑ (Up arrow)</strong>: Shows the previous command. You can press it multiple times to scroll through your command history. Once you find what you want, you can edit it or just press <code>ENTER</code> to run it again.</p>

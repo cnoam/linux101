@@ -549,7 +549,6 @@
 <p>We have files a directories. What can we do with them?</p>
 <p>The obvious is to open a file, e.g. open a JPEG with photo viewer app. But there is so much more!</p>
 <p>First, let's use a file large enough that will not fit in the terminal's screen.</p>
-<p>🎥 open the <a href="">video</a>, and exectute the commands below</p>
 <p><code>ls /var/log/dmesg</code> . If the file exists, its name is printed. If not, an error is printed.</p>
 <p><code>cat /var/log/dmesg</code> will print the whole file contents to the screen. Because the file is too long, we miss the first part. Use <code>less /var/log/dmesg</code> and press <code>space bar</code> to move pages.</p>
 <p>To see the first N (default 10) lines: <code>head /var/log/dmesg</code>
@@ -576,8 +575,8 @@ Create a file there: <code>touch chap3/insider/tuchman</code></p>
 <code>find / -type f -mtime -21 -size +50k -exec grep -l "log" {} +</code></p>
 <p>This command has tons of options. Part of its strenght is that once a file/dir is found, some operations on it can be executed (search within it in this example), and the operation can be any linux command!</p>
 <h1 id="locate-a-command">locate a command<a class="headerlink" href="#locate-a-command" title="Permanent link">&para;</a></h1>
-<p>When we type a command (for example <code>date</code>), the shell looks for a file with that name (* minor lie here) and if found, execute it.<br>
-How can we find where is the vast dir tree is this command?</p>
+<p>When we type a command (for example <code>date</code>), the shell looks for a file with that name and if found, execute it.<br>
+How can we find where in the vast dir tree is this command?</p>
 <p>Use <code>which date</code>. 
 In Alpine it tells us there is a file at <code>/bin/date</code> <br>
 In Ubuntu , the location is <code>/usr/bin/date</code><br></p>
@@ -589,7 +588,7 @@ In Ubuntu , the location is <code>/usr/bin/date</code><br></p>
 <p>✅ create a file with some text in it: <code>echo "I love shell" &gt; selfie.jpg</code>
 Then run <code>file selfie.jpg</code> and see what it says.</p>
 <p>⚠️ the <code>file</code> command is not installed in Alpine (this is why is is so lightweight...)</p>
-<h3 id="execrcise-how-many-lines-in-that-file">💻 Execrcise - how many lines in that file?<a class="headerlink" href="#execrcise-how-many-lines-in-that-file" title="Permanent link">&para;</a></h3>
+<h3 id="exercise-how-many-lines-in-that-file">💻 Exercise - how many lines in that file?<a class="headerlink" href="#exercise-how-many-lines-in-that-file" title="Permanent link">&para;</a></h3>
 <p>run <code>wc --help</code>.</p>
 <p>How many lines are in <code>/var/log/dmesg</code>? <br>
 What is its file type?</p>

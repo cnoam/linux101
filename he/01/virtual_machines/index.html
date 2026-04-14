@@ -559,29 +559,28 @@
 <h3 id="hypervisor-type-1-type-2">איור המדגים את ההבדל בין Hypervisor Type 1 ל-Type 2:<a class="headerlink" href="#hypervisor-type-1-type-2" title="Permanent link">&para;</a></h3>
 <p><img alt=" " src="https://miro.medium.com/v2/resize:fit:4800/format:webp/0*r7b1FbiZM3bdTZDf.png" /></p>
 <p>https://medium.com/@ravipatel.it/understanding-hypervisors-exploring-type-1-vs-type-2-and-full-vs-para-virtualization-71b4dad9abd9</p>
-<p>Now go and install VirtualBox on your computer.</p>
-<h1 id="installing-linux-in-virtualbox-3-alternatives">Installing Linux in VirtualBox: 3 alternatives<a class="headerlink" href="#installing-linux-in-virtualbox-3-alternatives" title="Permanent link">&para;</a></h1>
-<h2 id="watch-the-videos-alt1-alt2">Watch the videos (alt1, alt2)<a class="headerlink" href="#watch-the-videos-alt1-alt2" title="Permanent link">&para;</a></h2>
-<p>In these videos, we install two variants of linux (each in its own VM)</p>
-<p>The first one is installing "linux lite" which has a GUI. It is pre-installed on a (virtual hard disk), so all we have to do is create the machine, and connect the hard disk. See it <a href="https://panoptotech.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=98ca8b22-12aa-497e-b254-b2b000826174">🎥 here</a></p>
-<p>The second is "installing alpine linux" which is a tiny, no GUI version of linux. We create a machine as before, and then follow all the steps until there is an installed linux!
-<br>This be used later, so don't skip!  See it <a href="https://panoptotech.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0e2f5dde-03a0-4a7e-bd73-b2b000826177">🎥 here</a></p>
-<h2 id="or-take-the-shortcut-alt3">or, Take the shortcut (alt3)<a class="headerlink" href="#or-take-the-shortcut-alt3" title="Permanent link">&para;</a></h2>
-<p>Follow the instructions in <a href="../../../01/using_VirtualBox_linux.pdf">Installing Linux in VirtualBox in 3 steps</a></p>
+<h1 id="-virtualbox-3">התקנת לינוקס ב-VirtualBox: 3 אפשרויות<a class="headerlink" href="#-virtualbox-3" title="Permanent link">&para;</a></h1>
+<h2 id="1-2">צפו בסרטונים (אפשרות 1, אפשרות 2)<a class="headerlink" href="#1-2" title="Permanent link">&para;</a></h2>
+<p>בסרטונים אלו נתקין שתי גרסאות של לינוקס (כל אחת במכונה וירטואלית משלה).</p>
+<p>הראשונה היא התקנת <strong>"Linux Lite"</strong> הכוללת ממשק גרפי (GUI). היא מגיעה מותקנת מראש על כונן קשיח וירטואלי, כך שכל שעלינו לעשות הוא ליצור את המכונה ולחבר אליה את הכונן הקשיח. צפו בזה <a href="https://panoptotech.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=98ca8b22-12aa-497e-b254-b2b000826174">🎥 כאן</a>.</p>
+<p>השנייה היא <strong>"התקנת Alpine Linux"</strong>, שהיא גרסה זעירה של לינוקס ללא ממשק גרפי. אנו יוצרים מכונה כפי שעשינו קודם, ולאחר מכן עוקבים אחר כל שלבי ההתקנה עד לקבלת מערכת לינוקס מותקנת! 
+<br>נשתמש בזה בהמשך, אז אל תדלגו! צפו בזה <a href="https://panoptotech.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0e2f5dde-03a0-4a7e-bd73-b2b000826177">🎥 כאן</a>.</p>
+<h2 id="3">או, השתמשו בקיצור הדרך (אפשרות 3)<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p>עקבו אחר ההוראות בקובץ: <a href="../../../01/using_VirtualBox_linux.pdf">התקנת לינוקס ב-VirtualBox ב-3 שלבים</a>.</p>
 <p><br><br></p>
-<h1 id="snapshots-how-to-go-back-to-a-good-state">Snapshots -- how to go back to a good state<a class="headerlink" href="#snapshots-how-to-go-back-to-a-good-state" title="Permanent link">&para;</a></h1>
-<p>VirtualBox snapshots are useful because they let you save the exact state of a virtual machine, including:</p>
+<h1 id="snapshots">Snapshots (נקודות שחזור) – איך לחזור למצב תקין<a class="headerlink" href="#snapshots" title="Permanent link">&para;</a></h1>
+<p>ה-Snapshots ב-VirtualBox שימושיים מאוד מכיוון שהם מאפשרים לשמור את המצב המדויק של המכונה הווירטואלית, כולל:</p>
 <ul>
-<li>Disk contents</li>
-<li>Memory (RAM) configuration</li>
-<li>Settings</li>
+<li><strong>תוכן הדיסק</strong> (קבצים, תוכנות שהותקנו).</li>
+<li><strong>תצורת הזיכרון (RAM)</strong> (מצב התוכניות הפתוחות באותו רגע).</li>
+<li><strong>הגדרות המערכת</strong>.</li>
 </ul>
-<p>This means you can:</p>
-<p>🕒 Go back in time — If something breaks (like a misconfigured boot file), you can quickly revert to the last working state.</p>
-<p>🧪 Experiment safely — Try changes without fear. If it fails, restore the snapshot.</p>
-<p>💡 Fast recovery — No need to reinstall or reconfigure your system.</p>
-<p>In short: Snapshots = undo button for your VM.</p>
-<p><a href="https://docs.oracle.com/en/virtualization/virtualbox/6.0/user/snapshots.html"><strong>snapshot in Oracle site</strong></a></p>
+<p>המשמעות היא שאתם יכולים:</p>
+<p>🕒 <strong>לחזור אחורה בזמן</strong> – אם משהו נשבר (כמו קובץ אתחול שהוגדר לא נכון), תוכלו לחזור במהירות למצב התקין האחרון.</p>
+<p>🧪 <strong>לנסות ניסויים בבטחה</strong> – נסו שינויים ללא פחד. אם זה נכשל, פשוט שחזרו את ה-Snapshot.</p>
+<p>💡 <strong>התאוששות מהירה</strong> – אין צורך להתקין מחדש או להגדיר את המערכת מאפס.</p>
+<p><strong>בקיצור: Snapshots = כפתור ה-"Undo" (ביטול פעולה) של המכונה הווירטואלית שלכם.</strong></p>
+<p><a href="https://docs.oracle.com/en/virtualization/virtualbox/6.0/user/snapshots.html"><strong>מידע על Snapshots באתר של Oracle</strong></a></p>
 
 
 

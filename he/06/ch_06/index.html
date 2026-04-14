@@ -488,8 +488,8 @@
 
 
 <h1 id="chapter-6-text-processing-editing">Chapter 6: Text Processing &amp; Editing<a class="headerlink" href="#chapter-6-text-processing-editing" title="Permanent link">&para;</a></h1>
-<h1 id="what-are-filter-programs-todo">What are 'filter programs'? TODO<a class="headerlink" href="#what-are-filter-programs-todo" title="Permanent link">&para;</a></h1>
-<p>(take from Ahmad's) This should be in the pipeline chapter</p>
+<h1 id="what-are-filter-programs">What are 'filter programs'?<a class="headerlink" href="#what-are-filter-programs" title="Permanent link">&para;</a></h1>
+<p>Linux filter programs are modular command-line utilities that read text from standard input, transform it, and output the result. Following the "do one thing and do it well" philosophy, tools like <strong>grep</strong>, <strong>awk</strong>, and <strong>sort</strong> are designed to be chained together using pipes (<code>|</code>). This allows you to build custom, complex data pipelines where the processed output of one command flows seamlessly into the next, making them indispensable for efficient log analysis and text manipulation.</p>
 <h2 id="viewing-text-files">Viewing Text Files<a class="headerlink" href="#viewing-text-files" title="Permanent link">&para;</a></h2>
 <p><strong>cat</strong> — Concatenate and print files</p>
 <p><code>cat /etc/os-release</code><br>
@@ -557,6 +557,9 @@ John,London
 <p>how would you see the contents of the file? (<code>cat</code>)</p>
 <p>Now sort the file, remove duplicate lines, and count the lines. Was it so hard?</p>
 <p>answer: <code>sort fruits.txt | uniq | wc -l</code></p>
+<ul>
+<li>or <code>sort -u fruits.txt | wc -l</code></li>
+</ul>
 <p>To understand how it works, run it in steps:</p>
 <div class="codehilite"><pre><span></span><code>sort fruits.txt
 sort fruits.txt | uniq
