@@ -48,7 +48,7 @@ Of course! nobody remembers all these strange command line args.
 Then you get the common options for commands:
 
 For example the `find` command:
-```
+``` bash
 ~$ cheat find
 # To find files following symlinks (otherwise the symlinks are not followed):
 find -L . -type f

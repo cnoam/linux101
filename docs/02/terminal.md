@@ -10,11 +10,11 @@ Using the File Manager, You can open two windows, open the relevant directories,
 
 Using the terminal, you type this *command line* `mv /path/to/file1 /path/to/other/file2`
 
-There are tasks which are easier using the GUI such as selecting muplitple files with no common name, or based on visual cues (picture thumbnails). Don't be fanatic. Use what works best.
+There are tasks which are easier using the GUI such as selecting multiple files with no common name, or based on visual cues (picture thumbnails). Don't be fanatic. Use what works best.
 
 **Example**: Move all files with extension DOCX to another folder
 
-ℹ️  *folder* and *directory* are synonims.
+ℹ️  *folder* and *directory* are synonyms.
 
 **Using File Manager:** set to list view, sort by extension, scroll down until the first file, select it, scroll down until the last one, SHIFT select it, drag to the destination folder which you already prepared, release the mouse button.
 
@@ -32,7 +32,7 @@ Examples: gnome-terminal, xterm, konsole, Windows Terminal
 
 Think of it like the TV screen and keyboard.
 
-In practice, we use these name interchangably.
+In practice, we use these name interchangeably.
 <br><br>
 
 
@@ -50,9 +50,9 @@ cd ..          # Go up one level
 📝 Tip: Use Tab to auto-complete folder names!
 
 
-🎥 open the [video](), and execute the commands below
+🎥 open the [video](https://panoptotech.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=aecc2354-cb25-41f9-90c8-b42b00b7e8be), and execute the commands below
 
-### 💻 Excercise -- copying a file 
+### 💻 Exercise -- copying a file
 Open a terminal. <br>
 If using Alpine, it is already open.<br>
 If using Windows WSL, open the Ubuntu, and this is the terminal.<br>

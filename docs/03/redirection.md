@@ -1,4 +1,4 @@
-# Chapter NN Text Streams, Redirection, and Pipes in Linux
+# Text Streams, Redirection, and Pipes in Linux
 
 ##  Why Do Linux Programs Use Text?
 
@@ -25,7 +25,7 @@ Every Linux program gets **three standard data streams**:
 You don’t usually see these streams directly — but you can control them with **redirection** and **pipes**.
 
 
-ℹ️ The fact that the data streams are provided, does not mean that program use ! For example, a GUI program (e.g. file explorer, video player) will not use stdin. 
+ℹ️ The fact that the data streams are provided, does not mean that program use them! For example, a GUI program (e.g. file explorer, video player) will not use stdin. 
 
 These are mostly used with **text based** content
 
@@ -63,7 +63,7 @@ command1 | command2
 
 This lets you build powerful chains of tools.
 
-The Beuty of it is that the program itself is *not aware* to the redirection. It keeps reading from stdin and writing to stdout.
+The Beauty of it is that the program itself is *not aware* to the redirection. It keeps reading from stdin and writing to stdout.
 
 
 
@@ -77,16 +77,15 @@ When you use a pipe:
 1. how many commands can be piped? Can I run `ls | grep x | wc | sort` ?
 1. if the second command (of four commands) fails, but the other succeeds, will the whole command fail or succeed?  What would you want it to be?
 
-!!TODO!!
 
-🎥 open the [video](), and execute the commands below
+🎥 open the [video](https://panoptotech.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=46869a52-f796-4e79-ba2f-b42b00d1d451), and execute the commands below
 
 
 ###  Examples:
 ```bash
 ls -l | less
 cat file.txt | grep "error"
-ps aux | grep firefox | wc -l
+ps aux | grep chrome | wc -l
 ```
 
 ---
@@ -97,7 +96,7 @@ Sometimes you want to **send only errors** to another command or to a file.
 
 ###  Example with `find`:
 ```bash
-find / -name "*.conf" 2> errors.txt
+find /usr -name "*.conf" 2> errors.txt
 ```
 - `find` may fail to read some directories
 - `2>` redirects only **stderr** to `errors.txt`
@@ -105,7 +104,7 @@ find / -name "*.conf" 2> errors.txt
 
 Or send both to separate places:
 ```bash
-find / -name "*.conf" > results.txt 2> errors.txt
+find /usr -name "*.conf" > results.txt 2> errors.txt
 ```
 
 ---

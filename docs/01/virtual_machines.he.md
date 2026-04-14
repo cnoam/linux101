@@ -1,5 +1,4 @@
 
-
 כדי להבין מה זה לינוקס[ ומה ההבדל בינו לwindows]  נסתכל קודם מהי מערכת הפעלה.
 
 # מהי מערכת הפעלה?
@@ -42,39 +41,41 @@
 https://medium.com/@ravipatel.it/understanding-hypervisors-exploring-type-1-vs-type-2-and-full-vs-para-virtualization-71b4dad9abd9
 
 
-Now go and install VirtualBox on your computer.
 
 
-# Installing Linux in VirtualBox: 3 alternatives
+# התקנת לינוקס ב-VirtualBox: 3 אפשרויות
 
-## Watch the videos (alt1, alt2)
-In these videos, we install two variants of linux (each in its own VM)
+## צפו בסרטונים (אפשרות 1, אפשרות 2)
+בסרטונים אלו נתקין שתי גרסאות של לינוקס (כל אחת במכונה וירטואלית משלה).
 
-The first one is installing "linux lite" which has a GUI. It is pre-installed on a (virtual hard disk), so all we have to do is create the machine, and connect the hard disk. See it [🎥 here](https://panoptotech.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=98ca8b22-12aa-497e-b254-b2b000826174)
+הראשונה היא התקנת **"Linux Lite"** הכוללת ממשק גרפי (GUI). היא מגיעה מותקנת מראש על כונן קשיח וירטואלי, כך שכל שעלינו לעשות הוא ליצור את המכונה ולחבר אליה את הכונן הקשיח. צפו בזה [🎥 כאן](https://panoptotech.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=98ca8b22-12aa-497e-b254-b2b000826174).
 
-The second is "installing alpine linux" which is a tiny, no GUI version of linux. We create a machine as before, and then follow all the steps until there is an installed linux!
-<br>This be used later, so don't skip!  See it [🎥 here](https://panoptotech.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0e2f5dde-03a0-4a7e-bd73-b2b000826177)
+השנייה היא **"התקנת Alpine Linux"**, שהיא גרסה זעירה של לינוקס ללא ממשק גרפי. אנו יוצרים מכונה כפי שעשינו קודם, ולאחר מכן עוקבים אחר כל שלבי ההתקנה עד לקבלת מערכת לינוקס מותקנת! 
+<br>נשתמש בזה בהמשך, אז אל תדלגו! צפו בזה [🎥 כאן](https://panoptotech.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0e2f5dde-03a0-4a7e-bd73-b2b000826177).
 
-## or, Take the shortcut (alt3)
-Follow the instructions in [Installing Linux in VirtualBox in 3 steps](./using_VirtualBox_linux.pdf)
+## או, השתמשו בקיצור הדרך (אפשרות 3)
+עקבו אחר ההוראות בקובץ: [התקנת לינוקס ב-VirtualBox ב-3 שלבים](./using_VirtualBox_linux.pdf).
 
 <br><br>
 
-# Snapshots -- how to go back to a good state
-VirtualBox snapshots are useful because they let you save the exact state of a virtual machine, including:
+# Snapshots (נקודות שחזור) – איך לחזור למצב תקין
 
-* Disk contents
-* Memory (RAM) configuration
-* Settings
 
-This means you can:
+ה-Snapshots ב-VirtualBox שימושיים מאוד מכיוון שהם מאפשרים לשמור את המצב המדויק של המכונה הווירטואלית, כולל:
 
-🕒 Go back in time — If something breaks (like a misconfigured boot file), you can quickly revert to the last working state.
+* **תוכן הדיסק** (קבצים, תוכנות שהותקנו).
+* **תצורת הזיכרון (RAM)** (מצב התוכניות הפתוחות באותו רגע).
+* **הגדרות המערכת**.
 
-🧪 Experiment safely — Try changes without fear. If it fails, restore the snapshot.
+המשמעות היא שאתם יכולים:
 
-💡 Fast recovery — No need to reinstall or reconfigure your system.
+🕒 **לחזור אחורה בזמן** – אם משהו נשבר (כמו קובץ אתחול שהוגדר לא נכון), תוכלו לחזור במהירות למצב התקין האחרון.
 
-In short: Snapshots = undo button for your VM.
+🧪 **לנסות ניסויים בבטחה** – נסו שינויים ללא פחד. אם זה נכשל, פשוט שחזרו את ה-Snapshot.
 
-[**snapshot in Oracle site**](https://docs.oracle.com/en/virtualization/virtualbox/6.0/user/snapshots.html)
+💡 **התאוששות מהירה** – אין צורך להתקין מחדש או להגדיר את המערכת מאפס.
+
+**בקיצור: Snapshots = כפתור ה-"Undo" (ביטול פעולה) של המכונה הווירטואלית שלכם.**
+
+[**מידע על Snapshots באתר של Oracle**](https://docs.oracle.com/en/virtualization/virtualbox/6.0/user/snapshots.html)
+

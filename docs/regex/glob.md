@@ -1,6 +1,6 @@
 # glob: Using wildcards ( '*', '?' ) for file names
 
-Using pattern such as `ls a*` may seem similar to regular expression, but it is different. This kind of usage is called *globbing* ( "global match" in ancient unix) and is used by the **shell** to expand name pattern to a list of files. The shell *expands* the pattern to a list of files before the command is run.
+Using pattern such as `ls a*` may seem similar to regular expression, but it is different. This kind of usage is called *globbing* ( "global match" in ancient unix) and is used by the **shell** to expand name pattern to a list of files. The shell *expands* the pattern to a list of files *before* the command is run.
 
 
 | Pattern   | Matches                                                       | Example Use                                                                    |
