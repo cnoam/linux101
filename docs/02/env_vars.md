@@ -1,5 +1,3 @@
-👍
-
 # Linux Environment Variables
 
 ## What is an Environment Variable?

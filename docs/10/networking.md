@@ -1,6 +1,4 @@
 
-👍
-
 # Chapter 10: Networking & Remote Access
 
 This chapter introduces key command-line tools to inspect your network setup, download files from the internet, and connect securely to remote machines. These tools are essential for system administration, software development, and working with remote servers or cloud environments.

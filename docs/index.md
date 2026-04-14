@@ -1,6 +1,4 @@
 
-👍
-
 # Linux: a self paced course for complete beginners
 
 **TODO:**
